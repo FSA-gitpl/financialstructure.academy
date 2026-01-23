@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung — Financial Structure Academy</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="legal-page">
+
+<section class="section">
+  <div class="section__inner">
+
+    <h1>Datenschutzerklärung</h1>
+
+    <p>Diese Datenschutzerklärung beschreibt die Regeln der Datenverarbeitung auf der Website der Financial Structure Academy („FSA”). Die Website dient ausschließlich Informationszwecken und erhebt keine personenbezogenen Daten, außer in den unten beschriebenen Fällen.</p>
+
+    <h2>1. Umfang der Datenverarbeitung</h2>
+    <p>FSA führt keine Benutzerkonten und sammelt keine personenbezogenen Daten aktiv. Daten können nur verarbeitet werden, wenn ein Nutzer FSA per E‑Mail kontaktiert.</p>
+
+    <h2>2. E‑Mail‑Kontakt</h2>
+    <p>Durch das Senden einer Nachricht an <a href="mailto:office@financialstructure.academy">office@financialstructure.academy</a> stellt der Nutzer freiwillig Daten zur Verfügung. Diese Daten werden ausschließlich zur Beantwortung der Anfrage verwendet.</p>
+
+    <h2>3. Cookies</h2>
+    <p>Die Website kann grundlegende Cookies verwenden, die für die technische Funktionalität erforderlich sind. FSA führt kein Nutzer‑Profiling durch.</p>
+
+    <h2>4. Weitergabe von Daten</h2>
+    <p>Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist gesetzlich vorgeschrieben.</p>
+
+    <h2>5. Rechte der Nutzer</h2>
+    <p>Nutzer können Auskunft über die Verarbeitung ihrer Daten, deren Berichtigung oder Löschung per E‑Mail anfordern.</p>
+
+    <h2>6. Kontakt</h2>
+    <p>Bei Fragen zur Datenschutzerklärung kontaktieren Sie uns bitte unter: <a href="mailto:office@financialstructure.academy">office@financialstructure.academy</a></p>
+
+  </div>
+</section>
+
+</body>
+</html>
