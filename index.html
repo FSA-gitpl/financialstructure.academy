@@ -65,30 +65,85 @@
         .brand__name { font-size: 0.9rem; letter-spacing: 0.18em; text-transform: uppercase; }
         .brand__tagline { font-size: 0.9rem; color: var(--text-muted); }
 
-        nav[role="navigation"] {
+        /* NAVIGATION */
+        .nav {
             display: flex;
             flex-wrap: wrap;
             gap: 18px;
             font-size: 0.9rem;
+            align-items: center;
         }
 
-        nav a {
+        .nav a {
             padding: 6px 10px;
             border-radius: var(--radius-chip);
             transition: background-color var(--transition-fast), transform var(--transition-fast);
         }
 
-        nav a:hover {
+        .nav a:hover {
             background-color: rgba(17, 17, 17, 0.04);
             transform: translateY(-1px);
         }
 
-        main[role="main"] {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-xl);
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
         }
 
+        .nav-dropbtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            padding: 6px 10px;
+            border-radius: 999px;
+            transition: background-color 0.18s ease-out;
+        }
+
+        .nav-dropbtn:hover {
+            background-color: rgba(17, 17, 17, 0.04);
+        }
+
+        .nav-dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 8px 0;
+            z-index: 10;
+        }
+
+        .nav-dropdown-content a {
+            display: block;
+            padding: 10px 16px;
+            font-size: 0.9rem;
+            color: #111;
+        }
+
+        .nav-dropdown-content a:hover {
+            background-color: rgba(17,17,17,0.05);
+        }
+
+        .nav-dropdown:hover .nav-dropdown-content {
+            display: block;
+        }
+
+        .kontakt-btn {
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: #111;
+            color: white;
+            transition: opacity 0.2s ease-out;
+        }
+
+        .kontakt-btn:hover {
+            opacity: 0.8;
+        }
+
+        /* HERO */
         .hero {
             background: var(--bg-panel);
             border-radius: var(--radius-panel);
@@ -150,6 +205,7 @@
             background-color: rgba(255, 255, 255, 0.8);
         }
 
+        /* SECTIONS */
         .section {
             background: var(--bg-panel);
             border-radius: var(--radius-panel);
@@ -192,6 +248,7 @@
             color: var(--text-muted);
         }
 
+        /* GRID */
         .grid {
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -251,11 +308,20 @@
         <div class="brand__tagline">Strukturalne podejście do rynku finansowego</div>
     </div>
 
-    <nav role="navigation">
+    <nav role="navigation" class="nav">
         <a href="#home">Home</a>
         <a href="#about">O FSA</a>
         <a href="#method">Metodologia</a>
-        <a href="#produkty">Produkty</a>
+
+        <div class="nav-dropdown">
+            <button class="nav-dropbtn">Produkty ▾</button>
+            <div class="nav-dropdown-content">
+                <a href="#produkty-ksiazki">Książki</a>
+                <a href="#produkty-kursy">Kursy</a>
+            </div>
+        </div>
+
+        <a href="mailto:office@financialstructure.academy" class="kontakt-btn">Kontakt</a>
     </nav>
 </header>
 
@@ -270,7 +336,7 @@
         <h1>Struktura rynku zamiast narracji rynkowej.</h1>
         <p class="hero__subtitle">
             Financial Structure Academy (FSA) koncentruje się na strukturze rynku, płynności oraz modelach
-            wykorzystywanych przez uczestników instytucjonalnych. Bez emocji, bez hałasu informacyjnego —
+            wykorzystywanych przez uczestników instytjonalnych. Bez emocji, bez hałasu informacyjnego —
             wyłącznie uporządkowana praca z danymi i zachowaniem rynku.
         </p>
         <div class="hero__meta">
@@ -336,27 +402,16 @@
             </p>
         </div>
 
-        <h3 style="margin-top:24px; margin-bottom:12px; font-size:1.2rem;">Książki FSA</h3>
+        <h3 id="produkty-ksiazki" style="margin-top:24px; margin-bottom:12px; font-size:1.2rem;">Książki FSA</h3>
 
         <div class="grid">
 
-            <div class="card">
-                <img src="assets/img/books/wprowadzenie.png" alt="Książka Wprowadzająca" style="width:100%; border-radius:12px; margin-bottom:12px;">
-                <div class="card__title">KSIĄŻKA WPROWADZAJĄCA<br><span style="color:#555;">Podstawa mentalna</span></div>
-                <div class="card__text">
-                    Mentalna podstawa pracy strukturalnej. Przygotowanie do analizy rynku.<br><br>
-                    <strong>Status:</strong> w przygotowaniu<br>
-                    <strong>Hasło:</strong> Obudź się. Zacznij analizować.
-                </div>
-            </div>
-            
             <div class="card">
                 <img src="assets/img/books/tom.png" alt="Struktura Systemowa — Tom 1" style="width:100%; border-radius:12px; margin-bottom:12px;">
                 <div class="card__title">STRUKTURA SYSTEMOWA<br><span style="color:#555;">Fundament techniczny — Tom 1</span></div>
                 <div class="card__text">
                     Fundament techniczny struktury systemowej. Porządkowanie pojęć i ram analizy.<br><br>
-                    <strong>Status:</strong> w przygotowaniu<br>
-                    <strong>Hasło:</strong> Z chaosu do porządku.
+                    <strong>Status:</strong> w przygotowaniu
                 </div>
             </div>
 
@@ -365,8 +420,7 @@
                 <div class="card__title">PRICE ACTION<br><span style="color:#555;">Metodologia FSA — Tom 2</span></div>
                 <div class="card__text">
                     Strukturalne podejście do ruchu ceny i zachowań uczestników rynku.<br><br>
-                    <strong>Status:</strong> w przygotowaniu<br>
-                    <strong>Hasło:</strong> Ruch to język rynku.
+                    <strong>Status:</strong> w przygotowaniu
                 </div>
             </div>
 
@@ -375,47 +429,19 @@
                 <div class="card__title">STRUKTURA DECYZJI<br><span style="color:#555;">Od analizy do działania — Tom 3</span></div>
                 <div class="card__text">
                     Strukturalny proces przechodzenia od analizy do działania.<br><br>
-                    <strong>Status:</strong> w przygotowaniu<br>
-                    <strong>Hasło:</strong> Stabilność i dyscyplina.
-                </div>
-            </div>
-
-
-        </div>
-
-        <h3 style="margin-top:40px; margin-bottom:12px; font-size:1.2rem;">Kursy FSA</h3>
-
-        <div class="grid">
-
-            <div class="card">
-                <div class="card__title">Kurs: Struktura rynku od podstaw<br><span style="color:#555;">i niestandardowe sytuacje</span></div>
-                <div class="card__text">
-                    Fundament analizy strukturalnej oraz praca z nietypowymi scenariuszami rynkowymi.<br><br>
-                    <strong>Status:</strong> coming soon
+                    <strong>Status:</strong> w przygotowaniu
                 </div>
             </div>
 
             <div class="card">
-                <div class="card__title">Kurs: Tworzenie własnego systemu handlowego<br><span style="color:#555;">na podstawie doświadczenia</span></div>
+                <img src="assets/img/books/wprowadzenie.png" alt="Książka Wprowadzająca" style="width:100%; border-radius:12px; margin-bottom:12px;">
+                <div class="card__title">KSIĄŻKA WPROWADZAJĄCA<br><span style="color:#555;">Podstawa mentalna</span></div>
                 <div class="card__text">
-                    Budowa systemu handlowego opartego na strukturze, procesie i obserwacji rynku.<br><br>
-                    <strong>Status:</strong> coming soon
+                    Mentalna podstawa pracy strukturalnej. Przygotowanie do analizy rynku.<br><br>
+                    <strong>Status:</strong> w przygotowaniu
                 </div>
             </div>
 
         </div>
 
-        <p class="section__note" style="margin-top:28px;">
-            Linki do zakupu produktów pojawią się po publikacji. Produkty FSA będą dostępne na wybranych zewnętrznych platformach sprzedażowych.
-        </p>
-
-    </div>
-</section>
-
-</main>
-
-<footer role="contentinfo">
-    <div class="footer__row">
-        <a href="#contact">Kontakt</a>
-        <a href="#legal">Prywatność</a>
-        <a href="#legal
+        <h3 id="produk
