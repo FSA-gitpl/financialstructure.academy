@@ -4,92 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Informacje prawne — Financial Structure Academy</title>
-
-  <meta name="description" content="Informacje prawne dotyczące serwisu Financial Structure Academy. Charakter edukacyjny, brak rekomendacji inwestycyjnych, prawa autorskie.">
-
   <link rel="stylesheet" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
 </head>
 
-<body>
+<body class="legal-page">
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="nav-inner">
-      <div class="nav-brand">
-        <strong>FINANCIAL STRUCTURE ACADEMY</strong><br>
-        <span>Strukturalne podejście do rynku finansowego</span>
-      </div>
+<section class="section">
+  <div class="section__inner">
 
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/o-fsa.html">O FSA</a>
-        <a href="/metodologia.html">Metodologia</a>
-        <a href="/produkty.html">Produkty</a>
-        <button id="themeToggle">Tryb</button>
-      </div>
-    </div>
-  </nav>
+    <h1>Informacje prawne</h1>
 
-  <!-- CONTENT -->
-  <section class="section">
-    <div class="section__inner">
-      <h1>Informacje prawne</h1>
+    <p>Niniejsza strona zawiera podstawowe informacje prawne dotyczące serwisu Financial Structure Academy („FSA”). Serwis ma charakter edukacyjny i informacyjny.</p>
 
-      <p>Serwis <strong>financialstructure.academy</strong> ma charakter edukacyjny i prezentuje treści dotyczące analizy strukturalnej rynku finansowego. Informacje publikowane w serwisie nie stanowią rekomendacji inwestycyjnych ani doradztwa finansowego.</p>
+    <h2>1. Charakter działalności</h2>
+    <p>FSA nie prowadzi działalności maklerskiej, doradczej ani inwestycyjnej. Publikowane materiały mają charakter edukacyjny.</p>
 
-      <h2>1. Charakter treści</h2>
-      <p>Wszystkie materiały mają charakter informacyjny i edukacyjny. Celem serwisu jest przedstawienie podejścia strukturalnego do analizy rynku, bez formułowania prognoz lub zaleceń inwestycyjnych.</p>
+    <h2>2. Brak gwarancji</h2>
+    <p>FSA nie gwarantuje wyników finansowych ani skuteczności metod przedstawionych w materiałach edukacyjnych.</p>
 
-      <h2>2. Brak doradztwa inwestycyjnego</h2>
-      <p>Serwis nie świadczy usług doradztwa inwestycyjnego, finansowego ani maklerskiego. Użytkownik podejmuje decyzje inwestycyjne wyłącznie na własną odpowiedzialność.</p>
+    <h2>3. Ochrona treści</h2>
+    <p>Wszystkie treści publikowane w serwisie są chronione prawem autorskim. Kopiowanie lub rozpowszechnianie bez zgody FSA jest zabronione.</p>
 
-      <h2>3. Ograniczenie odpowiedzialności</h2>
-      <p>Autorzy serwisu nie ponoszą odpowiedzialności za skutki decyzji podejmowanych na podstawie prezentowanych treści. Informacje mogą ulegać zmianom i nie stanowią gwarancji wyników rynkowych.</p>
+    <h2>4. Odpowiedzialność użytkownika</h2>
+    <p>Użytkownik korzysta z materiałów na własną odpowiedzialność. FSA nie ponosi odpowiedzialności za decyzje inwestycyjne użytkowników.</p>
 
-      <h2>4. Prawa autorskie</h2>
-      <p>Wszelkie treści, materiały edukacyjne, grafiki i układ strony są chronione prawem autorskim. Kopiowanie lub rozpowszechnianie wymaga zgody właściciela serwisu.</p>
+    <h2>5. Kontakt</h2>
+    <p>W sprawach prawnych prosimy o kontakt: <a href="mailto:office@financialstructure.academy">office@financialstructure.academy</a></p>
 
-      <h2>5. Informacje techniczne</h2>
-      <p>Serwis może przetwarzać podstawowe dane techniczne niezbędne do prawidłowego działania strony, takie jak pliki cookies lub dane statystyczne.</p>
-
-      <h2>6. Aktualizacje</h2>
-      <p>Serwis zastrzega sobie prawo do aktualizacji niniejszych informacji prawnych. Aktualna wersja dokumentu jest publikowana na tej stronie.</p>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="section" style="text-align:center; border-top:1px solid var(--border);">
-    <div>© Financial Structure Academy</div>
-    <div style="margin-top:8px;">
-      <a href="/regulamin.html">Regulamin</a> •
-      <a href="/polityka-prywatnosci.html">Polityka prywatności</a> •
-      <a href="/informacje-prawne.html">Informacje prawne</a>
-    </div>
-  </footer>
-
-  <!-- THEME SCRIPT -->
-  <script>
-    const toggle = document.getElementById("themeToggle");
-    const root = document.documentElement;
-
-    if (localStorage.getItem("theme") === "dark") {
-      root.setAttribute("data-theme", "dark");
-    }
-
-    toggle.addEventListener("click", () => {
-      const isDark = root.getAttribute("data-theme") === "dark";
-      if (isDark) {
-        root.removeAttribute("data-theme");
-        localStorage.setItem("theme", "light");
-      } else {
-        root.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      }
-    });
-  </script>
+  </div>
+</section>
 
 </body>
 </html>
