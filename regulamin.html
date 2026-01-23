@@ -4,89 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Regulamin — Financial Structure Academy</title>
-
-  <meta name="description" content="Regulamin korzystania z serwisu Financial Structure Academy. Zasady użytkowania, odpowiedzialność i informacje ogólne.">
-
   <link rel="stylesheet" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
 </head>
 
-<body>
+<body class="legal-page">
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="nav-inner">
-      <div class="nav-brand">
-        <strong>FINANCIAL STRUCTURE ACADEMY</strong><br>
-        <span>Strukturalne podejście do rynku finansowego</span>
-      </div>
+<section class="section">
+  <div class="section__inner">
 
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/o-fsa.html">O FSA</a>
-        <a href="/metodologia.html">Metodologia</a>
-        <a href="/produkty.html">Produkty</a>
-        <button id="themeToggle">Tryb</button>
-      </div>
-    </div>
-  </nav>
+    <h1>Regulamin Financial Structure Academy</h1>
 
-  <!-- CONTENT -->
-  <section class="section">
-    <div class="section__inner">
-      <h1>Regulamin</h1>
+    <p>Niniejszy regulamin określa zasady korzystania z serwisu Financial Structure Academy („FSA”). Korzystając z serwisu, użytkownik akceptuje poniższe postanowienia.</p>
 
-      <p>Niniejszy regulamin określa zasady korzystania z serwisu Financial Structure Academy dostępnego pod adresem <strong>financialstructure.academy</strong>.</p>
+    <h2>1. Charakter serwisu</h2>
+    <p>FSA jest niezależną jednostką edukacyjną dostarczającą materiały dotyczące analizy rynku finansowego. Serwis ma charakter informacyjny i edukacyjny.</p>
 
-      <h2>1. Informacje ogólne</h2>
-      <p>Serwis ma charakter edukacyjny i prezentuje materiały dotyczące analizy strukturalnej rynku finansowego. Treści publikowane w serwisie mają charakter informacyjny i nie stanowią rekomendacji inwestycyjnych.</p>
+    <h2>2. Brak doradztwa inwestycyjnego</h2>
+    <p>Materiały publikowane przez FSA nie stanowią rekomendacji inwestycyjnych, porad finansowych ani zachęty do zawierania transakcji.</p>
 
-      <h2>2. Korzystanie z serwisu</h2>
-      <p>Użytkownik zobowiązuje się korzystać z serwisu w sposób zgodny z prawem oraz zasadami współżycia społecznego. Zabronione jest podejmowanie działań mogących zakłócić funkcjonowanie serwisu.</p>
+    <h2>3. Prawa autorskie</h2>
+    <p>Wszelkie treści, materiały, grafiki i publikacje są własnością Financial Structure Academy i są chronione prawem autorskim.</p>
 
-      <h2>3. Odpowiedzialność</h2>
-      <p>Autorzy serwisu nie ponoszą odpowiedzialności za decyzje inwestycyjne podejmowane na podstawie prezentowanych treści. Użytkownik korzysta z materiałów na własną odpowiedzialność.</p>
+    <h2>4. Odpowiedzialność</h2>
+    <p>FSA nie ponosi odpowiedzialności za decyzje podejmowane przez użytkowników na podstawie materiałów edukacyjnych.</p>
 
-      <h2>4. Prawa autorskie</h2>
-      <p>Wszelkie treści publikowane w serwisie są chronione prawem autorskim. Kopiowanie, rozpowszechnianie lub wykorzystywanie materiałów wymaga zgody właściciela serwisu.</p>
+    <h2>5. Kontakt</h2>
+    <p>W sprawach związanych z regulaminem prosimy o kontakt: <a href="mailto:office@financialstructure.academy">office@financialstructure.academy</a></p>
 
-      <h2>5. Zmiany regulaminu</h2>
-      <p>Serwis zastrzega sobie prawo do wprowadzania zmian w regulaminie. Aktualna wersja dokumentu jest publikowana na tej stronie.</p>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="section" style="text-align:center; border-top:1px solid var(--border);">
-    <div>© Financial Structure Academy</div>
-    <div style="margin-top:8px;">
-      <a href="/regulamin.html">Regulamin</a> •
-      <a href="/polityka-prywatnosci.html">Polityka prywatności</a> •
-      <a href="/informacje-prawne.html">Informacje prawne</a>
-    </div>
-  </footer>
-
-  <!-- THEME SCRIPT -->
-  <script>
-    const toggle = document.getElementById("themeToggle");
-    const root = document.documentElement;
-
-    if (localStorage.getItem("theme") === "dark") {
-      root.setAttribute("data-theme", "dark");
-    }
-
-    toggle.addEventListener("click", () => {
-      const isDark = root.getAttribute("data-theme") === "dark";
-      if (isDark) {
-        root.removeAttribute("data-theme");
-        localStorage.setItem("theme", "light");
-      } else {
-        root.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      }
-    });
-  </script>
+  </div>
+</section>
 
 </body>
 </html>
