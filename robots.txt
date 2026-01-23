@@ -1,10 +1,13 @@
 User-agent: *
 Allow: /
 
-# Запрет на служебные файлы (если появятся)
+#
 Disallow: /tmp/
 Disallow: /private/
 Disallow: /drafts/
 
-# Карта сайта
+# Sitemap
 Sitemap: https://financialstructure.academy/sitemap.xml
+
+# Host 
+Host: financialstructure.academy
