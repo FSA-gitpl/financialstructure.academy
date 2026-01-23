@@ -1,74 +1,118 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Financial Structure Academy — Strukturalne podejście do rynku</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Structure Academy</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Financial Structure Academy — edukacja oparta na strukturze rynku, płynności i zachowaniach uczestników instytucjonalnych. Zero narracji. Zero emocji.">
+  <link rel="canonical" href="https://twojadomena.com/">
+  <meta name="robots" content="index, follow">
 
-  <!-- Open Graph -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <meta name="description" content="Financial Structure Academy — instytucjonalna edukacja rynkowa oparta na strukturze, płynności i procesie. Zero narracji. Zero emocji.">
+  <meta name="keywords" content="struktura rynku, płynność, edukacja rynkowa, trading, analiza instytucjonalna, FSA, Financial Structure Academy">
+  <meta name="author" content="Financial Structure Academy">
+
+  <meta property="og:image" content="https://twojadomena.com/assets/img/og-image.png">
+  <meta name="twitter:image" content="https://twojadomena.com/assets/img/og-image.png">
+
   <meta property="og:title" content="Financial Structure Academy">
-  <meta property="og:description" content="Strukturalne podejście do rynku finansowego. Zero narracji. Zero emocji.">
-  <meta property="og:image" content="/assets/og-image.png">
+  <meta property="og:description" content="Strukturalne podejście do rynku finansowego. Edukacja oparta na danych, płynności i uczestnikach instytucjonalnych.">
+  <meta property="og:image" content="assets/img/og-image.png">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://financialstructure.academy/">
+  <meta property="og:url" content="https://twojadomena.com">
 
-  <!-- Styles -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Financial Structure Academy">
+  <meta name="twitter:description" content="Instytucjonalne materiały edukacyjne oparte na strukturze rynku.">
+  <meta name="twitter:image" content="assets/img/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap">
+
+  <!-- ВНЕШНИЙ CSS -->
   <link rel="stylesheet" href="/style.css">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="nav-inner">
-      <div class="nav-brand">
-        <strong>FINANCIAL STRUCTURE ACADEMY</strong><br>
-        <span>Strukturalne podejście do rynku finansowego</span>
-      </div>
-
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/o-fsa.html">O FSA</a>
-        <a href="/metodologia.html">Metodologia</a>
-        <a href="/produkty.html">Produkty</a>
-        <button id="themeToggle">Tryb</button>
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand" style="display:flex;align-items:center;gap:12px;">
+      <img src="assets/img/books/logo.png" alt="FSA logo"
+           style="height:40px;width:40px;border-radius:50%;" loading="lazy">
+      <div style="display:flex;flex-direction:column;">
+        <span style="font-weight:600;font-size:0.95rem;letter-spacing:0.04em;">
+          FINANCIAL STRUCTURE ACADEMY
+        </span>
+        <span style="font-size:0.75rem;color:var(--subtext);">
+          Strukturalne podejście do rynku finansowego
+        </span>
       </div>
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero__content">
-      <h1>Strukturalne materiały edukacyjne</h1>
-      <p class="hero__subtitle">Struktura rynku. Zero narracji. Zero emocji.</p>
-
-      <div class="hero__meta">
-        <div class="hero__meta-item">Strukturalna analiza rynku</div>
-        <div class="hero__meta-item">Analiza płynności</div>
-        <div class="hero__meta-item">Edukacja oparta na doświadczeniu</div>
-        <div class="hero__meta-item">Wizualizacja błędów</div>
-        <div class="hero__meta-item">Skuteczne materiały edukacyjne</div>
-      </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">O FSA</a>
+      <a href="#method">Metodologia</a>
+      <a href="#produkty">Produkty</a>
+      <a href="#kontakt">Kontakt</a>
+      <button id="themeToggle">🌙 Dark</button>
     </div>
-  </header>
+  </div>
+</nav>
 
-  <!-- SECTION: METODOLOGIA -->
-  <section class="section">
-    <div class="section__inner">
-      <h2>Metodologia FSA</h2>
+<section id="home" class="hero">
+  <div class="hero__content">
+    <div class="hero__label">
+      <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--text);margin-right:6px;"></span>
+      Instytucjonalne materiały edukacyjne
+    </div>
+
+    <h1>Struktura rynku. Zero narracji. Zero emocji.</h1>
+
+    <p class="hero__subtitle" style="color:var(--subtext);">
+      Financial Structure Academy uczy analizy opartej na płynności, strukturze i zachowaniach
+      uczestników instytucjonalnych.
+    </p>
+
+    <div class="hero__meta">
+      <div class="hero__meta-item">Strukturalna analiza rynku</div>
+      <div class="hero__meta-item">Modele płynności</div>
+      <div class="hero__meta-item">Edukacja oparta na doświadczeniu</div>
+      <div class="hero__meta-item">Minimalizacja błędów</div>
+      <div class="hero__meta-item">Dostępne materiały edukacyjne</div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="section__inner">
+    <div class="section__kicker">O FSA</div>
+    <h2>Niezależna jednostka edukacyjna oparta na strukturze rynku.</h2>
+
+    <div class="section__body">
+      <p>
+        Financial Structure Academy powstała jako odpowiedź na brak spójnej, technicznej i strukturalnej edukacji rynkowej.
+      </p>
+      <p>
+        Za FSA stoi międzynarodowa grupa traderów z doświadczeniem 5–15 lat.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="method" class="section">
+  <div class="section__inner">
+    <div class="section__kicker">Metodologia</div>
+    <h2>Struktura. Płynność. Uczestnicy.</h2>
+
+    <div class="section__body">
       <p>Metodologia FSA zakłada, że rynek jest systemem, a nie narracją.</p>
 
       <div class="method-diagram">
-
         <div class="method-step">
           <div class="step-circle">1</div>
           <div class="step-label">Struktura rynku</div>
@@ -101,68 +145,239 @@
           <div class="step-circle">5</div>
           <div class="step-label">Decyzja</div>
         </div>
-
       </div>
+
     </div>
-  </section>
-    <!-- SECTION: PRODUKTY -->
-  <section class="section">
-    <div class="section__inner">
-      <h2>Produkty FSA</h2>
-      <p>Moduły wiedzy oparte na strukturze rynku. Produkty FSA — książki i kursy — są projektowane tak, aby eliminować narrację i skupiać się wyłącznie na procesie, strukturze i płynności.</p>
+  </div>
+</section>
+<!-- PRODUKTY -->
+<section id="produkty" class="section">
+  <div class="section__inner">
 
-      <div class="grid">
+    <div class="section__kicker">Produkty FSA</div>
+    <h2>Moduły wiedzy oparte na strukturze rynku.</h2>
 
-        <div class="card">
-          <h3 class="card__title">Książki FSA</h3>
-          <p class="card__text">Materiały edukacyjne oparte na strukturze rynku, procesach decyzyjnych i analizie płynności.</p>
+    <div class="section__body">
+      <p>
+        Produkty FSA — książki i kursy — są projektowane jako spójne moduły wiedzy. Każdy moduł rozwija
+        konkretny element metodologii: strukturę, płynność, uczestników, proces lub decyzję.
+      </p>
+
+      <p>
+        Za ich treścią stoi międzynarodowy zespół traderów z doświadczeniem 5–15 lat, pracujących na
+        różnych rynkach. To wiedza praktyczna, przetestowana w realnych warunkach.
+      </p>
+
+      <p>
+        Celem materiałów FSA jest <strong>zwiększenie kompetencji użytkownika i ograniczenie liczby błędów</strong>
+        popełnianych na początku drogi.
+      </p>
+    </div>
+
+    <!-- KSIĄŻKI -->
+    <h3 style="margin-top:32px; margin-bottom:12px; font-size:1.2rem;">
+      Książki FSA
+    </h3>
+
+    <div class="grid">
+
+      <!-- WPROWADZENIE -->
+      <div class="card">
+        <img src="assets/img/books/wprowadzenie.png"
+             alt="Książka Wprowadzająca"
+             loading="lazy"
+             style="width:100%; height:auto; border-radius:12px; margin-bottom:12px;">
+        <div class="card__title">
+          KSIĄŻKA WPROWADZAJĄCA<br>
+          <span style="color:var(--subtext);">Podstawa mentalna</span>
         </div>
-
-        <div class="card">
-          <h3 class="card__title">Kursy FSA</h3>
-          <p class="card__text">Systematyczne moduły edukacyjne, które prowadzą od podstaw struktury rynku do zaawansowanych procesów.</p>
+        <div class="card__text">
+          Mentalna podstawa pracy strukturalnej. Przygotowanie do analizy rynku.
+          <br><br><strong>Status:</strong> w przygotowaniu
         </div>
-
-        <div class="card">
-          <h3 class="card__title">Wizualizacja błędów</h3>
-          <p class="card__text">Praktyczne przykłady błędów strukturalnych i procesowych, które popełniają uczestnicy rynku.</p>
-        </div>
-
       </div>
+
+      <!-- TOM 1 -->
+      <div class="card">
+        <img src="assets/img/books/tom.png"
+             alt="Struktura Systemowa — Tom 1"
+             loading="lazy"
+             style="width:100%; height:auto; border-radius:12px; margin-bottom:12px;">
+        <div class="card__title">
+          STRUKTURA SYSTEMOWA<br>
+          <span style="color:var(--subtext);">Tom 1</span>
+        </div>
+        <div class="card__text">
+          Fundament techniczny pracy strukturalnej. Definicje, modele i ramy analizy.
+          <br><br><strong>Status:</strong> w przygotowaniu
+        </div>
+      </div>
+
+      <!-- TOM 2 -->
+      <div class="card">
+        <img src="assets/img/books/tom2.png"
+             alt="Price Action — Tom 2"
+             loading="lazy"
+             style="width:100%; height:auto; border-radius:12px; margin-bottom:12px;">
+        <div class="card__title">
+          PRICE ACTION<br>
+          <span style="color:var(--subtext);">Tom 2</span>
+        </div>
+        <div class="card__text">
+          Price Action bez narracji. Mechanika ruchu ceny i zachowania uczestników.
+          <br><br><strong>Status:</strong> w przygotowaniu
+        </div>
+      </div>
+
+      <!-- TOM 3 -->
+      <div class="card">
+        <img src="assets/img/books/tom3.png"
+             alt="Struktura Decyzji — Tom 3"
+             loading="lazy"
+             style="width:100%; height:auto; border-radius:12px; margin-bottom:12px;">
+        <div class="card__title">
+          STRUKTURA DECYZJI<br>
+          <span style="color:var(--subtext);">Tom 3</span>
+        </div>
+        <div class="card__text">
+          Proces przechodzenia od obserwacji do działania. Struktura decyzji.
+          <br><br><strong>Status:</strong> w przygotowaniu
+        </div>
+      </div>
+
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="section" style="text-align:center; border-top:1px solid var(--border);">
-    <div>© 2024 Financial Structure Academy</div>
-    <div style="margin-top:8px;">
-      <a href="/regulamin.html">Regulamin</a> •
-      <a href="/polityka-prywatnosci.html">Polityka prywatności</a> •
-      <a href="/informacje-prawne.html">Informacje prawne</a>
+    <!-- KURSY -->
+    <h3 style="margin-top:40px; margin-bottom:12px; font-size:1.2rem;">
+      Kursy FSA
+    </h3>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card__title">Kurs: Struktura rynku od podstaw</div>
+        <div class="card__text">
+          Fundament analizy strukturalnej oraz praca z nietypowymi scenariuszami rynkowymi.
+          <br><br><strong>Status:</strong> coming soon
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__title">Kurs: Tworzenie własnego systemu handlowego</div>
+        <div class="card__text">
+          Budowa systemu handlowego opartego na strukturze, procesie i obserwacji rynku.
+          <br><br><strong>Status:</strong> coming soon
+        </div>
+      </div>
+
     </div>
-  </footer>
 
-  <!-- THEME TOGGLE SCRIPT -->
-  <script>
-    const toggle = document.getElementById("themeToggle");
-    const root = document.documentElement;
+    <p style="margin-top:28px;">
+      Linki do zakupu produktów pojawią się po publikacji. Produkty FSA będą dostępne na wybranych
+      zewnętrznych platformach sprzedażowych.
+    </p>
 
-    // Load saved theme
-    if (localStorage.getItem("theme") === "dark") {
-      root.setAttribute("data-theme", "dark");
-    }
+  </div>
+</section>
 
-    toggle.addEventListener("click", () => {
-      const isDark = root.getAttribute("data-theme") === "dark";
-      if (isDark) {
-        root.removeAttribute("data-theme");
-        localStorage.setItem("theme", "light");
-      } else {
-        root.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      }
-    });
-  </script>
+<!-- KONTAKT -->
+<section id="kontakt" class="section">
+  <div class="section__inner">
+
+    <div class="section__kicker">Kontakt</div>
+    <h2>Skontaktuj się z FSA</h2>
+
+    <div class="section__body">
+      <p>
+        Financial Structure Academy działa jako niezależna jednostka edukacyjna. Jeśli chcesz uzyskać
+        informacje dotyczące materiałów, współpracy lub kwestii organizacyjnych — skontaktuj się z nami.
+      </p>
+
+      <p style="margin-top:16px; font-size:1.05rem;">
+        <strong>E‑mail:</strong><br>
+        <a href="mailto:office@financialstructure.academy"
+           style="color:var(--text); text-decoration:none;">
+           office@financialstructure.academy
+        </a>
+      </p>
+
+      <a href="mailto:office@financialstructure.academy"
+         class="kontakt-btn"
+         style="
+           display:inline-block;
+           margin-top:22px;
+           padding:10px 18px;
+           background:var(--text);
+           color:var(--bg);
+           border-radius:6px;
+           text-decoration:none;
+           transition:0.3s;
+         ">
+         Wyślij wiadomość
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="
+  background:#0A1A2F;
+  color:#fff;
+  padding:40px 24px;
+  margin-top:80px;
+">
+  <div style="
+    max-width:960px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+  ">
+
+    <div style="font-size:1rem; font-weight:600;">
+      FINANCIAL STRUCTURE ACADEMY
+    </div>
+
+    <div style="font-size:0.9rem; opacity:0.75; line-height:1.6;">
+      Strukturalne podejście do rynku finansowego.
+      Edukacja oparta na danych, płynności i uczestnikach instytucjonalnych.
+    </div>
+
+    <div style="display:flex; gap:24px; flex-wrap:wrap; font-size:0.9rem;">
+      <a href="regulamin.html" style="color:#fff; opacity:0.8; text-decoration:none;">Regulamin</a>
+      <a href="polityka-prywatnosci.html" style="color:#fff; opacity:0.8; text-decoration:none;">Polityka prywatności</a>
+      <a href="informacje-prawne.html" style="color:#fff; opacity:0.8; text-decoration:none;">Informacje prawne</a>
+    </div>
+
+    <div style="font-size:0.8rem; opacity:0.5; margin-top:12px;">
+      © Financial Structure Academy — Wszystkie prawa zastrzeżone
+    </div>
+
+  </div>
+</footer>
+
+<!-- DARK MODE SCRIPT -->
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    root.setAttribute('data-theme', savedTheme);
+    toggleBtn.textContent = savedTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+
+    toggleBtn.textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
+  });
+</script>
 
 </body>
 </html>
