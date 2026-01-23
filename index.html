@@ -30,19 +30,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+
+    /* ------------------------------ */
+    /*        THEME VARIABLES         */
+    /* ------------------------------ */
+
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --subtext: #333333;
+      --border: rgba(0,0,0,0.1);
+      --hero-bg: #fafafa;
+      --card-bg: #ffffff;
+      --nav-bg: #ffffff;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0A0F14;
+      --text: #f2f2f2;
+      --subtext: #cccccc;
+      --border: rgba(255,255,255,0.15);
+      --hero-bg: #11161d;
+      --card-bg: #161d26;
+      --nav-bg: #0A0F14;
+    }
+
+    /* ------------------------------ */
+    /*        GLOBAL STYLES           */
+    /* ------------------------------ */
+
     body {
       margin: 0;
       padding: 0;
       font-family: 'Inter', system-ui, sans-serif;
-      color: #111;
-      background: #fff;
+      color: var(--text);
+      background: var(--bg);
       line-height: 1.55;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     h1, h2, h3 {
       font-family: 'IBM Plex Serif', serif;
       font-weight: 600;
       margin: 0 0 16px 0;
+      color: var(--text);
+      transition: color 0.3s ease;
     }
 
     /* FADE-IN ANIMATION */
@@ -69,30 +101,34 @@
       text-transform: uppercase;
       font-size: 0.8rem;
       letter-spacing: 0.08em;
-      color: #777;
+      color: var(--subtext);
       margin-bottom: 12px;
+      transition: color 0.3s ease;
     }
 
     .section__body p {
       margin-bottom: 18px;
-    }
-
-    .section__list {
-      margin-top: 24px;
-      padding-left: 20px;
+      color: var(--subtext);
+      transition: color 0.3s ease;
     }
 
     .section__list li {
       margin-bottom: 8px;
+      color: var(--subtext);
     }
+
+    /* ------------------------------ */
+    /*            NAVBAR              */
+    /* ------------------------------ */
 
     nav {
       position: sticky;
       top: 0;
-      background: #fff;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border);
       padding: 14px 24px;
       z-index: 100;
+      transition: background 0.3s ease, border-color 0.3s ease;
     }
 
     nav .nav-inner {
@@ -117,154 +153,76 @@
 
     nav a {
       text-decoration: none;
-      color: #111;
+      color: var(--text);
       font-size: 0.95rem;
+      transition: color 0.3s ease;
     }
+
+    /* THEME TOGGLE BUTTON */
+    #themeToggle {
+      background:none;
+      border:1px solid var(--border);
+      padding:6px 12px;
+      border-radius:6px;
+      cursor:pointer;
+      font-size:0.9rem;
+      color:var(--text);
+      transition: all 0.3s ease;
+    }
+
+    #themeToggle:hover {
+      opacity:0.7;
+    }
+
+    /* ------------------------------ */
+    /*             HERO               */
+    /* ------------------------------ */
 
     .hero {
       padding: 120px 24px 100px;
-      background: #fafafa;
-    }
-
-    .hero__content {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .hero__label {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-      color: #555;
-      margin-bottom: 18px;
-    }
-
-    .hero__label-dot {
-      width: 8px;
-      height: 8px;
-      background: #111;
-      border-radius: 50%;
+      background: var(--hero-bg);
+      transition: background 0.3s ease;
     }
 
     .hero__subtitle {
-      max-width: 720px;
-      margin-top: 18px;
-      margin-bottom: 28px;
-      color: #333;
-    }
-
-    .hero__meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 18px;
-      margin-top: 24px;
+      color: var(--subtext);
     }
 
     .hero__meta-item {
-      background: #eee;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 0.85rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      transition: all 0.3s ease;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 28px;
-      margin-top: 24px;
-    }
+    /* ------------------------------ */
+    /*             CARDS              */
+    /* ------------------------------ */
 
     .card {
-      border: 1px solid rgba(0,0,0,0.1);
+      border: 1px solid var(--border);
       padding: 18px;
       border-radius: 12px;
-      background: #fff;
-    }
-
-    .card__title {
-      font-weight: 600;
-      margin-bottom: 8px;
+      background: var(--card-bg);
+      transition: background 0.3s ease, border-color 0.3s ease;
     }
 
     .card__text {
-      font-size: 0.9rem;
-      color: #444;
+      color: var(--subtext);
     }
 
-    .method-diagram {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 32px;
-      margin-bottom: 12px;
-      gap: 18px;
-    }
+    /* ------------------------------ */
+    /*         METHOD DIAGRAM         */
+    /* ------------------------------ */
 
-    .method-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 120px;
-    }
-
-    .step-circle {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: #111;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      margin-bottom: 8px;
-      font-size: 1rem;
+    .method-line {
+      background: var(--border);
     }
 
     .step-label {
-      font-size: 0.9rem;
-      color: #333;
+      color: var(--subtext);
     }
 
-    .method-line {
-      flex: 1;
-      height: 2px;
-      background: rgba(0,0,0,0.15);
-    }
-
-    @media (max-width: 700px) {
-      .method-diagram {
-        flex-direction: column;
-        gap: 22px;
-      }
-
-      .method-line {
-        width: 2px;
-        height: 32px;
-      }
-
-      nav .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
-
-      nav .nav-links {
-        flex-wrap: wrap;
-        gap: 14px;
-      }
-    }
-
-    .kontakt-btn {
-      padding: 10px 18px;
-      background: #111;
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
   </style>
 </head>
 
@@ -279,7 +237,7 @@
         <div style="font-weight:600; font-size:1rem; letter-spacing:0.02em;">
           FINANCIAL STRUCTURE ACADEMY
         </div>
-        <div style="font-size:0.75rem; color:#777;">
+        <div style="font-size:0.75rem; color:var(--subtext);">
           Strukturalne podejście do rynku finansowego
         </div>
       </div>
@@ -291,6 +249,9 @@
       <a href="#method">Metodologia</a>
       <a href="#produkty">Produkty</a>
       <a href="#kontakt">Kontakt</a>
+
+      <!-- THEME SWITCH -->
+      <button id="themeToggle">🌙 Dark</button>
     </div>
 
   </div>
@@ -411,7 +372,7 @@
   </div>
 </section>
 
-  <!-- PRODUKTY -->
+<!-- PRODUKTY -->
 <section id="produkty" class="section">
   <div class="section__inner">
 
@@ -448,7 +409,7 @@
       <div class="card fade-in">
         <img src="assets/img/books/wprowadzenie.png" alt="Książka Wprowadzająca"
              style="width:100%; border-radius:12px; margin-bottom:12px;">
-        <div class="card__title">KSIĄŻKA WPROWADZAJĄCA<br><span style="color:#555;">Podstawa mentalna</span></div>
+        <div class="card__title">KSIĄŻKA WPROWADZAJĄCA<br><span style="color:var(--subtext);">Podstawa mentalna</span></div>
         <div class="card__text">
           Mentalna podstawa pracy strukturalnej. Przygotowanie do analizy rynku.
           <br><br><strong>Status:</strong> w przygotowaniu
@@ -458,7 +419,7 @@
       <div class="card fade-in">
         <img src="assets/img/books/tom.png" alt="Struktura Systemowa — Tom 1"
              style="width:100%; border-radius:12px; margin-bottom:12px;">
-        <div class="card__title">STRUKTURA SYSTEMOWA<br><span style="color:#555;">Tom 1</span></div>
+        <div class="card__title">STRUKTURA SYSTEMOWA<br><span style="color:var(--subtext);">Tom 1</span></div>
         <div class="card__text">
           Fundament techniczny pracy strukturalnej. Definicje, modele i ramy analizy.
           <br><br><strong>Status:</strong> w przygotowaniu
@@ -468,7 +429,7 @@
       <div class="card fade-in">
         <img src="assets/img/books/tom2.png" alt="Price Action — Tom 2"
              style="width:100%; border-radius:12px; margin-bottom:12px;">
-        <div class="card__title">PRICE ACTION<br><span style="color:#555;">Tom 2</span></div>
+        <div class="card__title">PRICE ACTION<br><span style="color:var(--subtext);">Tom 2</span></div>
         <div class="card__text">
           Price Action bez narracji. Mechanika ruchu ceny i zachowania uczestników.
           <br><br><strong>Status:</strong> w przygotowaniu
@@ -478,7 +439,7 @@
       <div class="card fade-in">
         <img src="assets/img/books/tom3.png" alt="Struktura Decyzji — Tom 3"
              style="width:100%; border-radius:12px; margin-bottom:12px;">
-        <div class="card__title">STRUKTURA DECYZJI<br><span style="color:#555;">Tom 3</span></div>
+        <div class="card__title">STRUKTURA DECYZJI<br><span style="color:var(--subtext);">Tom 3</span></div>
         <div class="card__text">
           Proces przechodzenia od obserwacji do działania. Struktura decyzji.
           <br><br><strong>Status:</strong> w przygotowaniu
@@ -536,7 +497,7 @@
       <p style="margin-top:16px; font-size:1.05rem;">
         <strong>E‑mail:</strong><br>
         <a href="mailto:office@financialstructure.academy"
-           style="color:#111; text-decoration:none;">
+           style="color:var(--text); text-decoration:none;">
            office@financialstructure.academy
         </a>
       </p>
@@ -587,6 +548,29 @@
 
   </div>
 </footer>
+
+<!-- DARK MODE SCRIPT -->
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    root.setAttribute('data-theme', savedTheme);
+    toggleBtn.textContent = savedTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+
+    toggleBtn.textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
+  });
+</script>
 
 </body>
 </html>
