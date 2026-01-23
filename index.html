@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Financial Structure Academy</title>
 
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://twojadomena.com/">
+
+  <!-- ROBOTS -->
+  <meta name="robots" content="index, follow">
+
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
@@ -26,8 +32,11 @@
   <meta name="twitter:description" content="Instytucjonalne materiały edukacyjne oparte na strukturze rynku.">
   <meta name="twitter:image" content="https://twojadomena.com/assets/img/og-image.png">
 
-  <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- FONT OPTIMIZATION -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap">
 
   <style>
 
@@ -75,6 +84,13 @@
       margin: 0 0 16px 0;
       color: var(--text);
       transition: color 0.3s ease;
+    }
+
+    a {
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+    a:hover {
+      opacity: 0.8;
     }
 
     /* FADE-IN ANIMATION */
@@ -184,6 +200,13 @@
       transition: background 0.3s ease;
     }
 
+    .hero__label-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text);
+    }
+
     .hero__subtitle {
       color: var(--subtext);
     }
@@ -232,7 +255,11 @@
   <div class="nav-inner">
 
     <div class="nav-brand fade-in">
-      <img src="assets/img/books/logo.png" alt="FSA logo" style="height:40px; width:40px; border-radius:50%;">
+      <img src="assets/img/books/logo.png"
+           alt="FSA logo"
+           width="40" height="40"
+           loading="lazy"
+           style="height:40px; width:40px; border-radius:50%;">
       <div style="display:flex; flex-direction:column;">
         <div style="font-weight:600; font-size:1rem; letter-spacing:0.02em;">
           FINANCIAL STRUCTURE ACADEMY
@@ -407,39 +434,62 @@
 
       <!-- WPROWADZENIE -->
       <div class="card fade-in">
-        <img src="assets/img/books/wprowadzenie.png" alt="Książka Wprowadzająca"
+        <img src="assets/img/books/wprowadzenie.png"
+             alt="Książka Wprowadzająca"
+             loading="lazy"
+             width="600" height="800"
              style="width:100%; border-radius:12px; margin-bottom:12px;">
-        <div class="card__title">KSIĄŻKA WPROWADZAJĄCA<br><span style="color:var(--subtext);">Podstawa mentalna</span></div>
+        <div class="card__title">KSIĄŻKA WPROWADZAJĄCA<br>
+          <span style="color:var(--subtext);">Podstawa mentalna</span>
+        </div>
         <div class="card__text">
           Mentalna podstawa pracy strukturalnej. Przygotowanie do analizy rynku.
           <br><br><strong>Status:</strong> w przygotowaniu
         </div>
       </div>
 
+      <!-- TOM 1 -->
       <div class="card fade-in">
-        <img src="assets/img/books/tom.png" alt="Struktura Systemowa — Tom 1"
+        <img src="assets/img/books/tom.png"
+             alt="Struktura Systemowa — Tom 1"
+             loading="lazy"
+             width="600" height="800"
              style="width:100%; border-radius:12px; margin-bottom:12px;">
-        <div class="card__title">STRUKTURA SYSTEMOWA<br><span style="color:var(--subtext);">Tom 1</span></div>
+        <div class="card__title">STRUKTURA SYSTEMOWA<br>
+          <span style="color:var(--subtext);">Tom 1</span>
+        </div>
         <div class="card__text">
           Fundament techniczny pracy strukturalnej. Definicje, modele i ramy analizy.
           <br><br><strong>Status:</strong> w przygotowaniu
         </div>
       </div>
 
+      <!-- TOM 2 -->
       <div class="card fade-in">
-        <img src="assets/img/books/tom2.png" alt="Price Action — Tom 2"
+        <img src="assets/img/books/tom2.png"
+             alt="Price Action — Tom 2"
+             loading="lazy"
+             width="600" height="800"
              style="width:100%; border-radius:12px; margin-bottom:12px;">
-        <div class="card__title">PRICE ACTION<br><span style="color:var(--subtext);">Tom 2</span></div>
+        <div class="card__title">PRICE ACTION<br>
+          <span style="color:var(--subtext);">Tom 2</span>
+        </div>
         <div class="card__text">
           Price Action bez narracji. Mechanika ruchu ceny i zachowania uczestników.
           <br><br><strong>Status:</strong> w przygotowaniu
         </div>
       </div>
 
+      <!-- TOM 3 -->
       <div class="card fade-in">
-        <img src="assets/img/books/tom3.png" alt="Struktura Decyzji — Tom 3"
+        <img src="assets/img/books/tom3.png"
+             alt="Struktura Decyzji — Tom 3"
+             loading="lazy"
+             width="600" height="800"
              style="width:100%; border-radius:12px; margin-bottom:12px;">
-        <div class="card__title">STRUKTURA DECYZJI<br><span style="color:var(--subtext);">Tom 3</span></div>
+        <div class="card__title">STRUKTURA DECYZJI<br>
+          <span style="color:var(--subtext);">Tom 3</span>
+        </div>
         <div class="card__text">
           Proces przechodzenia od obserwacji do działania. Struktura decyzji.
           <br><br><strong>Status:</strong> w przygotowaniu
