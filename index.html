@@ -1,390 +1,293 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Structure Academy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Structure Academy</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: system-ui, sans-serif;
-            color: #111;
-            background: #fff;
-            line-height: 1.55;
-        }
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, sans-serif;
+      color: #111;
+      background: #fff;
+      line-height: 1.55;
+    }
 
-        h1, h2, h3 {
-            font-weight: 600;
-            margin: 0 0 16px 0;
-        }
+    h1, h2, h3 {
+      font-weight: 600;
+      margin: 0 0 16px 0;
+    }
 
-        .section {
-            padding: 80px 24px;
-        }
+    .section {
+      padding: 80px 24px;
+    }
 
-        .section__inner {
-            max-width: 960px;
-            margin: 0 auto;
-        }
+    .section__inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-        .section__kicker {
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.08em;
-            color: #777;
-            margin-bottom: 12px;
-        }
+    .section__kicker {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      color: #777;
+      margin-bottom: 12px;
+    }
 
-        .section__body p {
-            margin-bottom: 18px;
-        }
+    .section__body p {
+      margin-bottom: 18px;
+    }
 
-        .section__list {
-            margin-top: 24px;
-            padding-left: 20px;
-        }
+    .section__list {
+      margin-top: 24px;
+      padding-left: 20px;
+    }
 
-        .section__list li {
-            margin-bottom: 8px;
-        }
+    .section__list li {
+      margin-bottom: 8px;
+    }
 
-        /* NAVIGATION */
-        nav {
-            position: sticky;
-            top: 0;
-            background: #fff;
-            border-bottom: 1px solid rgba(0,0,0,0.08);
-            padding: 14px 24px;
-            z-index: 100;
-        }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 14px 24px;
+      z-index: 100;
+    }
 
-        nav .nav-inner {
-            max-width: 960px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    nav .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #111;
-            margin-left: 22px;
-            font-size: 0.95rem;
-        }
+    nav .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-        /* HERO */
-        .hero {
-            padding: 120px 24px 100px;
-            background: #fafafa;
-        }
+    nav .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
 
-        .hero__content {
-            max-width: 960px;
-            margin: 0 auto;
-        }
+    nav a {
+      text-decoration: none;
+      color: #111;
+      font-size: 0.95rem;
+    }
 
-        .hero__label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
-            color: #555;
-            margin-bottom: 18px;
-        }
+    .hero {
+      padding: 120px 24px 100px;
+      background: #fafafa;
+    }
 
-        .hero__label-dot {
-            width: 8px;
-            height: 8px;
-            background: #111;
-            border-radius: 50%;
-        }
+    .hero__content {
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-        .hero__subtitle {
-            max-width: 720px;
-            margin-top: 18px;
-            margin-bottom: 28px;
-            color: #333;
-        }
+    .hero__label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 18px;
+    }
 
-        .hero__meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px 18px;
-            margin-top: 24px;
-        }
+    .hero__label-dot {
+      width: 8px;
+      height: 8px;
+      background: #111;
+      border-radius: 50%;
+    }
 
-        .hero__meta-item {
-            background: #eee;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-        }
+    .hero__subtitle {
+      max-width: 720px;
+      margin-top: 18px;
+      margin-bottom: 28px;
+      color: #333;
+    }
 
-        /* GRID */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 28px;
-            margin-top: 24px;
-        }
+    .hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      margin-top: 24px;
+    }
 
-        .card {
-            border: 1px solid rgba(0,0,0,0.1);
-            padding: 18px;
-            border-radius: 12px;
-            background: #fff;
-        }
+    .hero__meta-item {
+      background: #eee;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
 
-        .card__title {
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      margin-top: 24px;
+    }
 
-        .card__text {
-            font-size: 0.9rem;
-            color: #444;
-        }
+    .card {
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 18px;
+      border-radius: 12px;
+      background: #fff;
+    }
 
-        /* DIAGRAM */
-        .method-diagram {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            gap: 18px;
-        }
+    .card__title {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
 
-        .method-step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 120px;
-        }
+    .card__text {
+      font-size: 0.9rem;
+      color: #444;
+    }
 
-        .step-circle {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: #111;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 1rem;
-        }
+    .method-diagram {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      gap: 18px;
+    }
 
-        .step-label {
-            font-size: 0.9rem;
-            color: #333;
-        }
+    .method-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 120px;
+    }
 
-        .method-line {
-            flex: 1;
-            height: 2px;
-            background: rgba(0,0,0,0.15);
-        }
+    .step-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
 
-        @media (max-width: 700px) {
-            .method-diagram {
-                flex-direction: column;
-                gap: 22px;
-            }
+    .step-label {
+      font-size: 0.9rem;
+      color: #333;
+    }
 
-            .method-line {
-                width: 2px;
-                height: 32px;
-            }
-        }
+    .method-line {
+      flex: 1;
+      height: 2px;
+      background: rgba(0,0,0,0.15);
+    }
 
-        /* CONTACT BUTTON */
-        .kontakt-btn {
-            padding: 10px 18px;
-            background: #111;
-            color: #fff;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-    </style>
+    @media (max-width: 700px) {
+      .method-diagram {
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .method-line {
+        width: 2px;
+        height: 32px;
+      }
+
+      nav .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      nav .nav-links {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+    }
+
+    .kontakt-btn {
+      padding: 10px 18px;
+      background: #111;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
 
 <body>
 
 <nav>
-    <div class="nav-inner">
-        <div class="logo">FSA</div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">O FSA</a>
-            <a href="#method">Metodologia</a>
-            <a href="#produkty">Produkty</a>
-            <a href="#kontakt">Kontakt</a>
+  <div class="nav-inner">
+
+    <div class="nav-brand">
+      <img src="assets/img/logo-fsa.png" alt="FSA logo" style="height:40px; width:40px; border-radius:50%;">
+      <div style="display:flex; flex-direction:column;">
+        <div style="font-weight:600; font-size:1rem; letter-spacing:0.02em;">
+          FINANCIAL STRUCTURE ACADEMY
         </div>
+        <div style="font-size:0.75rem; color:#777;">
+          Strukturalne podejście do rynku finansowego
+        </div>
+      </div>
     </div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">O FSA</a>
+      <a href="#method">Metodologia</a>
+      <a href="#produkty">Produkty</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+
+  </div>
 </nav>
 
 <section id="home" class="hero">
-    <div class="hero__content">
+  <div class="hero__content">
 
-        <div class="hero__label">
-            <span class="hero__label-dot"></span>
-            <span>Instytucjonalne materiały edukacyjne</span>
-        </div>
-
-        <h1>Struktura rynku. Zero narracji. Zero emocji.</h1>
-
-        <p class="hero__subtitle">
-            Financial Structure Academy uczy analizy opartej na płynności, strukturze i zachowaniach
-            uczestników instytucjonalnych. FSA powstała, aby osoby wchodzące w świat rynków finansowych
-            mogły zdobyć realną wiedzę, popełniać mniej błędów i rozumieć mechanikę rynku.
-        </p>
-
-        <div class="hero__meta">
-            <div class="hero__meta-item">Strukturalna analiza rynku</div>
-            <div class="hero__meta-item">Modele płynności</div>
-            <div class="hero__meta-item">Edukacja oparta na doświadczeniu</div>
-            <div class="hero__meta-item">Minimalizacja błędów</div>
-            <div class="hero__meta-item">Dostępne materiały edukacyjne</div>
-        </div>
-
+    <div class="hero__label">
+      <span class="hero__label-dot"></span>
+      <span>Instytucjonalne materiały edukacyjne</span>
     </div>
+
+    <h1>Struktura rynku. Zero narracji. Zero emocji.</h1>
+
+    <p class="hero__subtitle">
+      Financial Structure Academy uczy analizy opartej na płynności, strukturze i zachowaniach
+      uczestników instytucjonalnych. FSA powstała, aby osoby wchodzące w świat rynków finansowych
+      mogły zdobyć realną wiedzę, popełniać mniej błędów i rozumieć mechanikę rynku.
+    </p>
+
+    <div class="hero__meta">
+      <div class="hero__meta-item">Strukturalna analiza rynku</div>
+      <div class="hero__meta-item">Modele płynności</div>
+      <div class="hero__meta-item">Edukacja oparta na doświadczeniu</div>
+      <div class="hero__meta-item">Minimalizacja błędów</div>
+      <div class="hero__meta-item">Dostępne materiały edukacyjne</div>
+    </div>
+
+  </div>
 </section>
 
-<!-- O FSA -->
-<section id="about" class="section">
-    <div class="section__inner">
-
-        <div class="section__kicker">O FSA</div>
-        <h2>Niezależna jednostka edukacyjna oparta na strukturze rynku.</h2>
-
-        <div class="section__body">
-
-            <p>
-                Financial Structure Academy powstała jako odpowiedź na brak spójnej, technicznej i strukturalnej
-                edukacji rynkowej. FSA koncentruje się na tym, co mierzalne i powtarzalne: strukturze rynku,
-                płynności oraz zachowaniach uczestników instytucjonalnych. To podejście eliminuje narracje,
-                emocjonalne interpretacje i przypadkowość.
-            </p>
-
-            <p>
-                Za FSA stoi międzynarodowa grupa traderów z doświadczeniem 5–15 lat, pracujących na różnych
-                rynkach i w różnych warunkach. To praktycy, którzy przeszli pełne cykle rynkowe, wypracowali
-                własne modele i przekładają je na uporządkowany system edukacyjny.
-            </p>
-
-            <p>
-                FSA traktuje edukację jak system: spójny, powtarzalny i oparty na jasno zdefiniowanych
-                strukturach. Każdy moduł — książka, kurs, rozdział — jest elementem większej całości,
-                zaprojektowanej tak, aby prowadzić użytkownika krok po kroku od fundamentów do zaawansowanych
-                modeli.
-            </p>
-
-            <p>
-                FSA działa niezależnie. Nie tworzymy narracji rynkowych, nie sprzedajemy sygnałów i nie
-                obiecujemy wyników. Naszym celem jest edukacja — czysta, strukturalna i wolna od konfliktu
-                interesów.
-            </p>
-
-            <ul class="section__list">
-                <li>międzynarodowy zespół praktyków z doświadczeniem 5–15 lat,</li>
-                <li>edukacja projektowana jak system, nie zbiór przypadkowych materiałów,</li>
-                <li>nacisk na strukturę rynku i płynność zamiast narracji,</li>
-                <li>pełna niezależność i brak konfliktu interesów,</li>
-                <li>materiały oparte na doświadczeniu, nie na marketingu,</li>
-                <li>misja: minimalizacja błędów początkujących i zwiększenie ich kompetencji.</li>
-            </ul>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- METODOLOGIA -->
-<section id="method" class="section">
-    <div class="section__inner">
-
-        <div class="section__kicker">Metodologia</div>
-        <h2>Struktura. Płynność. Uczestnicy.</h2>
-
-        <div class="section__body">
-
-            <p>
-                Metodologia FSA zakłada, że rynek jest systemem, a nie narracją. Każdy ruch ceny wynika z
-                płynności i zachowań uczestników instytucjonalnych — to one definiują mechanikę rynku.
-            </p>
-
-            <p>
-                FSA uczy analizy opartej na danych, nie na interpretacjach. Edukacja jest projektowana jak
-                system: spójne definicje, powtarzalne modele, jasne procesy.
-            </p>
-
-            <p>
-                Za metodologią stoi międzynarodowy zespół traderów z doświadczeniem 5–15 lat, pracujących na
-                różnych rynkach i w różnych warunkach.
-            </p>
-
-            <p>
-                FSA nie przewiduje przyszłości, nie tworzy narracji i nie obiecuje wyników. Uczy, jak analizować
-                rynek w sposób powtarzalny, uporządkowany i niezależny od emocji.
-            </p>
-
-            <!-- DIAGRAM METODOLOGII -->
-            <div class="method-diagram">
-                <div class="method-step">
-                    <div class="step-circle">1</div>
-                    <div class="step-label">Struktura rynku</div>
-                </div>
-
-                <div class="method-line"></div>
-
-                <div class="method-step">
-                    <div class="step-circle">2</div>
-                    <div class="step-label">Płynność</div>
-                </div>
-
-                <div class="method-line"></div>
-
-                <div class="method-step">
-                    <div class="step-circle">3</div>
-                    <div class="step-label">Uczestnicy instytucjonalni</div>
-                </div>
-
-                <div class="method-line"></div>
-
-                <div class="method-step">
-                    <div class="step-circle">4</div>
-                    <div class="step-label">Proces analityczny</div>
-                </div>
-
-                <div class="method-line"></div>
-
-                <div class="method-step">
-                    <div class="step-circle">5</div>
-                    <div class="step-label">Decyzja</div>
-                </div>
-            </div>
-
-            <ul class="section__list">
-                <li>struktura rynku,</li>
-                <li>płynność,</li>
-                <li>uczestnicy instytucjonalni,</li>
-                <li>systemowe ramy edukacyjne,</li>
-                <li>proces decyzyjny,</li>
-                <li>zero narracji.</li>
-            </ul>
-
-        </div>
-    </div>
-</section>
-
-<!-- PRODUKTY -->
+    <!-- PRODUKTY -->
 <section id="produkty" class="section">
     <div class="section__inner">
 
@@ -417,6 +320,7 @@
 
         <div class="grid">
 
+            <!-- WPROWADZENIE — teraz jako pierwsza -->
             <div class="card">
                 <img src="assets/img/books/wprowadzenie.png" alt="Książka Wprowadzająca"
                      style="width:100%; border-radius:12px; margin-bottom:12px;">
@@ -456,8 +360,6 @@
                     <br><br><strong>Status:</strong> w przygotowaniu
                 </div>
             </div>
-
-            
 
         </div>
 
@@ -508,7 +410,7 @@
                 informacje dotyczące materiałów, współpracy lub kwestii organizacyjnych — skontaktuj się z nami.
             </p>
 
-            <p style="margin-top:16px; font-size:1.05rem; ">
+            <p style="margin-top:16px; font-size:1.05rem;">
                 <strong>E‑mail:</strong><br>
                 <a href="mailto:office@financialstructure.academy"
                    style="color:#111; text-decoration:none;">
