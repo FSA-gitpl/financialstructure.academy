@@ -4,92 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Polityka prywatności — Financial Structure Academy</title>
-
-  <meta name="description" content="Polityka prywatności serwisu Financial Structure Academy. Informacje o danych, plikach cookies i zasadach korzystania.">
-
   <link rel="stylesheet" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
 </head>
 
-<body>
+<body class="legal-page">
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="nav-inner">
-      <div class="nav-brand">
-        <strong>FINANCIAL STRUCTURE ACADEMY</strong><br>
-        <span>Strukturalne podejście do rynku finansowego</span>
-      </div>
+<section class="section">
+  <div class="section__inner">
 
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/o-fsa.html">O FSA</a>
-        <a href="/metodologia.html">Metodologia</a>
-        <a href="/produkty.html">Produkty</a>
-        <button id="themeToggle">Tryb</button>
-      </div>
-    </div>
-  </nav>
+    <h1>Polityka prywatności</h1>
 
-  <!-- CONTENT -->
-  <section class="section">
-    <div class="section__inner">
-      <h1>Polityka prywatności</h1>
+    <p>Niniejsza polityka prywatności opisuje zasady przetwarzania danych w serwisie Financial Structure Academy („FSA”). Serwis ma charakter informacyjny i nie gromadzi danych osobowych poza przypadkami opisanymi poniżej.</p>
 
-      <p>Niniejsza polityka prywatności opisuje zasady przetwarzania podstawowych danych technicznych podczas korzystania z serwisu <strong>financialstructure.academy</strong>.</p>
+    <h2>1. Zakres przetwarzania danych</h2>
+    <p>FSA nie prowadzi rejestracji użytkowników i nie zbiera danych osobowych w sposób aktywny. Dane mogą być przetwarzane wyłącznie w przypadku kontaktu e‑mailowego ze strony użytkownika.</p>
 
-      <h2>1. Zakres danych</h2>
-      <p>Serwis nie gromadzi danych osobowych użytkowników, z wyjątkiem informacji technicznych przesyłanych automatycznie przez przeglądarkę (np. adres IP, typ urządzenia, pliki cookies niezbędne do działania strony).</p>
+    <h2>2. Kontakt e‑mail</h2>
+    <p>Wysyłając wiadomość na adres <a href="mailto:office@financialstructure.academy">office@financialstructure.academy</a>, użytkownik przekazuje dane dobrowolnie. Dane te są wykorzystywane wyłącznie do odpowiedzi na zapytanie.</p>
 
-      <h2>2. Pliki cookies</h2>
-      <p>Serwis może wykorzystywać pliki cookies w celu zapewnienia prawidłowego działania strony, w tym zapamiętywania preferencji użytkownika, takich jak wybrany tryb jasny/ciemny.</p>
+    <h2>3. Pliki cookies</h2>
+    <p>Serwis może wykorzystywać podstawowe pliki cookies niezbędne do prawidłowego działania strony. FSA nie prowadzi profilowania użytkowników.</p>
 
-      <h2>3. Cele przetwarzania</h2>
-      <p>Dane techniczne mogą być wykorzystywane wyłącznie do celów statystycznych, bezpieczeństwa oraz poprawy funkcjonowania serwisu.</p>
+    <h2>4. Udostępnianie danych</h2>
+    <p>Dane nie są udostępniane podmiotom trzecim, chyba że wymagają tego obowiązujące przepisy prawa.</p>
 
-      <h2>4. Udostępnianie danych</h2>
-      <p>Serwis nie udostępnia żadnych danych osobowych osobom trzecim. Dane techniczne mogą być przetwarzane przez dostawców usług hostingowych wyłącznie w zakresie niezbędnym do utrzymania działania strony.</p>
+    <h2>5. Prawa użytkownika</h2>
+    <p>Użytkownik ma prawo do uzyskania informacji o przetwarzaniu danych, ich poprawienia lub usunięcia poprzez kontakt e‑mail.</p>
 
-      <h2>5. Bezpieczeństwo</h2>
-      <p>Serwis stosuje standardowe środki bezpieczeństwa mające na celu ochronę przed nieautoryzowanym dostępem i nadużyciami.</p>
+    <h2>6. Kontakt</h2>
+    <p>W sprawach związanych z polityką prywatności prosimy o kontakt: <a href="mailto:office@financialstructure.academy">office@financialstructure.academy</a></p>
 
-      <h2>6. Zmiany polityki</h2>
-      <p>Serwis zastrzega sobie prawo do aktualizacji niniejszej polityki prywatności. Aktualna wersja dokumentu jest publikowana na tej stronie.</p>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="section" style="text-align:center; border-top:1px solid var(--border);">
-    <div>© Financial Structure Academy</div>
-    <div style="margin-top:8px;">
-      <a href="/regulamin.html">Regulamin</a> •
-      <a href="/polityka-prywatnosci.html">Polityka prywatności</a> •
-      <a href="/informacje-prawne.html">Informacje prawne</a>
-    </div>
-  </footer>
-
-  <!-- THEME SCRIPT -->
-  <script>
-    const toggle = document.getElementById("themeToggle");
-    const root = document.documentElement;
-
-    if (localStorage.getItem("theme") === "dark") {
-      root.setAttribute("data-theme", "dark");
-    }
-
-    toggle.addEventListener("click", () => {
-      const isDark = root.getAttribute("data-theme") === "dark";
-      if (isDark) {
-        root.removeAttribute("data-theme");
-        localStorage.setItem("theme", "light");
-      } else {
-        root.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-      }
-    });
-  </script>
+  </div>
+</section>
 
 </body>
 </html>
