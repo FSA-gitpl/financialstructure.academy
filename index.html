@@ -6,9 +6,6 @@
     <title>Financial Structure Academy (FSA)</title>
 
     <style>
-        /* =========================
-           DESIGN TOKENS (2026)
-        ========================== */
         :root {
             --bg-main: #f7f7f9;
             --bg-panel: #ffffff;
@@ -38,48 +35,24 @@
             --transition-fast: 0.18s ease-out;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            height: 100%;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: var(--font-sans);
-            background:
-                var(--bg-accent-soft),
-                var(--bg-main);
+            background: var(--bg-accent-soft), var(--bg-main);
             color: var(--text-main);
             line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
             padding: 32px 18px 48px;
         }
 
-        .page {
-            max-width: 980px;
-            margin: 0 auto;
-        }
+        .page { max-width: 980px; margin: 0 auto; }
 
-        /* =========================
-           ACCESSIBILITY BASICS
-        ========================== */
-        a {
-            color: inherit;
-        }
-
-        a:focus-visible,
-        button:focus-visible {
+        a { color: inherit; text-decoration: none; }
+        a:focus-visible, button:focus-visible {
             outline: 2px solid #111;
             outline-offset: 3px;
         }
 
-        /* =========================
-           TOP NAV
-        ========================== */
         header[role="banner"] {
             display: flex;
             justify-content: space-between;
@@ -88,22 +61,9 @@
             gap: 18px;
         }
 
-        .brand {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .brand__name {
-            font-size: 0.9rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-        }
-
-        .brand__tagline {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
+        .brand { display: flex; flex-direction: column; gap: 4px; }
+        .brand__name { font-size: 0.9rem; letter-spacing: 0.18em; text-transform: uppercase; }
+        .brand__tagline { font-size: 0.9rem; color: var(--text-muted); }
 
         nav[role="navigation"] {
             display: flex;
@@ -113,12 +73,9 @@
         }
 
         nav a {
-            text-decoration: none;
             padding: 6px 10px;
             border-radius: var(--radius-chip);
-            transition: background-color var(--transition-fast),
-                        opacity var(--transition-fast),
-                        transform var(--transition-fast);
+            transition: background-color var(--transition-fast), transform var(--transition-fast);
         }
 
         nav a:hover {
@@ -126,9 +83,6 @@
             transform: translateY(-1px);
         }
 
-        /* =========================
-           HERO / STORY START
-        ========================== */
         main[role="main"] {
             display: flex;
             flex-direction: column;
@@ -145,19 +99,7 @@
             animation: fadeInUp 0.6s ease-out both;
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.12), transparent 55%);
-            opacity: 0.7;
-            pointer-events: none;
-        }
-
-        .hero__content {
-            position: relative;
-            z-index: 1;
-        }
+        .hero__content { position: relative; z-index: 1; }
 
         .hero__label {
             display: inline-flex;
@@ -208,13 +150,6 @@
             background-color: rgba(255, 255, 255, 0.8);
         }
 
-        /* =========================
-           SECTIONS / NARRATIVE
-        ========================== */
-        section {
-            scroll-margin-top: 80px;
-        }
-
         .section {
             background: var(--bg-panel);
             border-radius: var(--radius-panel);
@@ -225,33 +160,7 @@
             animation: fadeInUp 0.6s ease-out both;
         }
 
-        .section + .section {
-            margin-top: 0;
-        }
-
-        .section::before {
-            content: "";
-            position: absolute;
-            left: -40%;
-            right: -40%;
-            top: 0;
-            height: 26px;
-            background: radial-gradient(circle at 50% 0, rgba(148, 163, 184, 0.18), transparent 60%);
-            opacity: 0.4;
-            pointer-events: none;
-        }
-
-        .section__inner {
-            position: relative;
-            z-index: 1;
-        }
-
-        h2 {
-            font-size: var(--fs-h2);
-            letter-spacing: -0.04em;
-            margin-bottom: 10px;
-        }
-
+        .section__inner { position: relative; z-index: 1; }
         .section__kicker {
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -260,25 +169,22 @@
             margin-bottom: 6px;
         }
 
+        h2 {
+            font-size: var(--fs-h2);
+            letter-spacing: -0.04em;
+            margin-bottom: 10px;
+        }
+
         .section__body {
             font-size: var(--fs-body);
             color: var(--text-main);
             max-width: 720px;
         }
 
-        .section__body p + p {
-            margin-top: 10px;
-        }
+        .section__body p + p { margin-top: 10px; }
 
-        .section__list {
-            margin-top: 10px;
-            padding-left: 20px;
-            color: var(--text-main);
-        }
-
-        .section__list li {
-            margin-bottom: 6px;
-        }
+        .section__list { margin-top: 10px; padding-left: 20px; }
+        .section__list li { margin-bottom: 6px; }
 
         .section__note {
             margin-top: 14px;
@@ -286,12 +192,9 @@
             color: var(--text-muted);
         }
 
-        /* =========================
-           GRID FOR PUBLICATIONS
-        ========================== */
         .grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
             gap: 26px;
             margin-top: 14px;
         }
@@ -314,9 +217,6 @@
             color: var(--text-muted);
         }
 
-        /* =========================
-           FOOTER
-        ========================== */
         footer[role="contentinfo"] {
             margin-top: var(--space-lg);
             font-size: 0.85rem;
@@ -326,57 +226,18 @@
             gap: 6px;
         }
 
-        .footer__row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+        .footer__row { display: flex; flex-wrap: wrap; gap: 12px; }
 
-        /* =========================
-           ANIMATIONS / MICRO-INTERACTIONS
-        ========================== */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================== */
         @media (max-width: 800px) {
-            body {
-                padding: 22px 14px 36px;
-            }
-
-            header[role="banner"] {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            h1 {
-                font-size: 2.4rem;
-            }
-
-            .grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-        }
-
-        @media (max-width: 520px) {
-            nav[role="navigation"] {
-                gap: 10px;
-            }
-
-            .hero,
-            .section {
-                padding: 22px 18px 24px;
-            }
+            body { padding: 22px 14px 36px; }
+            header[role="banner"] { flex-direction: column; align-items: flex-start; }
+            h1 { font-size: 2.4rem; }
+            .grid { grid-template-columns: minmax(0, 1fr); }
         }
     </style>
 </head>
@@ -384,180 +245,176 @@
 <body>
 <div class="page">
 
-    <header role="banner">
-        <div class="brand">
-            <div class="brand__name">Financial Structure Academy</div>
-            <div class="brand__tagline">Strukturalne podejście do rynku finansowego</div>
+<header role="banner">
+    <div class="brand">
+        <div class="brand__name">Financial Structure Academy</div>
+        <div class="brand__tagline">Strukturalne podejście do rynku finansowego</div>
+    </div>
+
+    <nav role="navigation">
+        <a href="#home">Home</a>
+        <a href="#about">O FSA</a>
+        <a href="#method">Metodologia</a>
+        <a href="#produkty">Produkty</a>
+    </nav>
+</header>
+
+<main role="main">
+
+<section id="home" class="hero">
+    <div class="hero__content">
+        <div class="hero__label">
+            <span class="hero__label-dot"></span>
+            <span>Instytucjonalne materiały edukacyjne</span>
+        </div>
+        <h1>Struktura rynku zamiast narracji rynkowej.</h1>
+        <p class="hero__subtitle">
+            Financial Structure Academy (FSA) koncentruje się na strukturze rynku, płynności oraz modelach
+            wykorzystywanych przez uczestników instytucjonalnych. Bez emocji, bez hałasu informacyjnego —
+            wyłącznie uporządkowana praca z danymi i zachowaniem rynku.
+        </p>
+        <div class="hero__meta">
+            <div class="hero__meta-item">Analiza strukturalna rynku</div>
+            <div class="hero__meta-item">Modele płynności</div>
+            <div class="hero__meta-item">Materiały edukacyjne dla zaawansowanych</div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <div class="section__inner">
+        <div class="section__kicker">O FSA</div>
+        <h2>Niezależna jednostka edukacyjna.</h2>
+        <div class="section__body">
+            <p>
+                Financial Structure Academy (FSA) to niezależna jednostka edukacyjna skoncentrowana na
+                strukturalnym podejściu do rynku. Zamiast prognoz i narracji, FSA skupia się na tym, jak
+                rynek jest zbudowany: gdzie znajduje się płynność, jak zachowują się uczestnicy
+                instytucjonalni oraz jakie modele są wykorzystywane w praktyce.
+            </p>
+            <p>
+                Materiały FSA są projektowane w sposób analityczny, przejrzysty i pozbawiony zbędnych
+                ozdobników. Celem jest stworzenie środowiska, w którym decyzje inwestycyjne opierają się
+                na strukturze, a nie na emocjach.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="method" class="section">
+    <div class="section__inner">
+        <div class="section__kicker">Metodologia</div>
+        <h2>Struktura, czytelność, dostępność.</h2>
+        <div class="section__body">
+            <p>
+                FSA traktuje projektowanie materiałów edukacyjnych jak pracę nad systemem: spójne pojęcia,
+                powtarzalne struktury, jasne definicje. Każdy element — od wykresu po opis — ma swoje miejsce
+                i funkcję.
+            </p>
+            <ul class="section__list">
+                <li>czytelna typografia i wysoki kontrast,</li>
+                <li>uporządkowana struktura treści,</li>
+                <li>minimalne, funkcjonalne mikrointerakcje,</li>
+                <li>szacunek do czasu i uwagi czytelnika.</li>
+            </ul>
+            <p class="section__note">
+                Dostępność i przejrzystość nie są dodatkiem — są podstawą.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="produkty" class="section">
+    <div class="section__inner">
+        <div class="section__kicker">Produkty FSA</div>
+        <h2>Strukturalne moduły wiedzy.</h2>
+
+        <div class="section__body">
+            <p>
+                Produkty FSA to seria książek i kursów projektowanych jako moduły wiedzy — uporządkowane,
+                techniczne i pozbawione narracyjnego szumu.
+            </p>
         </div>
 
-        <nav role="navigation" aria-label="Główna nawigacja">
-            <a href="#home">Home</a>
-            <a href="#about">O FSA</a>
-            <a href="#method">Podejście</a>
-            <a href="#publications">Publikacje</a>
-            <a href="#contact">Kontakt</a>
-            <a href="#legal">Prawne</a>
-        </nav>
-    </header>
+        <h3 style="margin-top:24px; margin-bottom:12px; font-size:1.2rem;">Książki FSA</h3>
 
-    <main role="main">
-        <!-- HERO / STORY START -->
-        <section id="home" class="hero" aria-labelledby="hero-title">
-            <div class="hero__content">
-                <div class="hero__label">
-                    <span class="hero__label-dot" aria-hidden="true"></span>
-                    <span>Instytucjonalne materiały edukacyjne</span>
-                </div>
-                <h1 id="hero-title">Struktura rynku zamiast narracji rynkowej.</h1>
-                <p class="hero__subtitle">
-                    Financial Structure Academy (FSA) koncentruje się na strukturze rynku, płynności oraz modelach
-                    wykorzystywanych przez uczestników instytucjonalnych. Bez emocji, bez hałasu informacyjnego —
-                    wyłącznie uporządkowana praca z danymi i zachowaniem rynku.
-                </p>
+        <div class="grid">
 
-                <div class="hero__meta" aria-label="Informacje dodatkowe">
-                    <div class="hero__meta-item">Analiza strukturalna rynku</div>
-                    <div class="hero__meta-item">Modele płynności</div>
-                    <div class="hero__meta-item">Materiały edukacyjne dla zaawansowanych</div>
+            <div class="card">
+                <img src="/assets/img/fsa/tom1.jpg" alt="Struktura Systemowa — Tom 1" style="width:100%; border-radius:12px; margin-bottom:12px;">
+                <div class="card__title">STRUKTURA SYSTEMOWA<br><span style="color:#555;">Fundament techniczny — Tom 1</span></div>
+                <div class="card__text">
+                    Fundament techniczny struktury systemowej. Porządkowanie pojęć i ram analizy.<br><br>
+                    <strong>Status:</strong> w przygotowaniu<br>
+                    <strong>Hasło:</strong> Z chaosu do porządku.
                 </div>
             </div>
-        </section>
 
-        <!-- ABOUT / WHO WE ARE -->
-        <section id="about" class="section" aria-labelledby="about-title">
-            <div class="section__inner">
-                <div class="section__kicker">O FSA</div>
-                <h2 id="about-title">Niezależna jednostka edukacyjna.</h2>
-                <div class="section__body">
-                    <p>
-                        Financial Structure Academy (FSA) to niezależna jednostka edukacyjna skoncentrowana na
-                        strukturalnym podejściu do rynku. Zamiast prognoz i narracji, FSA skupia się na tym, jak
-                        rynek jest zbudowany: gdzie znajduje się płynność, jak zachowują się uczestnicy
-                        instytucjonalni oraz jakie modele są wykorzystywane w praktyce.
-                    </p>
-                    <p>
-                        Materiały FSA są projektowane w sposób analityczny, przejrzysty i pozbawiony zbędnych
-                        ozdobników. Celem jest stworzenie środowiska, w którym decyzje inwestycyjne opierają się
-                        na strukturze, a nie na emocjach.
-                    </p>
+            <div class="card">
+                <img src="/assets/img/fsa/tom2.jpg" alt="Price Action — Tom 2" style="width:100%; border-radius:12px; margin-bottom:12px;">
+                <div class="card__title">PRICE ACTION<br><span style="color:#555;">Metodologia FSA — Tom 2</span></div>
+                <div class="card__text">
+                    Strukturalne podejście do ruchu ceny i zachowań uczestników rynku.<br><br>
+                    <strong>Status:</strong> w przygotowaniu<br>
+                    <strong>Hasło:</strong> Ruch to język rynku.
                 </div>
             </div>
-        </section>
 
-        <!-- METHOD / APPROACH -->
-        <section id="method" class="section" aria-labelledby="method-title">
-            <div class="section__inner">
-                <div class="section__kicker">Podejście</div>
-                <h2 id="method-title">Struktura, czytelność, dostępność.</h2>
-                <div class="section__body">
-                    <p>
-                        FSA traktuje projektowanie materiałów edukacyjnych jak pracę nad systemem: spójne pojęcia,
-                        powtarzalne struktury, jasne definicje. Każdy element — od wykresu po opis — ma swoje miejsce
-                        i funkcję.
-                    </p>
-                    <ul class="section__list">
-                        <li>czytelna typografia i wysoki kontrast dla komfortu odbiorcy,</li>
-                        <li>uporządkowana struktura treści zamiast przeładowania informacjami,</li>
-                        <li>minimalne, funkcjonalne użycie animacji i mikrointerakcji,</li>
-                        <li>szacunek do czasu i uwagi czytelnika.</li>
-                    </ul>
-                    <p class="section__note">
-                        Dostępność i przejrzystość nie są dodatkiem — są podstawą. Materiały FSA są projektowane tak,
-                        aby były zrozumiałe i użyteczne dla odbiorców o różnym poziomie doświadczenia.
-                    </p>
+            <div class="card">
+                <img src="/assets/img/fsa/tom3.jpg" alt="Struktura Decyzji — Tom 3" style="width:100%; border-radius:12px; margin-bottom:12px;">
+                <div class="card__title">STRUKTURA DECYZJI<br><span style="color:#555;">Od analizy do działania — Tom 3</span></div>
+                <div class="card__text">
+                    Strukturalny proces przechodzenia od analizy do działania.<br><br>
+                    <strong>Status:</strong> w przygotowaniu<br>
+                    <strong>Hasło:</strong> Stabilność i dyscyplina.
                 </div>
             </div>
-        </section>
 
-        <!-- PUBLICATIONS -->
-        <section id="publications" class="section" aria-labelledby="publications-title">
-            <div class="section__inner">
-                <div class="section__kicker">Publikacje</div>
-                <h2 id="publications-title">Strukturalne materiały edukacyjne.</h2>
-                <div class="section__body">
-                    <p>
-                        Publikacje FSA obejmują materiały poświęcone strukturze rynku, płynności oraz praktycznym
-                        modelom wykorzystywanym przez uczestników instytucjonalnych. Każda publikacja jest
-                        zaprojektowana jako spójny moduł wiedzy, który można włączyć do własnego procesu pracy.
-                    </p>
-
-                    <div class="grid" aria-label="Przykładowe obszary publikacji">
-                        <div class="card">
-                            <div class="card__title">Struktura rynku</div>
-                            <div class="card__text">
-                                Analiza warstw rynku, rozmieszczenia płynności oraz zachowań uczestników w różnych
-                                warunkach rynkowych.
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__title">Modele płynności</div>
-                            <div class="card__text">
-                                Przykłady modeli wykorzystywanych przez uczestników instytucjonalnych oraz ich
-                                praktyczne implikacje.
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="section__note">
-                        Lista książek i materiałów zostanie opublikowana w osobnym katalogu. Aktualizacje będą
-                        komunikowane poprzez oficjalne kanały FSA.
-                    </p>
+            <div class="card">
+                <img src="/assets/img/fsa/wprowadzenie.jpg" alt="Książka Wprowadzająca" style="width:100%; border-radius:12px; margin-bottom:12px;">
+                <div class="card__title">KSIĄŻKA WPROWADZAJĄCA<br><span style="color:#555;">Podstawa mentalna</span></div>
+                <div class="card__text">
+                    Mentalna podstawa pracy strukturalnej. Przygotowanie do analizy rynku.<br><br>
+                    <strong>Status:</strong> w przygotowaniu<br>
+                    <strong>Hasło:</strong> Obudź się. Zacznij analizować.
                 </div>
             </div>
-        </section>
 
-        <!-- CONTACT -->
-        <section id="contact" class="section" aria-labelledby="contact-title">
-            <div class="section__inner">
-                <div class="section__kicker">Kontakt</div>
-                <h2 id="contact-title">Kanał komunikacji z FSA.</h2>
-                <div class="section__body">
-                    <p>
-                        W sprawie materiałów edukacyjnych, aktualizacji lub kwestii technicznych związanych z
-                        publikacjami FSA prosimy o kontakt poprzez dedykowany adres e‑mail:
-                    </p>
-                    <p>
-                        <strong>office@financialstructure.academy</strong>
-                    </p>
-                    <p class="section__note">
-                        Odpowiedzi są udzielane wyłącznie na zapytania merytoryczne związane z zakresem działalności
-                        FSA.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- LEGAL -->
-        <section id="legal" class="section" aria-labelledby="legal-title">
-            <div class="section__inner">
-                <div class="section__kicker">Informacje prawne</div>
-                <h2 id="legal-title">Prywatność i warunki korzystania.</h2>
-                <div class="section__body">
-                    <p>
-                        Financial Structure Academy (FSA) przetwarza dane wyłącznie w zakresie niezbędnym do obsługi
-                        zapytań oraz dostarczania materiałów edukacyjnych. Dane nie są udostępniane podmiotom
-                        zewnętrznym, z wyjątkiem przypadków wymaganych przez prawo.
-                    </p>
-                    <p>
-                        Materiały publikowane przez FSA są przeznaczone wyłącznie do użytku osobistego odbiorcy.
-                        Kopiowanie, udostępnianie lub rozpowszechnianie treści bez uprzedniej zgody FSA jest
-                        zabronione.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer role="contentinfo">
-        <div class="footer__row">
-            <span>© Financial Structure Academy (FSA)</span>
-            <span>Strukturalne podejście do rynku finansowego</span>
         </div>
-        <div class="footer__row">
-            <span>financialstructure.academy</span>
-        </div>
-    </footer>
 
-</div>
-</body>
-</html>
+        <h3 style="margin-top:40px; margin-bottom:12px; font-size:1.2rem;">Kursy FSA</h3>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="card__title">Kurs: Struktura rynku od podstaw<br><span style="color:#555;">i niestandardowe sytuacje</span></div>
+                <div class="card__text">
+                    Fundament analizy strukturalnej oraz praca z nietypowymi scenariuszami rynkowymi.<br><br>
+                    <strong>Status:</strong> coming soon
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__title">Kurs: Tworzenie własnego systemu handlowego<br><span style="color:#555;">na podstawie doświadczenia</span></div>
+                <div class="card__text">
+                    Budowa systemu handlowego opartego na strukturze, procesie i obserwacji rynku.<br><br>
+                    <strong>Status:</strong> coming soon
+                </div>
+            </div>
+
+        </div>
+
+        <p class="section__note" style="margin-top:28px;">
+            Linki do zakupu produktów pojawią się po publikacji. Produkty FSA będą dostępne na wybranych zewnętrznych platformach sprzedażowych.
+        </p>
+
+    </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+    <div class="footer__row">
+        <a href="#contact">Kontakt</a>
+        <a href="#legal">Prywatność</a>
+        <a href="#legal
