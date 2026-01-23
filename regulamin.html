@@ -1,227 +1,92 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Regulamin — Financial Structure Academy</title>
 
-  <link rel="canonical" href="https://twojadomena.com/regulamin.html">
-  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Regulamin korzystania z serwisu Financial Structure Academy. Zasady użytkowania, odpowiedzialność i informacje ogólne.">
 
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
-
-  <meta name="description" content="Regulamin korzystania z serwisu Financial Structure Academy. Zasady, odpowiedzialność, ograniczenia i prawa użytkownika.">
-  <meta name="author" content="Financial Structure Academy">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap">
-
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --subtext: #333333;
-      --border: rgba(0,0,0,0.1);
-      --nav-bg: #ffffff;
-    }
-    [data-theme="dark"] {
-      --bg: #0A0F14;
-      --text: #f2f2f2;
-      --subtext: #cccccc;
-      --border: rgba(255,255,255,0.15);
-      --nav-bg: #0A0F14;
-    }
-    body {
-      margin:0;
-      font-family:'Inter',system-ui,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-      transition:background .3s ease,color .3s ease;
-    }
-    h1,h2,h3 {
-      font-family:'IBM Plex Serif',serif;
-      margin:0 0 16px 0;
-    }
-    a { color:var(--text); text-decoration:none; }
-    a:hover { opacity:.8; }
-    nav {
-      position:sticky; top:0;
-      background:var(--nav-bg);
-      border-bottom:1px solid var(--border);
-      padding:14px 24px;
-      z-index:10;
-    }
-    .nav-inner {
-      max-width:960px; margin:0 auto;
-      display:flex; justify-content:space-between; align-items:center;
-    }
-    .nav-brand { font-weight:600; font-size:0.95rem; }
-    .nav-links { display:flex; gap:18px; font-size:0.9rem; }
-    #themeToggle {
-      background:none; border:1px solid var(--border);
-      padding:6px 12px; border-radius:6px;
-      cursor:pointer; font-size:0.85rem; color:var(--text);
-    }
-    .page {
-      max-width:960px;
-      margin:40px auto 60px;
-      padding:0 24px;
-    }
-    .page-kicker {
-      text-transform:uppercase;
-      font-size:0.8rem;
-      letter-spacing:0.08em;
-      color:var(--subtext);
-      margin-bottom:8px;
-    }
-    .page-section { margin-top:32px; }
-    .page-section h2 { font-size:1.2rem; }
-    .page-section p { margin-bottom:12px; color:var(--subtext); }
-    .page-section ul { padding-left:18px; color:var(--subtext); }
-    footer {
-      background:#0A1A2F;
-      color:#fff;
-      padding:28px 24px;
-      margin-top:40px;
-    }
-    footer .inner {
-      max-width:960px; margin:0 auto;
-      font-size:0.85rem; opacity:0.8;
-    }
-  </style>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
 </head>
+
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <div class="nav-brand">
-      FINANCIAL STRUCTURE ACADEMY
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <strong>FINANCIAL STRUCTURE ACADEMY</strong><br>
+        <span>Strukturalne podejście do rynku finansowego</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/o-fsa.html">O FSA</a>
+        <a href="/metodologia.html">Metodologia</a>
+        <a href="/produkty.html">Produkty</a>
+        <button id="themeToggle">Tryb</button>
+      </div>
     </div>
-    <div class="nav-links">
-      <a href="index.html">Strona główna</a>
-      <a href="regulamin.html">Regulamin</a>
-      <a href="polityka-prywatnosci.html">Polityka prywatności</a>
-      <a href="informacje-prawne.html">Informacje prawne</a>
-      <button id="themeToggle">🌙 Dark</button>
+  </nav>
+
+  <!-- CONTENT -->
+  <section class="section">
+    <div class="section__inner">
+      <h1>Regulamin</h1>
+
+      <p>Niniejszy regulamin określa zasady korzystania z serwisu Financial Structure Academy dostępnego pod adresem <strong>financialstructure.academy</strong>.</p>
+
+      <h2>1. Informacje ogólne</h2>
+      <p>Serwis ma charakter edukacyjny i prezentuje materiały dotyczące analizy strukturalnej rynku finansowego. Treści publikowane w serwisie mają charakter informacyjny i nie stanowią rekomendacji inwestycyjnych.</p>
+
+      <h2>2. Korzystanie z serwisu</h2>
+      <p>Użytkownik zobowiązuje się korzystać z serwisu w sposób zgodny z prawem oraz zasadami współżycia społecznego. Zabronione jest podejmowanie działań mogących zakłócić funkcjonowanie serwisu.</p>
+
+      <h2>3. Odpowiedzialność</h2>
+      <p>Autorzy serwisu nie ponoszą odpowiedzialności za decyzje inwestycyjne podejmowane na podstawie prezentowanych treści. Użytkownik korzysta z materiałów na własną odpowiedzialność.</p>
+
+      <h2>4. Prawa autorskie</h2>
+      <p>Wszelkie treści publikowane w serwisie są chronione prawem autorskim. Kopiowanie, rozpowszechnianie lub wykorzystywanie materiałów wymaga zgody właściciela serwisu.</p>
+
+      <h2>5. Zmiany regulaminu</h2>
+      <p>Serwis zastrzega sobie prawo do wprowadzania zmian w regulaminie. Aktualna wersja dokumentu jest publikowana na tej stronie.</p>
+
     </div>
-  </div>
-</nav>
+  </section>
 
-<main class="page" data-theme="light">
-  <div class="page-kicker">Dokument</div>
-  <h1>Regulamin korzystania z serwisu Financial Structure Academy</h1>
+  <!-- FOOTER -->
+  <footer class="section" style="text-align:center; border-top:1px solid var(--border);">
+    <div>© 2024 Financial Structure Academy</div>
+    <div style="margin-top:8px;">
+      <a href="/regulamin.html">Regulamin</a> •
+      <a href="/polityka-prywatnosci.html">Polityka prywatności</a> •
+      <a href="/informacje-prawne.html">Informacje prawne</a>
+    </div>
+  </footer>
 
-  <p>
-    Niniejszy regulamin określa zasady korzystania z serwisu internetowego Financial Structure Academy
-    („Serwis”). Korzystając z Serwisu, użytkownik akceptuje postanowienia niniejszego regulaminu.
-  </p>
+  <!-- THEME SCRIPT -->
+  <script>
+    const toggle = document.getElementById("themeToggle");
+    const root = document.documentElement;
 
-  <div class="page-section">
-    <h2>1. Postanowienia ogólne</h2>
-    <p>
-      1.1. Serwis ma charakter edukacyjny i informacyjny. Materiały publikowane w Serwisie nie stanowią
-      rekomendacji inwestycyjnych, porady inwestycyjnej ani doradztwa finansowego.
-    </p>
-    <p>
-      1.2. Korzystanie z Serwisu jest dobrowolne. Użytkownik ponosi pełną odpowiedzialność za decyzje
-      podejmowane na podstawie informacji uzyskanych w Serwisie.
-    </p>
-    <p>
-      1.3. Operator Serwisu zastrzega sobie prawo do wprowadzania zmian w treści Serwisu, w tym do
-      aktualizacji, modyfikacji lub usunięcia materiałów.
-    </p>
-  </div>
+    if (localStorage.getItem("theme") === "dark") {
+      root.setAttribute("data-theme", "dark");
+    }
 
-  <div class="page-section">
-    <h2>2. Zakres i charakter treści</h2>
-    <p>
-      2.1. Materiały publikowane w Serwisie mają charakter edukacyjny i służą wyłącznie celom
-      szkoleniowym oraz informacyjnym.
-    </p>
-    <p>
-      2.2. Informacje dotyczące rynków finansowych, instrumentów, strategii lub metod analizy mają
-      charakter ogólny i nie uwzględniają indywidualnej sytuacji użytkownika.
-    </p>
-    <p>
-      2.3. Użytkownik powinien każdorazowo samodzielnie ocenić ryzyko związane z podejmowanymi decyzjami
-      finansowymi lub inwestycyjnymi.
-    </p>
-  </div>
-
-  <div class="page-section">
-    <h2>3. Odpowiedzialność</h2>
-    <p>
-      3.1. Operator Serwisu nie ponosi odpowiedzialności za decyzje inwestycyjne, finansowe lub inne
-      działania podjęte przez użytkownika na podstawie treści dostępnych w Serwisie.
-    </p>
-    <p>
-      3.2. Operator Serwisu nie gwarantuje osiągnięcia jakichkolwiek wyników finansowych ani
-      inwestycyjnych w związku z wykorzystaniem materiałów edukacyjnych.
-    </p>
-    <p>
-      3.3. Użytkownik korzysta z Serwisu na własne ryzyko i odpowiedzialność.
-    </p>
-  </div>
-
-  <div class="page-section">
-    <h2>4. Prawa autorskie</h2>
-    <p>
-      4.1. Wszystkie materiały tekstowe, graficzne oraz inne treści dostępne w Serwisie podlegają
-      ochronie prawnej i są chronione przepisami prawa autorskiego.
-    </p>
-    <p>
-      4.2. Zabronione jest kopiowanie, rozpowszechnianie, modyfikowanie lub wykorzystywanie materiałów
-      w sposób wykraczający poza dozwolony użytek osobisty, bez uprzedniej zgody Operatora Serwisu.
-    </p>
-  </div>
-
-  <div class="page-section">
-    <h2>5. Zmiany regulaminu</h2>
-    <p>
-      5.1. Operator Serwisu zastrzega sobie prawo do zmiany niniejszego regulaminu w każdym czasie.
-    </p>
-    <p>
-      5.2. Zmiany regulaminu wchodzą w życie z chwilą opublikowania zaktualizowanej wersji na stronie
-      Serwisu.
-    </p>
-  </div>
-
-  <div class="page-section">
-    <h2>6. Kontakt</h2>
-    <p>
-      W sprawach związanych z funkcjonowaniem Serwisu lub niniejszym regulaminem można kontaktować się
-      za pośrednictwem adresu e‑mail:
-      <a href="mailto:office@financialstructure.academy">office@financialstructure.academy</a>.
-    </p>
-  </div>
-</main>
-
-<footer>
-  <div class="inner">
-    © Financial Structure Academy — dokument informacyjny. Treść ma charakter edukacyjny i nie stanowi
-    rekomendacji inwestycyjnej.
-  </div>
-</footer>
-
-<script>
-  const root = document.documentElement;
-  const btn = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('theme');
-  if (saved) {
-    root.setAttribute('data-theme', saved);
-    btn.textContent = saved === 'dark' ? '☀️ Light' : '🌙 Dark';
-  }
-  btn.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme') || 'light';
-    const next = current === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    btn.textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
-  });
-</script>
+    toggle.addEventListener("click", () => {
+      const isDark = root.getAttribute("data-theme") === "dark";
+      if (isDark) {
+        root.removeAttribute("data-theme");
+        localStorage.setItem("theme", "light");
+      } else {
+        root.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  </script>
 
 </body>
 </html>
