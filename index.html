@@ -5,19 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Financial Structure Academy</title>
 
+  <!-- INSTYTUCJONALNE FONTY -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: system-ui, sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       color: #111;
       background: #fff;
       line-height: 1.55;
     }
 
     h1, h2, h3 {
+      font-family: 'IBM Plex Serif', serif;
       font-weight: 600;
       margin: 0 0 16px 0;
+    }
+
+    /* FADE-IN ANIMATION */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .section {
@@ -237,8 +252,8 @@
 <nav>
   <div class="nav-inner">
 
-    <div class="nav-brand">
-      <img src="assets/img/books/logo.png" alt="FSA logo" style="height:40px; width:40px; border-radius:50%;">
+    <div class="nav-brand fade-in">
+      <img src="assets/img/logo-fsa.svg" alt="FSA logo" style="height:40px; width:40px; border-radius:50%;">
       <div style="display:flex; flex-direction:column;">
         <div style="font-weight:600; font-size:1rem; letter-spacing:0.02em;">
           FINANCIAL STRUCTURE ACADEMY
@@ -263,12 +278,12 @@
 <section id="home" class="hero">
   <div class="hero__content">
 
-    <div class="hero__label">
+    <div class="hero__label fade-in">
       <span class="hero__label-dot"></span>
       <span>Instytucjonalne materiały edukacyjne</span>
     </div>
 
-    <h1>Struktura rynku. Zero narracji. Zero emocji.</h1>
+    <h1 class="fade-in">Struktura rynku. Zero narracji. Zero emocji.</h1>
 
     <p class="hero__subtitle">
       Financial Structure Academy uczy analizy opartej na płynności, strukturze i zachowaniach
@@ -287,7 +302,98 @@
   </div>
 </section>
 
-    <!-- PRODUKTY -->
+<!-- O FSA -->
+<section id="about" class="section">
+  <div class="section__inner">
+
+    <div class="section__kicker">O FSA</div>
+    <h2>Niezależna jednostka edukacyjna oparta na strukturze rynku.</h2>
+
+    <div class="section__body">
+      <p>
+        Financial Structure Academy powstała jako odpowiedź na brak spójnej, technicznej i strukturalnej
+        edukacji rynkowej. FSA koncentruje się na tym, co mierzalne i powtarzalne: strukturze rynku,
+        płynności oraz zachowaniach uczestników instytucjonalnych.
+      </p>
+
+      <p>
+        Za FSA stoi międzynarodowa grupa traderów z doświadczeniem 5–15 lat, pracujących na różnych
+        rynkach i w różnych warunkach. To praktycy, którzy przeszli pełne cykle rynkowe i wypracowali
+        własne modele.
+      </p>
+
+      <ul class="section__list">
+        <li>międzynarodowy zespół praktyków,</li>
+        <li>edukacja projektowana jak system,</li>
+        <li>nacisk na strukturę i płynność,</li>
+        <li>pełna niezależność,</li>
+        <li>zero narracji.</li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<!-- METODOLOGIA -->
+<section id="method" class="section">
+  <div class="section__inner">
+
+    <div class="section__kicker">Metodologia</div>
+    <h2>Struktura. Płynność. Uczestnicy.</h2>
+
+    <div class="section__body">
+
+      <p>
+        Metodologia FSA zakłada, że rynek jest systemem, a nie narracją. Każdy ruch ceny wynika z
+        płynności i zachowań uczestników instytucjonalnych.
+      </p>
+
+      <p>
+        FSA uczy analizy opartej na danych, nie interpretacjach. Edukacja jest projektowana jak system:
+        spójne definicje, powtarzalne modele, jasne procesy.
+      </p>
+
+      <!-- DIAGRAM -->
+      <div class="method-diagram">
+        <div class="method-step">
+          <div class="step-circle">1</div>
+          <div class="step-label">Struktura rynku</div>
+        </div>
+
+        <div class="method-line"></div>
+
+        <div class="method-step">
+          <div class="step-circle">2</div>
+          <div class="step-label">Płynność</div>
+        </div>
+
+        <div class="method-line"></div>
+
+        <div class="method-step">
+          <div class="step-circle">3</div>
+          <div class="step-label">Uczestnicy</div>
+        </div>
+
+        <div class="method-line"></div>
+
+        <div class="method-step">
+          <div class="step-circle">4</div>
+          <div class="step-label">Proces</div>
+        </div>
+
+        <div class="method-line"></div>
+
+        <div class="method-step">
+          <div class="step-circle">5</div>
+          <div class="step-label">Decyzja</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- PRODUKTY -->
 <section id="produkty" class="section">
     <div class="section__inner">
 
@@ -321,7 +427,7 @@
         <div class="grid">
 
             <!-- WPROWADZENIE — teraz jako pierwsza -->
-            <div class="card">
+            <div class="card fade-in">
                 <img src="assets/img/books/wprowadzenie.png" alt="Książka Wprowadzająca"
                      style="width:100%; border-radius:12px; margin-bottom:12px;">
                 <div class="card__title">KSIĄŻKA WPROWADZAJĄCA<br><span style="color:#555;">Podstawa mentalna</span></div>
@@ -331,7 +437,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card fade-in">
                 <img src="assets/img/books/tom.png" alt="Struktura Systemowa — Tom 1"
                      style="width:100%; border-radius:12px; margin-bottom:12px;">
                 <div class="card__title">STRUKTURA SYSTEMOWA<br><span style="color:#555;">Tom 1</span></div>
@@ -341,7 +447,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card fade-in">
                 <img src="assets/img/books/tom2.png" alt="Price Action — Tom 2"
                      style="width:100%; border-radius:12px; margin-bottom:12px;">
                 <div class="card__title">PRICE ACTION<br><span style="color:#555;">Tom 2</span></div>
@@ -351,7 +457,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card fade-in">
                 <img src="assets/img/books/tom3.png" alt="Struktura Decyzji — Tom 3"
                      style="width:100%; border-radius:12px; margin-bottom:12px;">
                 <div class="card__title">STRUKTURA DECYZJI<br><span style="color:#555;">Tom 3</span></div>
@@ -370,7 +476,7 @@
 
         <div class="grid">
 
-            <div class="card">
+            <div class="card fade-in">
                 <div class="card__title">Kurs: Struktura rynku od podstaw</div>
                 <div class="card__text">
                     Fundament analizy strukturalnej oraz praca z nietypowymi scenariuszami rynkowymi.
@@ -378,7 +484,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card fade-in">
                 <div class="card__title">Kurs: Tworzenie własnego systemu handlowego</div>
                 <div class="card__text">
                     Budowa systemu handlowego opartego na strukturze, procesie i obserwacji rynku.
