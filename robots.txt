@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://twojadomena.com/sitemap.xml
+# Запрет на служебные файлы (если появятся)
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /drafts/
+
+# Карта сайта
+Sitemap: https://financialstructure.academy/sitemap.xml
