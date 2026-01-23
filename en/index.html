@@ -5,43 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Financial Structure Academy</title>
 
-  <link rel="canonical" href="https://financialstructure.academy/en/">
-  <meta name="robots" content="index, follow">
-
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
 
-  <meta name="description" content="Financial Structure Academy — institutional market education based on structure, liquidity, and process. Zero narratives. Zero emotions.">
-  <meta name="keywords" content="market structure, liquidity, institutional trading, education, FSA, Financial Structure Academy">
-  <meta name="author" content="Financial Structure Academy">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://financialstructure.academy/en/">
 
-  <!-- Multilingual SEO -->
-  <link rel="alternate" hreflang="pl" href="https://financialstructure.academy/">
-  <link rel="alternate" hreflang="en" href="https://financialstructure.academy/en/">
-  <link rel="alternate" hreflang="de" href="https://financialstructure.academy/de/">
+  <!-- Meta -->
+  <meta name="description" content="Financial Structure Academy — institutional market education based on structure, liquidity, and participant behavior.">
+  <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Financial Structure Academy">
-  <meta property="og:description" content="Institutional approach to financial markets. Education based on data, liquidity, and participant behavior.">
-  <meta property="og:image" content="/assets/img/og-image.png">
+  <meta property="og:description" content="Institutional approach to financial markets. Education based on structure, liquidity, and participant behavior.">
+  <meta property="og:image" content="https://financialstructure.academy/assets/img/og-image.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://financialstructure.academy/en/">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Financial Structure Academy">
   <meta name="twitter:description" content="Institutional educational materials based on market structure.">
-  <meta name="twitter:image" content="/assets/img/og-image.png">
+  <meta name="twitter:image" content="https://financialstructure.academy/assets/img/og-image.png">
+
+  <!-- Multilingual -->
+  <link rel="alternate" hreflang="pl" href="https://financialstructure.academy/">
+  <link rel="alternate" hreflang="en" href="https://financialstructure.academy/en/">
+  <link rel="alternate" hreflang="de" href="https://financialstructure.academy/de/">
+  <link rel="alternate" hreflang="x-default" href="https://financialstructure.academy/">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap">
 
-  <!-- External CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
   <div class="nav-inner">
     <div class="nav-brand" style="display:flex;align-items:center;gap:12px;">
@@ -76,6 +81,7 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <section id="home" class="hero">
   <div class="hero__content">
     <div class="hero__label">
@@ -99,6 +105,7 @@
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="section">
   <div class="section__inner">
     <div class="section__kicker">About FSA</div>
@@ -115,6 +122,7 @@
   </div>
 </section>
 
+<!-- METHOD -->
 <section id="method" class="section">
   <div class="section__inner">
     <div class="section__kicker">Methodology</div>
@@ -162,6 +170,7 @@
   </div>
 </section>
 
+<!-- PRODUCTS -->
 <section id="products" class="section">
   <div class="section__inner">
 
@@ -185,6 +194,7 @@
       </p>
     </div>
 
+    <!-- BOOKS -->
     <h3 style="margin-top:32px; margin-bottom:12px; font-size:1.2rem;">
       FSA Books
     </h3>
@@ -253,6 +263,7 @@
 
     </div>
 
+    <!-- COURSES -->
     <h3 style="margin-top:40px; margin-bottom:12px; font-size:1.2rem;">
       FSA Courses
     </h3>
@@ -284,6 +295,7 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
   <div class="section__inner">
 
@@ -304,7 +316,6 @@
         </a>
       </p>
 
-      <!-- Improved Gmail Button -->
       <a href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=office@financialstructure.academy"
          target="_blank"
          rel="noopener noreferrer"
@@ -325,6 +336,7 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer style="
   background:#0A1A2F;
   color:#fff;
@@ -349,9 +361,9 @@
     </div>
 
     <div style="display:flex; gap:24px; flex-wrap:wrap; font-size:0.9rem;">
-      <a href="/regulamin.html" style="color:#fff; opacity:0.8; text-decoration:none;">Terms</a>
-      <a href="/polityka-prywatnosci.html" style="color:#fff; opacity:0.8; text-decoration:none;">Privacy Policy</a>
-      <a href="/informacje-prawne.html" style="color:#fff; opacity:0.8; text-decoration:none;">Legal Information</a>
+      <a href="/en/terms.html" style="color:#fff; opacity:0.8; text-decoration:none;">Terms</a>
+      <a href="/en/privacy.html" style="color:#fff; opacity:0.8; text-decoration:none;">Privacy Policy</a>
+      <a href="/en/legal.html" style="color:#fff; opacity:0.8; text-decoration:none;">Legal Information</a>
     </div>
 
     <div style="font-size:0.8rem; opacity:0.5; margin-top:12px;">
@@ -361,25 +373,28 @@
   </div>
 </footer>
 
+<!-- DARK MODE SCRIPT -->
 <script>
   const toggleBtn = document.getElementById('themeToggle');
   const root = document.documentElement;
 
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    root.setAttribute('data-theme', savedTheme);
-    toggleBtn.textContent = savedTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+  if (toggleBtn) {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      root.setAttribute('data-theme', savedTheme);
+      toggleBtn.textContent = savedTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+
+      toggleBtn.textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
+    });
   }
-
-  toggleBtn.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-
-    toggleBtn.textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
-  });
 </script>
 
 </body>
