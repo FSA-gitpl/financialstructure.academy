@@ -5,160 +5,557 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Structure Academy (FSA)</title>
 
-    <!-- Modern system font stack -->
     <style>
+        /* =========================
+           DESIGN TOKENS (2026)
+        ========================== */
+        :root {
+            --bg-main: #f7f7f9;
+            --bg-panel: #ffffff;
+            --bg-accent-soft: radial-gradient(circle at 0% 0%, #eef2ff 0, transparent 55%),
+                              radial-gradient(circle at 100% 100%, #f5f0ff 0, transparent 55%);
+            --text-main: #111111;
+            --text-muted: #555555;
+            --border-soft: #e1e1e8;
+
+            --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text",
+                         "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+            --fs-h1: 3.4rem;
+            --fs-h2: 1.9rem;
+            --fs-body: 1.1rem;
+
+            --radius-panel: 18px;
+            --radius-chip: 999px;
+
+            --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.06);
+
+            --space-xl: 96px;
+            --space-lg: 56px;
+            --space-md: 28px;
+            --space-sm: 16px;
+
+            --transition-fast: 0.18s ease-out;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #ffffff;
-            color: #111111;
-            line-height: 1.65;
-            padding: 60px 24px;
-            -webkit-font-smoothing: antialiased;
+        html, body {
+            height: 100%;
         }
 
-        .container {
-            max-width: 900px;
+        body {
+            font-family: var(--font-sans);
+            background:
+                var(--bg-accent-soft),
+                var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            padding: 32px 18px 48px;
+        }
+
+        .page {
+            max-width: 980px;
             margin: 0 auto;
         }
 
-        /* NAVIGATION */
-        nav {
+        /* =========================
+           ACCESSIBILITY BASICS
+        ========================== */
+        a {
+            color: inherit;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #111;
+            outline-offset: 3px;
+        }
+
+        /* =========================
+           TOP NAV
+        ========================== */
+        header[role="banner"] {
             display: flex;
-            gap: 32px;
-            margin-bottom: 80px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-lg);
+            gap: 18px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .brand__name {
+            font-size: 0.9rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .brand__tagline {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        nav[role="navigation"] {
+            display: flex;
             flex-wrap: wrap;
+            gap: 18px;
+            font-size: 0.9rem;
         }
 
         nav a {
             text-decoration: none;
-            color: #111;
-            font-weight: 600;
-            font-size: 15px;
-            letter-spacing: 0.3px;
-            transition: opacity .2s;
+            padding: 6px 10px;
+            border-radius: var(--radius-chip);
+            transition: background-color var(--transition-fast),
+                        opacity var(--transition-fast),
+                        transform var(--transition-fast);
         }
 
         nav a:hover {
-            opacity: 0.5;
+            background-color: rgba(17, 17, 17, 0.04);
+            transform: translateY(-1px);
         }
 
-        /* HEADINGS */
+        /* =========================
+           HERO / STORY START
+        ========================== */
+        main[role="main"] {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+
+        .hero {
+            background: var(--bg-panel);
+            border-radius: var(--radius-panel);
+            box-shadow: var(--shadow-soft);
+            padding: 32px 32px 36px;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.12), transparent 55%);
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero__label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px;
+            border-radius: var(--radius-chip);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: var(--space-sm);
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(6px);
+        }
+
+        .hero__label-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: #22c55e;
+        }
+
         h1 {
-            font-size: 54px;
-            font-weight: 700;
-            letter-spacing: -1.5px;
-            margin-bottom: 24px;
+            font-size: var(--fs-h1);
+            letter-spacing: -0.06em;
+            margin-bottom: var(--space-sm);
+        }
+
+        .hero__subtitle {
+            font-size: 1.05rem;
+            max-width: 620px;
+            color: var(--text-muted);
+        }
+
+        .hero__meta {
+            margin-top: var(--space-md);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .hero__meta-item {
+            padding: 4px 10px;
+            border-radius: var(--radius-chip);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* =========================
+           SECTIONS / NARRATIVE
+        ========================== */
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        .section {
+            background: var(--bg-panel);
+            border-radius: var(--radius-panel);
+            box-shadow: var(--shadow-soft);
+            padding: 28px 28px 30px;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .section + .section {
+            margin-top: 0;
+        }
+
+        .section::before {
+            content: "";
+            position: absolute;
+            left: -40%;
+            right: -40%;
+            top: 0;
+            height: 26px;
+            background: radial-gradient(circle at 50% 0, rgba(148, 163, 184, 0.18), transparent 60%);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .section__inner {
+            position: relative;
+            z-index: 1;
         }
 
         h2 {
-            font-size: 30px;
-            font-weight: 700;
-            letter-spacing: -0.7px;
-            margin-bottom: 16px;
+            font-size: var(--fs-h2);
+            letter-spacing: -0.04em;
+            margin-bottom: 10px;
         }
 
-        p, li {
-            font-size: 20px;
-            max-width: 760px;
+        .section__kicker {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--text-muted);
+            margin-bottom: 6px;
         }
 
-        section {
-            margin-bottom: 100px;
+        .section__body {
+            font-size: var(--fs-body);
+            color: var(--text-main);
+            max-width: 720px;
         }
 
-        ul {
-            margin-top: 12px;
-            padding-left: 22px;
+        .section__body p + p {
+            margin-top: 10px;
         }
 
-        /* FOOTER */
-        footer {
-            margin-top: 120px;
-            font-size: 14px;
-            opacity: 0.6;
+        .section__list {
+            margin-top: 10px;
+            padding-left: 20px;
+            color: var(--text-main);
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 700px) {
-            h1 { font-size: 40px; }
-            h2 { font-size: 26px; }
-            nav { gap: 18px; }
-            p, li { font-size: 18px; }
+        .section__list li {
+            margin-bottom: 6px;
+        }
+
+        .section__note {
+            margin-top: 14px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* =========================
+           GRID FOR PUBLICATIONS
+        ========================== */
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            gap: 26px;
+            margin-top: 14px;
+        }
+
+        .card {
+            border-radius: 14px;
+            border: 1px solid var(--border-soft);
+            padding: 16px 16px 18px;
+            background-color: #fcfcff;
+        }
+
+        .card__title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .card__text {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+        footer[role="contentinfo"] {
+            margin-top: var(--space-lg);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .footer__row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* =========================
+           ANIMATIONS / MICRO-INTERACTIONS
+        ========================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+        @media (max-width: 800px) {
+            body {
+                padding: 22px 14px 36px;
+            }
+
+            header[role="banner"] {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            nav[role="navigation"] {
+                gap: 10px;
+            }
+
+            .hero,
+            .section {
+                padding: 22px 18px 24px;
+            }
         }
     </style>
 </head>
 
 <body>
-<div class="container">
+<div class="page">
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#o-fsa">O FSA</a>
-        <a href="#publikacje">Publikacje</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="#privacy">Prywatność</a>
-        <a href="#terms">Warunki</a>
-    </nav>
+    <header role="banner">
+        <div class="brand">
+            <div class="brand__name">Financial Structure Academy</div>
+            <div class="brand__tagline">Strukturalne podejście do rynku finansowego</div>
+        </div>
 
-    <section id="home">
-        <h1>Financial Structure Academy</h1>
-        <p>
-            Instytucjonalne materiały edukacyjne dotyczące struktury rynku, płynności oraz modeli wykorzystywanych przez uczestników instytucjonalnych. 
-            FSA opracowuje analityczne, precyzyjne i pozbawione emocji materiały edukacyjne oparte na obserwacji zachowań rynku.
-        </p>
-    </section>
+        <nav role="navigation" aria-label="Główna nawigacja">
+            <a href="#home">Home</a>
+            <a href="#about">O FSA</a>
+            <a href="#method">Podejście</a>
+            <a href="#publications">Publikacje</a>
+            <a href="#contact">Kontakt</a>
+            <a href="#legal">Prawne</a>
+        </nav>
+    </header>
 
-    <section id="o-fsa">
-        <h2>O FSA</h2>
-        <p>
-            Financial Structure Academy (FSA) to niezależna jednostka edukacyjna specjalizująca się w analizie strukturalnej rynku oraz modelach płynności. 
-            Nasze materiały są projektowane z myślą o przejrzystości, precyzji i instytucjonalnym standardzie.
-        </p>
-    </section>
+    <main role="main">
+        <!-- HERO / STORY START -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero__content">
+                <div class="hero__label">
+                    <span class="hero__label-dot" aria-hidden="true"></span>
+                    <span>Instytucjonalne materiały edukacyjne</span>
+                </div>
+                <h1 id="hero-title">Struktura rynku zamiast narracji rynkowej.</h1>
+                <p class="hero__subtitle">
+                    Financial Structure Academy (FSA) koncentruje się na strukturze rynku, płynności oraz modelach
+                    wykorzystywanych przez uczestników instytucjonalnych. Bez emocji, bez hałasu informacyjnego —
+                    wyłącznie uporządkowana praca z danymi i zachowaniem rynku.
+                </p>
 
-    <section id="publikacje">
-        <h2>Publikacje</h2>
-        <p>Publikacje FSA obejmują:</p>
-        <ul>
-            <li>analizę struktury rynku</li>
-            <li>modele płynności</li>
-            <li>praktyczne przykłady zastosowania</li>
-            <li>materiały rozszerzające i aktualizacje</li>
-        </ul>
-        <p><strong>Lista książek pojawi się wkrótce.</strong></p>
-    </section>
+                <div class="hero__meta" aria-label="Informacje dodatkowe">
+                    <div class="hero__meta-item">Analiza strukturalna rynku</div>
+                    <div class="hero__meta-item">Modele płynności</div>
+                    <div class="hero__meta-item">Materiały edukacyjne dla zaawansowanych</div>
+                </div>
+            </div>
+        </section>
 
-    <section id="kontakt">
-        <h2>Kontakt</h2>
-        <p>
-            W przypadku pytań dotyczących materiałów edukacyjnych lub kwestii technicznych prosimy o kontakt:
-        </p>
-        <p><strong>office@financialstructure.academy</strong></p>
-    </section>
+        <!-- ABOUT / WHO WE ARE -->
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="section__inner">
+                <div class="section__kicker">O FSA</div>
+                <h2 id="about-title">Niezależna jednostka edukacyjna.</h2>
+                <div class="section__body">
+                    <p>
+                        Financial Structure Academy (FSA) to niezależna jednostka edukacyjna skoncentrowana na
+                        strukturalnym podejściu do rynku. Zamiast prognoz i narracji, FSA skupia się na tym, jak
+                        rynek jest zbudowany: gdzie znajduje się płynność, jak zachowują się uczestnicy
+                        instytucjonalni oraz jakie modele są wykorzystywane w praktyce.
+                    </p>
+                    <p>
+                        Materiały FSA są projektowane w sposób analityczny, przejrzysty i pozbawiony zbędnych
+                        ozdobników. Celem jest stworzenie środowiska, w którym decyzje inwestycyjne opierają się
+                        na strukturze, a nie na emocjach.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <section id="privacy">
-        <h2>Polityka prywatności</h2>
-        <p>
-            Financial Structure Academy (FSA) przetwarza dane wyłącznie w zakresie niezbędnym do obsługi zapytań oraz dostarczania materiałów edukacyjnych.
-        </p>
-    </section>
+        <!-- METHOD / APPROACH -->
+        <section id="method" class="section" aria-labelledby="method-title">
+            <div class="section__inner">
+                <div class="section__kicker">Podejście</div>
+                <h2 id="method-title">Struktura, czytelność, dostępność.</h2>
+                <div class="section__body">
+                    <p>
+                        FSA traktuje projektowanie materiałów edukacyjnych jak pracę nad systemem: spójne pojęcia,
+                        powtarzalne struktury, jasne definicje. Każdy element — od wykresu po opis — ma swoje miejsce
+                        i funkcję.
+                    </p>
+                    <ul class="section__list">
+                        <li>czytelna typografia i wysoki kontrast dla komfortu odbiorcy,</li>
+                        <li>uporządkowana struktura treści zamiast przeładowania informacjami,</li>
+                        <li>minimalne, funkcjonalne użycie animacji i mikrointerakcji,</li>
+                        <li>szacunek do czasu i uwagi czytelnika.</li>
+                    </ul>
+                    <p class="section__note">
+                        Dostępność i przejrzystość nie są dodatkiem — są podstawą. Materiały FSA są projektowane tak,
+                        aby były zrozumiałe i użyteczne dla odbiorców o różnym poziomie doświadczenia.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <section id="terms">
-        <h2>Terms of Use</h2>
-        <p>
-            Materiały publikowane przez Financial Structure Academy (FSA) są przeznaczone wyłącznie do użytku osobistego odbiorcy. 
-            Kopiowanie, udostępnianie lub rozpowszechnianie treści bez zgody FSA jest zabronione.
-        </p>
-    </section>
+        <!-- PUBLICATIONS -->
+        <section id="publications" class="section" aria-labelledby="publications-title">
+            <div class="section__inner">
+                <div class="section__kicker">Publikacje</div>
+                <h2 id="publications-title">Strukturalne materiały edukacyjne.</h2>
+                <div class="section__body">
+                    <p>
+                        Publikacje FSA obejmują materiały poświęcone strukturze rynku, płynności oraz praktycznym
+                        modelom wykorzystywanym przez uczestników instytucjonalnych. Każda publikacja jest
+                        zaprojektowana jako spójny moduł wiedzy, który można włączyć do własnego procesu pracy.
+                    </p>
 
-    <footer>
-        © Financial Structure Academy (FSA)
+                    <div class="grid" aria-label="Przykładowe obszary publikacji">
+                        <div class="card">
+                            <div class="card__title">Struktura rynku</div>
+                            <div class="card__text">
+                                Analiza warstw rynku, rozmieszczenia płynności oraz zachowań uczestników w różnych
+                                warunkach rynkowych.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__title">Modele płynności</div>
+                            <div class="card__text">
+                                Przykłady modeli wykorzystywanych przez uczestników instytucjonalnych oraz ich
+                                praktyczne implikacje.
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="section__note">
+                        Lista książek i materiałów zostanie opublikowana w osobnym katalogu. Aktualizacje będą
+                        komunikowane poprzez oficjalne kanały FSA.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <div class="section__inner">
+                <div class="section__kicker">Kontakt</div>
+                <h2 id="contact-title">Kanał komunikacji z FSA.</h2>
+                <div class="section__body">
+                    <p>
+                        W sprawie materiałów edukacyjnych, aktualizacji lub kwestii technicznych związanych z
+                        publikacjami FSA prosimy o kontakt poprzez dedykowany adres e‑mail:
+                    </p>
+                    <p>
+                        <strong>office@financialstructure.academy</strong>
+                    </p>
+                    <p class="section__note">
+                        Odpowiedzi są udzielane wyłącznie na zapytania merytoryczne związane z zakresem działalności
+                        FSA.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEGAL -->
+        <section id="legal" class="section" aria-labelledby="legal-title">
+            <div class="section__inner">
+                <div class="section__kicker">Informacje prawne</div>
+                <h2 id="legal-title">Prywatność i warunki korzystania.</h2>
+                <div class="section__body">
+                    <p>
+                        Financial Structure Academy (FSA) przetwarza dane wyłącznie w zakresie niezbędnym do obsługi
+                        zapytań oraz dostarczania materiałów edukacyjnych. Dane nie są udostępniane podmiotom
+                        zewnętrznym, z wyjątkiem przypadków wymaganych przez prawo.
+                    </p>
+                    <p>
+                        Materiały publikowane przez FSA są przeznaczone wyłącznie do użytku osobistego odbiorcy.
+                        Kopiowanie, udostępnianie lub rozpowszechnianie treści bez uprzedniej zgody FSA jest
+                        zabronione.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer__row">
+            <span>© Financial Structure Academy (FSA)</span>
+            <span>Strukturalne podejście do rynku finansowego</span>
+        </div>
+        <div class="footer__row">
+            <span>financialstructure.academy</span>
+        </div>
     </footer>
 
 </div>
