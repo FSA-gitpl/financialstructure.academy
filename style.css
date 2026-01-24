@@ -80,7 +80,7 @@ a:hover {
    NAVIGATION
 =========================== */
 nav {
-  position: sticky;
+  
   top: 0;
   background: var(--nav-bg);
   border-bottom: 1px solid var(--border);
