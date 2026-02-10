@@ -344,62 +344,76 @@ nav {
   footer {
     padding: 40px 24px !important;
   }
-   .card-horizontal {
+   /* ===== SEKCJA ZESTAWY ===== */
+
+.zestawy-section {
   width: 100%;
-  max-width: 420px !important; /* KLUCZOWE — ogranicza całą kartę */
-  margin: 0 auto 32px auto !important;
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
-  padding: 20px !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 900px;
+  margin: 80px auto 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.zestawy-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 32px;
   text-align: center;
-  box-sizing: border-box !important;
+  color: #111;
 }
 
-/* Obraz poziomy – kontrolowany rozmiar */
+/* ===== KARTA HORYZONTALNA ===== */
+
+.card-horizontal {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 32px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  box-sizing: border-box;
+}
+
 .card-horizontal img {
-  width: 100% !important;
-  max-width: 380px !important; /* KLUCZOWE — realny rozmiar okładki */
-  height: auto !important;
+  width: 100%;
+  max-width: 440px;
+  height: auto;
   border-radius: 4px;
-  margin-bottom: 18px !important;
-  display: block !important;
+  margin-bottom: 20px;
 }
 
-/* Tekst */
-.card-horizontal .card__text {
-  font-size: 16px !important;
-  line-height: 1.45 !important;
-  color: #111 !important;
-  margin-bottom: 20px !important;
+.card-horizontal__text {
+  font-size: 16px;
+  line-height: 1.45;
+  color: #111;
+  margin-bottom: 20px;
 }
 
-/* CTA */
-.card-horizontal .card__link {
-  display: inline-block !important;
-  padding: 10px 22px !important;
-  background: #000 !important;
-  color: #fff !important;
-  text-decoration: none !important;
-  font-size: 15px !important;
-  border-radius: 4px !important;
-  transition: 0.2s !important;
+.card-horizontal__link {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: 0.2s;
 }
 
-.card-horizontal .card__link:hover {
-  background: #333 !important;
+.card-horizontal__link:hover {
+  background: #333;
 }
 
 /* ===== RESPONSYWNOŚĆ ===== */
+
 @media (max-width: 480px) {
   .card-horizontal {
-    max-width: 320px !important;
-    padding: 16px !important;
+    max-width: 340px;
+    padding: 16px;
   }
   .card-horizontal img {
-    max-width: 300px !important;
+    max-width: 300px;
   }
 }
 
