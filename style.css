@@ -416,7 +416,37 @@ nav {
     max-width: 300px;
   }
 }
+/* ===========================
+   ZESTAWY – SPÓJNY STYL FSA
+=========================== */
 
+.zestaw {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.zestaw__img {
+  width: 100%;
+  max-width: 420px; /* średnia, elegancka wielkość */
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.zestaw__text {
+  color: var(--subtext);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Responsywność */
+@media (max-width: 480px) {
+  .zestaw__img {
+    max-width: 300px;
+  }
+}
   
 
 
