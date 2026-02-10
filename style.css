@@ -344,4 +344,61 @@ nav {
   footer {
     padding: 40px 24px !important;
   }
+   .card-horizontal {
+  width: 100%;
+  max-width: 620px; /* szeroka karta */
+  margin: 0 auto 40px auto;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Obraz poziomy – większy */
+.card-horizontal img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Tekst */
+.card-horizontal .card__text {
+  font-size: 17px;
+  line-height: 1.45;
+  color: #111;
+  margin-bottom: 22px;
+}
+
+/* Link CTA */
+.card-horizontal .card__link {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.card-horizontal .card__link:hover {
+  background: #333;
+}
+
+/* ===== RESPONSYWNOŚĆ ===== */
+
+@media (max-width: 600px) {
+  .card-horizontal {
+    padding: 18px;
+  }
+  .card-horizontal img {
+    max-width: 100%;
+  }
+}
+
 }
