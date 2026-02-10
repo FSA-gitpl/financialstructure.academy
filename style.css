@@ -344,6 +344,65 @@ nav {
   footer {
     padding: 40px 24px !important;
   }
+   .card-horizontal {
+  width: 100%;
+  max-width: 420px !important; /* KLUCZOWE — ogranicza całą kartę */
+  margin: 0 auto 32px auto !important;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 20px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box !important;
+}
+
+/* Obraz poziomy – kontrolowany rozmiar */
+.card-horizontal img {
+  width: 100% !important;
+  max-width: 380px !important; /* KLUCZOWE — realny rozmiar okładki */
+  height: auto !important;
+  border-radius: 4px;
+  margin-bottom: 18px !important;
+  display: block !important;
+}
+
+/* Tekst */
+.card-horizontal .card__text {
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+  color: #111 !important;
+  margin-bottom: 20px !important;
+}
+
+/* CTA */
+.card-horizontal .card__link {
+  display: inline-block !important;
+  padding: 10px 22px !important;
+  background: #000 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 15px !important;
+  border-radius: 4px !important;
+  transition: 0.2s !important;
+}
+
+.card-horizontal .card__link:hover {
+  background: #333 !important;
+}
+
+/* ===== RESPONSYWNOŚĆ ===== */
+@media (max-width: 480px) {
+  .card-horizontal {
+    max-width: 320px !important;
+    padding: 16px !important;
+  }
+  .card-horizontal img {
+    max-width: 300px !important;
+  }
+}
+
   
 
 
