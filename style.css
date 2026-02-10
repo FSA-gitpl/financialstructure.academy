@@ -447,7 +447,46 @@ nav {
     max-width: 300px;
   }
 }
-  
+
+   /* ===========================
+   ZESTAWY – SPÓJNY STYL Z KSIĄŻKAMI
+=========================== */
+
+.zestaw-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.zestaw-card__img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.zestaw-card__text {
+  color: var(--subtext);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Responsywność */
+@media (max-width: 480px) {
+  .zestaw-card {
+    max-width: 320px;
+    padding: 14px;
+  }
+  .zestaw-card__img {
+    max-width: 300px;
+  }
+}
 
 
 }
