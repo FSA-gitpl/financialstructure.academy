@@ -344,62 +344,7 @@ nav {
   footer {
     padding: 40px 24px !important;
   }
-   .card-horizontal {
-  width: 100%;
-  max-width: 480px; /* ograniczamy szerokość całej karty */
-  margin: 0 auto 32px auto;
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* Obraz poziomy – mniejszy i kontrolowany */
-.card-horizontal img {
-  width: 100%;
-  max-width: 420px; /* kluczowa wartość – zmniejsza okładkę */
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 18px;
-}
-
-/* Tekst */
-.card-horizontal .card__text {
-  font-size: 16px;
-  line-height: 1.45;
-  color: #111;
-  margin-bottom: 20px;
-}
-
-/* Link CTA */
-.card-horizontal .card__link {
-  display: inline-block;
-  padding: 10px 22px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  font-size: 15px;
-  border-radius: 4px;
-  transition: 0.2s;
-}
-
-.card-horizontal .card__link:hover {
-  background: #333;
-}
-
-/* ===== RESPONSYWNOŚĆ ===== */
-
-@media (max-width: 600px) {
-  .card-horizontal {
-    padding: 16px;
-  }
-  .card-horizontal img {
-    max-width: 100%;
-  }
-}
+  
 
 
 }
