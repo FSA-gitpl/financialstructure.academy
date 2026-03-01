@@ -546,6 +546,45 @@ nav {
     height: 180px;
   }
 }
+
+   .fsa-slider {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 360px;        /* единая высота */
+  object-fit: cover;    /* обрезает красиво */
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.product-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.product-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #111;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
    
 
 }
