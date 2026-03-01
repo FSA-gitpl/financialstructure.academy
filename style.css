@@ -24,10 +24,6 @@
 /* ===========================
    BASE
 =========================== */
-img {
-   width: 50% !important;
-   heihgt: 60% !important;
-}
 body {
   margin: 0;
   padding: 0;
