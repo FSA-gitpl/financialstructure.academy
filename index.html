@@ -80,6 +80,76 @@
   </div>
 </nav>
 
+<section id="produkty-carousel" class="fsa-products-carousel swiper">
+  <div class="swiper-wrapper">
+
+    <!-- Wprowadzenie -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/assets/img/books/wprowadzenie.png" alt="Książka Wprowadzająca">
+        <h3>Wprowadzenie</h3>
+        <p>Mentalna podstawa pracy strukturalnej. Przygotowanie do analizy rynku.</p>
+        <a href="https://buy.stripe.com/cNi3co5wRgRD98u46R4ow06" class="btn">Kup Wprowadzenie</a>
+      </div>
+    </div>
+
+    <!-- Tom 1 -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/assets/img/books/tom.png" alt="Struktura Systemowa — Tom 1">
+        <h3>Tom 1 — Struktura Systemowa</h3>
+        <p>Fundament techniczny pracy strukturalnej. Definicje, modele i ramy analizy.</p>
+        <a href="https://buy.stripe.com/9B68wIf7rcBn2K646R4ow02" class="btn">Kup Tom 1</a>
+      </div>
+    </div>
+
+    <!-- Tom 2 -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/assets/img/books/tom2.png" alt="Price Action — Tom 2">
+        <h3>Tom 2 — Price Action</h3>
+        <p>Mechanika ruchu ceny i zachowania uczestników bez narracji.</p>
+        <a href="https://buy.stripe.com/5kQ3co1gBdFrbgC32N4ow04" class="btn">Kup Tom 2</a>
+      </div>
+    </div>
+
+    <!-- Tom 3 -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/assets/img/books/tom3.png" alt="Struktura Decyzji — Tom 3">
+        <h3>Tom 3 — Struktura Decyzji</h3>
+        <p>Proces przechodzenia od obserwacji do działania. Struktura decyzji.</p>
+        <a href="https://buy.stripe.com/00wfZabVfeJvesO46R4ow05" class="btn">Kup Tom 3</a>
+      </div>
+    </div>
+
+    <!-- Flow Dynamics -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/assets/img/books/FD.png" alt="Flow Dynamics™">
+        <h3>Flow Dynamics™</h3>
+        <p>Autorska metodologia rozwijana przez lata. Kompletny system pracy.</p>
+        <a href="https://buy.stripe.com/7sY6oAgbvcBnacy5aV4ow00" class="btn">Kup Flow Dynamics™</a>
+      </div>
+    </div>
+
+    <!-- Zestaw 4 książek -->
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/assets/img/books/kompletmain2.png" alt="Kompletny Fundament – Zestaw 4 Książek">
+        <h3>Kompletny Fundament FSA</h3>
+        <p>Czterotomowy zestaw w cenie niższej o 50%.</p>
+        <a href="https://buy.stripe.com/00w7sE7EZ0SF98ugTD4ow01" class="btn">Kup Zestaw</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-pagination"></div>
+</section>
+  
 <!-- HERO -->
 <section id="home" class="hero">
   <div class="hero__content">
@@ -439,5 +509,32 @@ Równolegle trwają prace związane z przygotowaniem kursów od strony prawnej i
   }
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.fsa-products-carousel', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1200: { slidesPerView: 3 }
+    }
+  });
+</script>
+  
 </body>
 </html>
