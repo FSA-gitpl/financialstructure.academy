@@ -633,6 +633,7 @@ nav {
    OBRAZKI – JEDNAKOWY ROZMIAR
    ============================ */
 .product-card img {
+   
   width: 50%;
   max-width: 40%;       /* ograniczenie szerokości */
   height: 260px;          /* stała wysokość */
