@@ -651,6 +651,16 @@ nav {
   display: block;
    }
 }
+@media (max-width: 1024px  !important) and (min-width: 769px  !important) {
+    .product-card img {
+        width: 50% !important;
+        height: 60% !important;
+        object-fit: cover;
+        border-radius: 12px;
+        margin: 0 auto 16px auto;
+        display: block;
+    }
+}
 
    
 
