@@ -404,7 +404,7 @@ nav {
 .card-horizontal__link:hover {
   background: #333;
 }
-
+}
 /* ===== RESPONSYWNOŚĆ ===== */
 
 @media (max-width: 480px) {
@@ -587,9 +587,9 @@ nav {
    OBRAZKI – JEDNAKOWY ROZMIAR
    ============================ */
 .product-card img {
-  width: 100%;
+  width: 50%;
   max-width: 360px;       /* ograniczenie szerokości */
-  height: 260px;          /* stała wysokość */
+  height: 60%;          /* stała wysokość */
   object-fit: cover;      /* eleganckie przycięcie */
   border-radius: 12px;
   margin: 0 auto 16px auto;
@@ -629,19 +629,30 @@ nav {
 /* ============================
    MOBILE
    ============================ */
-@media (max-width: 768px) {
-  .fsa-slider {
-    max-width: 100%;
-    margin: 24px auto;
-    padding: 0 8px;
-  }
+@media (max-width: 769px){
+    .product-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        transition: transform .3s ease, box-shadow .3s ease;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+   .product-card img {
+  width: 50%;
+  max-width: 360px;       /* ograniczenie szerokości */
+  height: 60%;          /* stała wysokość */
+  object-fit: cover;      /* eleganckie przycięcie */
+  border-radius: 12px;
+  margin: 0 auto 16px auto;
+  display: block;
+   }
+}
 
-  .product-card {
-    padding: 16px;
-  }
+   
 
-  .product-card img {
-    max-width: 50%;
-    height: 50% !important;   /* mniejsza wysokość na telefonach */
-  }
+   
 }
