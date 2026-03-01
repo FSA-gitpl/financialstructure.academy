@@ -508,8 +508,8 @@ nav {
 }
 
 .product-card img {
-  width: 100%;
-  height: 220px;
+  width: 50%;
+  height: 40%;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 16px;
@@ -543,7 +543,8 @@ nav {
 
 @media (max-width: 768px) {
   .product-card img {
-    height: 180px;
+      width: 50%;
+      height: 40%;
   }
 }
 
@@ -559,8 +560,8 @@ nav {
 }
 
 .product-card img {
-  width: 100%;
-  height: 360px;        /* единая высота */
+  width: 50%;
+  height: 40%;        /* единая высота */
   object-fit: cover;    /* обрезает красиво */
   border-radius: 12px;
   margin-bottom: 16px;
@@ -632,8 +633,8 @@ nav {
    OBRAZKI – JEDNAKOWY ROZMIAR
    ============================ */
 .product-card img {
-  width: 100%;
-  max-width: 360px;       /* ograniczenie szerokości */
+  width: 50%;
+  max-width: 40%;       /* ograniczenie szerokości */
   height: 260px;          /* stała wysokość */
   object-fit: cover;      /* eleganckie przycięcie */
   border-radius: 12px;
@@ -686,8 +687,8 @@ nav {
   }
 
   .product-card img {
-    max-width: 100%;
-    height: 220px;   /* mniejsza wysokość na telefonach */
+    max-width: 50%;
+    height: 40%;   /* mniejsza wysokość na telefonach */
   }
 }
 
