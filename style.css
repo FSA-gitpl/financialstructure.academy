@@ -509,7 +509,7 @@ nav {
 
 .product-card img {
   width: 50%;
-  height: 40%;
+  height: 60%;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 16px;
@@ -544,7 +544,7 @@ nav {
 @media (max-width: 768px) {
   .product-card img {
       width: 50%;
-      height: 40%;
+      height: 60%;
   }
 }
 
@@ -561,8 +561,8 @@ nav {
 
 .product-card img {
   width: 50%;
-  height: 40%;        /* единая высота */
-  object-fit: cover;    /* обрезает красиво */
+  height: 60%;        
+  object-fit: cover;    
   border-radius: 12px;
   margin-bottom: 16px;
 }
@@ -634,9 +634,8 @@ nav {
    ============================ */
 .product-card img {
    
-  width: 50%;
-  max-width: 40%;       /* ograniczenie szerokości */
-  height: 260px;          /* stała wysokość */
+  width: 50%;       /* ograniczenie szerokości */
+  height: 60%;          /* stała wysokość */
   object-fit: cover;      /* eleganckie przycięcie */
   border-radius: 12px;
   margin: 0 auto 16px auto;
@@ -688,8 +687,8 @@ nav {
   }
 
   .product-card img {
-    max-width: 50%;
-    height: 40%;   /* mniejsza wysokość na telefonach */
+    width: 50%;
+    height: 60%;   /* mniejsza wysokość na telefonach */
   }
 }
 
