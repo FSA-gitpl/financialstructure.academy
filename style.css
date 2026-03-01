@@ -641,8 +641,8 @@ nav {
   }
 
   .product-card img {
-    max-width: 100%;
-    height: 220px;   /* mniejsza wysokość na telefonach */
+    max-width: 50%;
+    height: 50% !important;   /* mniejsza wysokość na telefonach */
   }
 }
 
