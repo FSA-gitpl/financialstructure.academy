@@ -554,6 +554,10 @@ nav {
   margin: 0 auto;
   padding: 40px 0;
 }
+   .fsa-slider img {
+  width: 50%;
+  height: 60%;
+}
 
 .product-card {
   text-align: center;
