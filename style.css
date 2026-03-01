@@ -585,6 +585,110 @@ nav {
   border-radius: 8px;
   text-decoration: none;
 }
-   
+
+   /* ============================================
+   KARCELA PRODUKTÓW FSA – WERSJA JEDEN SLIDE
+   (zawsze 1 produkt na ekranie, wycentrowany)
+   ============================================ */
+
+/* Kontener całej karuzeli */
+.fsa-slider {
+  width: 100%;
+  max-width: 640px;      /* szerokość całej karuzeli */
+  margin: 40px auto;     /* wycentrowanie */
+  padding: 0;
+}
+
+/* Wyrównanie slajdów w pionie */
+.fsa-slider .swiper-wrapper {
+  align-items: stretch;   /* każdy slajd ma tę samą wysokość */
+}
+
+/* Każdy slajd jest flexboxem, aby karta była idealnie wycentrowana */
+.fsa-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Karta produktu wewnątrz slajdu */
+.product-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+  max-width: 420px;       /* szerokość karty */
+  margin: 0 auto;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+/* ============================
+   OBRAZKI – JEDNAKOWY ROZMIAR
+   ============================ */
+.product-card img {
+  width: 100%;
+  max-width: 360px;       /* ograniczenie szerokości */
+  height: 260px;          /* stała wysokość */
+  object-fit: cover;      /* eleganckie przycięcie */
+  border-radius: 12px;
+  margin: 0 auto 16px auto;
+  display: block;
+}
+
+/* Teksty */
+.product-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: var(--subtext);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Przycisk */
+.product-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #111;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background .2s ease, opacity .2s ease;
+}
+
+.product-card .btn:hover {
+  background: #333;
+}
+
+/* ============================
+   MOBILE
+   ============================ */
+@media (max-width: 768px) {
+  .fsa-slider {
+    max-width: 100%;
+    margin: 24px auto;
+    padding: 0 8px;
+  }
+
+  .product-card {
+    padding: 16px;
+  }
+
+  .product-card img {
+    max-width: 100%;
+    height: 220px;   /* mniejsza wysokość na telefonach */
+  }
+}
 
 }
