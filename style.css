@@ -404,7 +404,7 @@ nav {
 .card-horizontal__link:hover {
   background: #333;
 }
-
+}
 /* ===== RESPONSYWNOŚĆ ===== */
 
 @media (max-width: 480px) {
