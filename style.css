@@ -10,7 +10,7 @@
   --card-bg: #ffffff;
   --nav-bg: #ffffff;
 }
-
+ 
 [data-theme="dark"] {
   --bg: #0A0F14;
   --text: #f2f2f2;
