@@ -14,16 +14,14 @@ body {
   color: var(--text-color);
 }
 
-:root[data-theme="dark"] .section__inner {
-  background: var(--card-bg, #FFFFFF);
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
+
 
 :root[data-theme="dark"] .card, .product-box, .section__inner {
   background: #13171b;
   box-shadow: var(--card-shadow);
+   border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .theme-banner {
