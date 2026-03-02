@@ -14,10 +14,7 @@ body {
   color: var(--text-color);
 }
 
-.card, .product-box, .section__inner {
-  background: var(--card-bg);
-  box-shadow: var(--card-shadow);
-}
+
 .theme-banner {
   position: fixed;
   bottom: 20px;
