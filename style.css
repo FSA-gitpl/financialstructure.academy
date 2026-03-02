@@ -1,26 +1,23 @@
 /* ===========================
    THEME VARIABLES
 =========================== */
-/* shadow product-card for str*/
-.fsa-arrow:hover {
-  opacity: 0.7;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  background: var(--card-bg);
-  border-radius: 50%;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none !important;
 }
-/* Minimalistyczne strzałki FSA */
+
 .fsa-arrow {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   color: var(--text);
-  transition: opacity .2s ease;
-  background: none;
-  border: none;
-  box-shadow: none;
+  background: var(--card-bg);
+  border-radius: 50%;
+  transition: 0.25s ease;
+  border: 1px solid var(--border);
 }
 
 /* Ikona */
@@ -29,9 +26,10 @@
   height: 20px;
 }
 
-/* Hover – tylko delikatne przyciemnienie */
+/* Hover – tło + cień jak w product-card */
 .fsa-arrow:hover {
-  opacity: 0.6;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
 }
 
 /* Pozycjonowanie */
@@ -43,7 +41,7 @@
   right: -50px;
 }
 
-/* Mobile – strzałki bliżej środka */
+/* Mobile */
 @media (max-width: 768px) {
   .swiper-button-prev { left: 10px; }
   .swiper-button-next { right: 10px; }
