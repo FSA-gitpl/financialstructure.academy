@@ -2,7 +2,7 @@
    THEME VARIABLES
 =========================== */
 :root {
-    --swiper-navigation-size: 0px;
+    --swiper-navigation-size: 0px !important;
 }
 :root {
   --bg: #ffffff;
