@@ -1,11 +1,5 @@
-html[data-theme="light"] {
-  --bg-color: #F4F6F8; /* or #F5F5F7, or #F7F6F4 */
-  --card-bg: #FFFFFF;
-  --text-color: #1A1A1A;
-  --accent-color: #2D7DF4;
-  --accent-hover: #1F5EC0;
-  --premium-gold: #C9A86A;
-  --shadow-soft: 0 2px 8px rgba(0,0,0,0.04);
+html[data-theme="light"] body {
+  background: linear-gradient(to bottom, #F7F6F4 0%, #FFFFFF 100%);
 }
 
 body {
