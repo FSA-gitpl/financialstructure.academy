@@ -1,6 +1,13 @@
 /* ===========================
    THEME VARIABLES
 =========================== */
+/* shadow product-card for str*/
+.fsa-arrow:hover {
+  opacity: 0.7;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  background: var(--card-bg);
+  border-radius: 50%;
+}
 /* Minimalistyczne strzałki FSA */
 .fsa-arrow {
   width: 36px;
