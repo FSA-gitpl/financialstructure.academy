@@ -9,10 +9,6 @@
   --accent-color: #2D7DF4;
   --accent-color-secondary: #C9A86A;
 }
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
-}
 
 
 .theme-banner {
