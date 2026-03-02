@@ -7,7 +7,6 @@
 }
 
 .fsa-arrow {
-  width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -32,14 +31,6 @@
   transform: translateY(-2px);
 }
 
-/* Pozycjonowanie */
-.swiper-button-prev {
-  left: -50px;
-}
-
-.swiper-button-next {
-  right: -50px;
-}
 
 /* Mobile */
 @media (max-width: 768px) {
