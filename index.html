@@ -534,6 +534,51 @@ Równolegle trwają prace związane z przygotowaniem kursów od strony prawnej i
     },
   });
 </script>
+
+  <div id="theme-banner" class="theme-banner">
+  <span id="theme-banner-text"></span>
+  <div class="theme-banner__buttons">
+    <button onclick="acceptTheme()">Tak</button>
+    <button onclick="declineTheme()">Nie</button>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    return;
+  }
+
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const detectedTheme = systemPrefersDark ? "dark" : "light";
+
+  document.documentElement.setAttribute("data-theme", detectedTheme);
+
+  const banner = document.getElementById("theme-banner");
+  const text = document.getElementById("theme-banner-text");
+
+  text.textContent = `Wykryto motyw systemowy: ${detectedTheme === "dark" ? "Ciemny" : "Jasny"}. Użyć go?`;
+  banner.style.display = "flex";
+});
+
+function acceptTheme() {
+  const current = document.documentElement.getAttribute("data-theme");
+  localStorage.setItem("theme", current);
+  document.getElementById("theme-banner").style.display = "none";
+}
+
+function declineTheme() {
+  const current = document.documentElement.getAttribute("data-theme");
+  const newTheme = current === "dark" ? "light" : "dark";
+
+  document.documentElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+
+  document.getElementById("theme-banner").style.display = "none";
+}
+</script>
   
 </body>
 </html>
