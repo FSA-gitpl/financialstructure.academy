@@ -1,6 +1,10 @@
 /* ===========================
    THEME VARIABLES
 =========================== */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 0 !important;
+}
 :root {
   --bg: #ffffff;
   --text: #111111;
