@@ -9,7 +9,15 @@
   --accent-color: #2D7DF4;
   --accent-color-secondary: #C9A86A;
 }
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
 
+.card, .product-box, .section__inner {
+  background: #13171b;
+  box-shadow: var(--card-shadow);
+}
 
 .theme-banner {
   position: fixed;
