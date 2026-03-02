@@ -9,6 +9,10 @@
 .swiper-button-prev::after {
     display: none !important;
 }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: inherit !important;
+}
 :root {
   --bg: #ffffff;
   --text: #111111;
