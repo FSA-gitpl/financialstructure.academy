@@ -1,6 +1,23 @@
 /* ===========================
    THEME VARIABLES
 =========================== */
+:root[data-theme="light"] {
+  --bg-color: #F5F6F7;
+  --text-color: #1A1A1A;
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  --accent-color: #2D7DF4;
+  --accent-color-secondary: #C9A86A;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.card, .product-box, .section__inner {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
 .theme-banner {
   position: fixed;
   bottom: 20px;
