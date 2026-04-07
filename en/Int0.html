@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to FSA Methodology — Financial Structure Academy</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    .book-page { min-height: 100vh; display: flex; flex-direction: column; }
+    .book-main { flex: 1; padding: 60px 24px; background: var(--hero-bg); }
+    .book-container { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: start; }
+    .book-cover { position: sticky; top: 100px; }
+    .book-cover img { width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+    .book-toc-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 10px 16px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 0.9rem; transition: opacity 0.2s; }
+    .book-toc-link:hover { opacity: 0.9; }
+    .book-toc-link svg { width: 16px; height: 16px; }
+    .book-content h1 { font-family: 'IBM Plex Serif', serif; font-size: 2rem; margin: 0 0 16px 0; color: var(--text); }
+    .book-subtitle { color: var(--subtext); font-size: 1.1rem; margin-bottom: 24px; line-height: 1.6; }
+    .book-section { margin-bottom: 32px; }
+    .book-section h2 { font-size: 1.3rem; margin: 0 0 16px 0; color: var(--text); }
+    .book-section p { color: var(--subtext); line-height: 1.7; margin-bottom: 16px; }
+    .book-highlight { background: var(--card-bg); border-left: 4px solid #45a29e; padding: 20px; border-radius: 4px; margin: 24px 0; }
+    .book-highlight p { margin: 0; color: var(--text); }
+    .book-cta { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .book-cta .btn { display: inline-block; padding: 14px 32px; background: var(--text); color: var(--bg); border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: opacity 0.2s; }
+    .book-cta .btn:hover { opacity: 0.95; }
+    .book-disclaimer { font-size: 0.85rem; color: var(--subtext); opacity: 0.8; margin-top: 24px; }
+    @media (max-width: 768px) {
+      .book-container { grid-template-columns: 1fr; }
+      .book-cover { position: static; text-align: center; max-width: 200px; margin: 0 auto 24px; }
+      .book-content h1 { font-size: 1.6rem; }
+      .book-subtitle { font-size: 1rem; }
+    }
+  </style>
+</head>
+
+<body class="book-page">
+
+<!-- NAVIGATION (no language switcher) -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand" style="display:flex;align-items:center;gap:12px;">
+      <img src="/assets/img/books/logo.png" alt="FSA logo" style="height:40px;width:40px;border-radius:50%;" loading="lazy">
+      <div style="display:flex;flex-direction:column;">
+        <span style="font-weight:600;font-size:0.95rem;letter-spacing:0.04em;">FINANCIAL STRUCTURE ACADEMY</span>
+        <span style="font-size:0.75rem;color:var(--subtext);">Institutional approach to financial markets</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="/en/#home">Home</a>
+      <a href="/en/#about">About</a>
+      <a href="/en/#method">Methodology</a>
+      <a href="/en/#products">Products</a>
+      <a href="/en/#contact">Contact</a>
+      <button id="themeToggle">🌙 Dark</button>
+    </div>
+  </div>
+</nav>
+
+<!-- BOOK CONTENT -->
+<main class="book-main">
+  <div class="book-container">
+    
+    <!-- Cover + TOC Link -->
+    <div class="book-cover">
+      <img src="/assets/img/books/int0.jpg" alt="Introduction to FSA Methodology">
+      <a href="https://github.com/your-repo/fsa-books/raw/main/toc/introduction.pdf" class="book-toc-link" target="_blank" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Table of Contents
+      </a>
+    </div>
+
+    <!-- Content -->
+    <div class="book-content">
+      <h1>Introduction to the FSA Methodology</h1>
+      <p class="book-subtitle">Foundation of Awareness and Analytical Logic</p>
+
+      <div class="book-section">
+        <p>Trading is often described as "the hardest path to easy money." The reality is that most participants approach the market expecting simple solutions, quick results, and clear signals. This approach overlooks the foundation: mindset, neutrality, and understanding the nature of price.</p>
+        <p><strong>Trading is not for everyone.</strong> It requires discipline, structured thinking, and acceptance of uncertainty. This introductory book prepares you for that journey.</p>
+      </div>
+
+      <div class="book-highlight">
+        <p><strong>What you will gain:</strong> A structured way to observe the market, elimination of flawed assumptions, and preparation for professional technical analysis — without promises, signals, or operational guidance.</p>
+      </div>
+
+      <div class="book-section">
+        <h2>What This Book Covers</h2>
+        <p>This material represents the first stage of the FSA methodological pathway. Its purpose is to organize the reader's perception of the market and prepare them for subsequent volumes focused on structural analysis.</p>
+        <p>Key topics include:</p>
+        <ul style="color:var(--subtext);line-height:1.7;padding-left:20px;">
+          <li>The nature of uncertainty and volatility as structural market features</li>
+          <li>Market participants and their behaviors (noise vs. structural moves)</li>
+          <li>Neutrality as a prerequisite for correct analysis</li>
+          <li>Working with information, not prediction</li>
+          <li>Recognizing market readability and unreadability</li>
+          <li>The learning process and common mistakes to avoid</li>
+        </ul>
+      </div>
+
+      <div class="book-section">
+        <h2>Why Start Here?</h2>
+        <p>Without this mental foundation, technical analysis becomes a source of overinterpretation, and decisions are driven by emotions rather than facts. This book does not contain strategies, trading signals, or operational guidance. It is intended solely for educational purposes and focuses on awareness, process, and the logic of observation.</p>
+        <p>Every chapter includes practical examples of common trader mistakes and shows how structured thinking leads to better interpretation — not better predictions.</p>
+      </div>
+
+      <div class="book-cta">
+        <a href="/en/confirm.html?product=intro" class="btn">Get Introduction Book</a>
+        <p class="book-disclaimer">Educational material only. Not investment advice. Digital product — non-refundable after access. By purchasing, you acknowledge the Terms of Use, Privacy Policy, and Refund Policy.</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#0A1A2F;color:#fff;padding:40px 24px;margin-top:0;">
+  <div style="max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:24px;">
+    <div style="font-size:1rem;font-weight:600;">FINANCIAL STRUCTURE ACADEMY</div>
+    <div style="font-size:0.9rem;opacity:0.75;line-height:1.6;">Institutional approach to financial markets. Education based on data, liquidity, and participant behavior.</div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:0.9rem;">
+      <a href="/en/terms.html" style="color:#fff;opacity:0.8;text-decoration:none;">Terms</a>
+      <a href="/en/privacy.html" style="color:#fff;opacity:0.8;text-decoration:none;">Privacy Policy</a>
+      <a href="/en/legal.html" style="color:#fff;opacity:0.8;text-decoration:none;">Legal Information</a>
+      <a href="/en/refund-policy.html" style="color:#fff;opacity:0.8;text-decoration:none;">Refund Information</a>
+    </div>
+    <div style="font-size:0.8rem;opacity:0.5;margin-top:12px;">© Financial Structure Academy — All rights reserved</div>
+  </div>
+</footer>
+
+<!-- DARK MODE SCRIPT -->
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  if (toggleBtn) {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      root.setAttribute('data-theme', savedTheme);
+      toggleBtn.textContent = savedTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    }
+    toggleBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggleBtn.textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
+    });
+  }
+</script>
+
+</body>
+</html>
