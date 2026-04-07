@@ -50,6 +50,9 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/style.css">
+
+  <!-- Language Redirect Script -->
+  <script src="/js/language-redirect.js" defer></script>
 </head>
 
 <body>
@@ -78,10 +81,10 @@
       <a href="#contact">Contact</a>
 
       <!-- Language Switch -->
-      <div class="lang-switch" style="margin-left:12px; opacity:0.8;">
-        <a href="/">PL</a> |
-        <a href="/en/">EN</a> |
-        <a href="/de/">DE</a>
+      <div class="lang-switch" id="langSwitch" style="margin-left:12px; opacity:0.8;">
+        <a href="#" data-lang="pl">PL</a> |
+        <a href="#" data-lang="en">EN</a> |
+        <a href="#" data-lang="de">DE</a>
       </div>
 
       <button id="themeToggle">🌙 Dark</button>
@@ -454,5 +457,18 @@
     });
   });
 </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const el = document.getElementById('langSwitch');
+  if (!el) return;
+  el.addEventListener('click', function(e) {
+    if (e.target.dataset.lang && window.FSA?.setLanguage) {
+      e.preventDefault();
+      window.FSA.setLanguage(e.target.dataset.lang);
+    }
+  });
+});
+</script>
+</body>
 </body>
 </html>
