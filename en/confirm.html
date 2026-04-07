@@ -4,232 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Confirm Purchase — Financial Structure Academy</title>
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
   <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="/style.css">
-
   <style>
-    .ack-page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    .ack-main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      background: var(--hero-bg);
-    }
-    .ack-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      max-width: 560px;
-      width: 100%;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-    }
-    .ack-box h1 {
-      font-family: 'IBM Plex Serif', serif;
-      font-size: 1.5rem;
-      margin: 0 0 8px 0;
-      color: var(--text);
-      text-align: center;
-    }
-    .ack-subtitle {
-      text-align: center;
-      color: var(--subtext);
-      font-size: 0.9rem;
-      margin-bottom: 24px;
-    }
-    .ack-product {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 20px 0;
-      text-align: center;
-    }
-    .ack-product-img {
-      width: 100%;
-      max-width: 200px;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 12px;
-      object-fit: contain;
-    }
-    .ack-product-name {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: var(--text);
-      margin: 8px 0 4px;
-    }
-    .ack-product-price {
-      color: var(--subtext);
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-    .ack-product-price s {
-      color: var(--subtext);
-      opacity: 0.6;
-      font-weight: 400;
-      font-size: 0.95rem;
-      margin-right: 6px;
-    }
-    .ack-docs {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 16px;
-      margin: 20px 0;
-    }
-    .ack-docs ul {
-      margin: 0;
-      padding-left: 20px;
-      list-style: none;
-    }
-    .ack-docs li {
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-    }
-    .ack-docs a {
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px dashed var(--border);
-      transition: border-color 0.2s;
-    }
-    .ack-docs a:hover {
-      border-bottom-color: var(--text);
-      opacity: 0.9;
-    }
-    .ack-checkbox {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin: 24px 0;
-      font-size: 0.9rem;
-      color: var(--subtext);
-    }
-    .ack-checkbox input {
-      margin-top: 4px;
-      width: 18px;
-      height: 18px;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-    .ack-checkbox label {
-      cursor: pointer;
-      line-height: 1.4;
-    }
-    .ack-btn {
-      display: block;
-      width: 100%;
-      padding: 14px 24px;
-      background: var(--text);
-      color: var(--bg);
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: opacity 0.2s, transform 0.2s;
-      text-align: center;
-      text-decoration: none;
-    }
-    .ack-btn:hover {
-      opacity: 0.95;
-      transform: translateY(-1px);
-    }
-    .ack-btn:disabled {
-      background: var(--border);
-      color: var(--subtext);
-      cursor: not-allowed;
-      transform: none;
-      opacity: 0.7;
-    }
-    .ack-note {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--subtext);
-      opacity: 0.7;
-      margin-top: 16px;
-    }
-    .ack-error {
-      text-align: center;
-      color: #ff6b6b;
-      font-size: 0.95rem;
-      margin: 16px 0;
-      display: none;
-    }
-    @media (max-width: 600px) {
-      .ack-box {
-        padding: 24px 20px;
-      }
-      .ack-box h1 {
-        font-size: 1.3rem;
-      }
-      .ack-product-price {
-        font-size: 1.1rem;
-      }
-    }
+    .ack-page{min-height:100vh;display:flex;flex-direction:column}
+    .ack-main{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 20px;background:var(--hero-bg)}
+    .ack-box{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:32px;max-width:560px;width:100%;box-shadow:0 8px 32px rgba(0,0,0,0.08)}
+    .ack-box h1{font-family:'IBM Plex Serif',serif;font-size:1.5rem;margin:0 0 8px 0;color:var(--text);text-align:center}
+    .ack-subtitle{text-align:center;color:var(--subtext);font-size:0.9rem;margin-bottom:24px}
+    .ack-product{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:20px;margin:20px 0;text-align:center}
+    .ack-product-img{width:100%;max-width:200px;height:auto;border-radius:8px;margin-bottom:12px;object-fit:contain}
+    .ack-product-name{font-weight:600;font-size:1.1rem;color:var(--text);margin:8px 0 4px}
+    .ack-product-price{color:var(--subtext);font-size:1.2rem;font-weight:700}
+    .ack-product-price s{color:var(--subtext);opacity:0.6;font-weight:400;font-size:0.95rem;margin-right:6px}
+    .ack-docs{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:16px;margin:20px 0}
+    .ack-docs ul{margin:0;padding-left:20px;list-style:none}
+    .ack-docs li{margin-bottom:8px;font-size:0.95rem}
+    .ack-docs a{color:var(--text);text-decoration:none;border-bottom:1px dashed var(--border);transition:border-color 0.2s}
+    .ack-docs a:hover{border-bottom-color:var(--text);opacity:0.9}
+    .ack-checkbox{display:flex;align-items:flex-start;gap:12px;margin:24px 0;font-size:0.9rem;color:var(--subtext)}
+    .ack-checkbox input{margin-top:4px;width:18px;height:18px;cursor:pointer;flex-shrink:0}
+    .ack-checkbox label{cursor:pointer;line-height:1.4}
+    .ack-btn{display:block;width:100%;padding:14px 24px;background:var(--text);color:var(--bg);border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity 0.2s,transform 0.2s;text-align:center;text-decoration:none}
+    .ack-btn:hover{opacity:0.95;transform:translateY(-1px)}
+    .ack-btn:disabled{background:var(--border);color:var(--subtext);cursor:not-allowed;transform:none;opacity:0.7;pointer-events:none}
+    .ack-note{text-align:center;font-size:0.8rem;color:var(--subtext);opacity:0.7;margin-top:16px}
+    .ack-error{text-align:center;color:#ff6b6b;font-size:0.95rem;margin:16px 0;display:none}
+    @media(max-width:600px){.ack-box{padding:24px 20px}.ack-box h1{font-size:1.3rem}.ack-product-price{font-size:1.1rem}}
   </style>
 </head>
-
 <body class="ack-page">
-
-<!-- NAVIGATION (no language switcher) -->
 <nav>
   <div class="nav-inner">
     <div class="nav-brand" style="display:flex;align-items:center;gap:12px;">
-      <img src="/assets/img/books/logo.png" alt="FSA logo"
-           style="height:40px;width:40px;border-radius:50%;" loading="lazy">
+      <img src="/assets/img/books/logo.png" alt="FSA logo" style="height:40px;width:40px;border-radius:50%;" loading="lazy">
       <div style="display:flex;flex-direction:column;">
-        <span style="font-weight:600;font-size:0.95rem;letter-spacing:0.04em;">
-          FINANCIAL STRUCTURE ACADEMY
-        </span>
-        <span style="font-size:0.75rem;color:var(--subtext);">
-          Institutional approach to financial markets
-        </span>
+        <span style="font-weight:600;font-size:0.95rem;letter-spacing:0.04em;">FINANCIAL STRUCTURE ACADEMY</span>
+        <span style="font-size:0.75rem;color:var(--subtext);">Institutional approach to financial markets</span>
       </div>
     </div>
-
     <div class="nav-links">
-      <a href="/en/#home">Home</a>
-      <a href="/en/#about">About</a>
-      <a href="/en/#method">Methodology</a>
-      <a href="/en/#products">Products</a>
-      <a href="/en/#contact">Contact</a>
+      <a href="/en/#home">Home</a><a href="/en/#about">About</a><a href="/en/#method">Methodology</a><a href="/en/#products">Products</a><a href="/en/#contact">Contact</a>
       <button id="themeToggle">🌙 Dark</button>
     </div>
   </div>
 </nav>
-
-<!-- ACKNOWLEDGMENT BOX -->
 <main class="ack-main">
   <div class="ack-box">
     <h1>Confirm Your Purchase</h1>
     <p class="ack-subtitle">Review and acknowledge the legal documents before proceeding to secure checkout.</p>
-
-    <!-- Dynamic Product Display -->
     <div class="ack-product" id="productBox">
       <img src="" alt="" class="ack-product-img" id="prodImg">
       <div class="ack-product-name" id="prodName">Loading...</div>
       <div class="ack-product-price" id="prodPrice"></div>
     </div>
-
     <div class="ack-error" id="errorMsg">Product not found. Please return to the store and try again.</div>
-
     <div class="ack-docs">
       <ul>
         <li><a href="/en/terms.html" target="_blank">Terms of Use</a></li>
@@ -238,162 +71,67 @@
         <li><a href="/en/refund-policy.html" target="_blank">Refund & Withdrawal Policy</a></li>
       </ul>
     </div>
-
     <div class="ack-checkbox">
       <input type="checkbox" id="ackCheck">
-      <label for="ackCheck">
-        I confirm that I have read, understood, and agree to the Terms of Use, Privacy Policy, Legal Information, and Refund Policy. I acknowledge that digital products are non-refundable once accessed and that I am purchasing for personal educational use only.
-      </label>
+      <label for="ackCheck">I confirm that I have read, understood, and agree to the Terms of Use, Privacy Policy, Legal Information, and Refund Policy. I acknowledge that digital products are non-refundable once accessed and that I am purchasing for personal educational use only.</label>
     </div>
-
-    <a id="continueBtn" class="ack-btn" disabled>Continue to Secure Checkout</a>
-
+    <button id="continueBtn" class="ack-btn" disabled>Continue to Secure Checkout</button>
     <p class="ack-note">Your data is protected. Payments processed via Stripe® with 256-bit encryption.</p>
   </div>
 </main>
-
-<!-- FOOTER -->
-<footer style="
-  background:#0A1A2F;
-  color:#fff;
-  padding:40px 24px;
-  margin-top:0;
-">
-  <div style="
-    max-width:960px;
-    margin:0 auto;
-    display:flex;
-    flex-direction:column;
-    gap:24px;
-  ">
-    <div style="font-size:1rem; font-weight:600;">
-      FINANCIAL STRUCTURE ACADEMY
+<footer style="background:#0A1A2F;color:#fff;padding:40px 24px;margin-top:0;">
+  <div style="max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:24px;">
+    <div style="font-size:1rem;font-weight:600;">FINANCIAL STRUCTURE ACADEMY</div>
+    <div style="font-size:0.9rem;opacity:0.75;line-height:1.6;">Institutional approach to financial markets. Education based on data, liquidity, and participant behavior.</div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:0.9rem;">
+      <a href="/en/terms.html" style="color:#fff;opacity:0.8;text-decoration:none;">Terms</a>
+      <a href="/en/privacy.html" style="color:#fff;opacity:0.8;text-decoration:none;">Privacy Policy</a>
+      <a href="/en/legal.html" style="color:#fff;opacity:0.8;text-decoration:none;">Legal Information</a>
+      <a href="/en/refund-policy.html" style="color:#fff;opacity:0.8;text-decoration:none;">Refund Information</a>
     </div>
-    <div style="font-size:0.9rem; opacity:0.75; line-height:1.6;">
-      Institutional approach to financial markets.
-      Education based on data, liquidity, and participant behavior.
-    </div>
-    <div style="display:flex; gap:24px; flex-wrap:wrap; font-size:0.9rem;">
-      <a href="/en/terms.html" style="color:#fff; opacity:0.8; text-decoration:none;">Terms</a>
-      <a href="/en/privacy.html" style="color:#fff; opacity:0.8; text-decoration:none;">Privacy Policy</a>
-      <a href="/en/legal.html" style="color:#fff; opacity:0.8; text-decoration:none;">Legal Information</a>
-      <a href="/en/refund-policy.html" style="color:#fff; opacity:0.8; text-decoration:none;">Refund Information</a>
-    </div>
-    <div style="font-size:0.8rem; opacity:0.5; margin-top:12px;">
-      © Financial Structure Academy — All rights reserved
-    </div>
+    <div style="font-size:0.8rem;opacity:0.5;margin-top:12px;">© Financial Structure Academy — All rights reserved</div>
   </div>
 </footer>
-
-<!-- DARK MODE SCRIPT -->
 <script>
-  const toggleBtn = document.getElementById('themeToggle');
-  const root = document.documentElement;
-  if (toggleBtn) {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      root.setAttribute('data-theme', savedTheme);
-      toggleBtn.textContent = savedTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
-    }
-    toggleBtn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      toggleBtn.textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
-    });
-  }
+  const toggleBtn=document.getElementById('themeToggle');const root=document.documentElement;
+  if(toggleBtn){const savedTheme=localStorage.getItem('theme');if(savedTheme){root.setAttribute('data-theme',savedTheme);toggleBtn.textContent=savedTheme==='dark'?'☀️ Light':'🌙 Dark';}
+  toggleBtn.addEventListener('click',()=>{const current=root.getAttribute('data-theme');const next=current==='dark'?'light':'dark';root.setAttribute('data-theme',next);localStorage.setItem('theme',next);toggleBtn.textContent=next==='dark'?'☀️ Light':'🌙 Dark';});}
 </script>
-
-<!-- DYNAMIC PRODUCT + CHECKBOX LOGIC -->
 <script>
-  // ===== CONFIG: Product Database =====
-  const PRODUCTS = {
-    'set': {
-      name: 'Complete Foundation FSA',
-      price: '169 $',
-      oldPrice: '246 $',
-      img: '/img/books/mainset1.png',
-      link: 'https://buy.stripe.com/00w7sE7EZ0SF98ugTD4ow01'
-    },
-    'intro': {
-      name: 'Introductory Book',
-      price: '9 $',
-      oldPrice: null,
-      img: '/img/books/int0.jpg',
-      link: 'https://buy.stripe.com/cNi3co5wRgRD98u46R4ow06'
-    },
-    'vol1': {
-      name: 'VOLUME 1 — System Structure',
-      price: '95 $',
-      oldPrice: '99 $',
-      img: '/img/books/vol1.png',
-      link: 'https://buy.stripe.com/9B68wIf7rcBn2K646R4ow02'
-    },
-    'vol2': {
-      name: 'VOLUME 2 — Price Action',
-      price: '49 $',
-      oldPrice: '69 $',
-      img: '/img/books/vol2.jpg',
-      link: 'https://buy.stripe.com/5kQ3co1gBdFrbgC32N4ow04'
-    },
-    'vol3': {
-      name: 'VOLUME 3 — Decision Structure',
-      price: '49 $',
-      oldPrice: '69 $',
-      img: '/img/books/vol3.jpg',
-      link: 'https://buy.stripe.com/00wfZabVfeJvesO46R4ow05'
-    }
+  const PRODUCTS={
+    'set':{name:'Complete Foundation FSA',price:'169 $',oldPrice:'246 $',img:'/assets/img/books/kompletmain3.png',link:'https://buy.stripe.com/00w7sE7EZ0SF98ugTD4ow01'},
+    'fd':{name:'Flow Dynamics™',price:'599 zł',oldPrice:null,img:'/assets/img/books/FD.png',link:'https://buy.stripe.com/7sY6oAgbvcBnacy5aV4ow00'},
+    'intro':{name:'Introductory Book',price:'249 zł',oldPrice:null,img:'/assets/img/books/wprowadzenie.png',link:'https://buy.stripe.com/cNi3co5wRgRD98u46R4ow06'},
+    'vol1':{name:'VOLUME 1 — System Structure',price:'95 $',oldPrice:'99 $',img:'/assets/img/books/tom.png',link:'https://buy.stripe.com/9B68wIf7rcBn2K646R4ow02'},
+    'vol2':{name:'VOLUME 2 — Price Action',price:'49 $',oldPrice:'69 $',img:'/assets/img/books/tom2.png',link:'https://buy.stripe.com/5kQ3co1gBdFrbgC32N4ow04'},
+    'vol3':{name:'VOLUME 3 — Decision Structure',price:'49 $',oldPrice:'69 $',img:'/assets/img/books/tom3.png',link:'https://buy.stripe.com/00wfZabVfeJvesO46R4ow05'}
   };
-
-  // ===== INIT =====
-  document.addEventListener('DOMContentLoaded', function() {
-    const params = new URLSearchParams(window.location.search);
-    const productKey = params.get('product');
-    const product = PRODUCTS[productKey];
-
-    const prodBox = document.getElementById('productBox');
-    const prodImg = document.getElementById('prodImg');
-    const prodName = document.getElementById('prodName');
-    const prodPrice = document.getElementById('prodPrice');
-    const errorMsg = document.getElementById('errorMsg');
-    const continueBtn = document.getElementById('continueBtn');
-    const checkbox = document.getElementById('ackCheck');
-
-    if (product) {
-      // Populate product info
-      prodImg.src = product.img;
-      prodImg.alt = product.name;
-      prodName.textContent = product.name;
-      
-      if (product.oldPrice) {
-        prodPrice.innerHTML = `<s>${product.oldPrice}</s> → ${product.price}`;
-      } else {
-        prodPrice.textContent = product.price;
-      }
-
-      // Set checkout link
-      continueBtn.href = product.link;
-
-      // Enable button on checkbox
-      checkbox.addEventListener('change', function() {
-        continueBtn.disabled = !this.checked;
+  document.addEventListener('DOMContentLoaded',function(){
+    const params=new URLSearchParams(window.location.search);
+    const productKey=params.get('product');
+    const product=PRODUCTS[productKey];
+    const prodBox=document.getElementById('productBox');
+    const prodImg=document.getElementById('prodImg');
+    const prodName=document.getElementById('prodName');
+    const prodPrice=document.getElementById('prodPrice');
+    const errorMsg=document.getElementById('errorMsg');
+    const continueBtn=document.getElementById('continueBtn');
+    const checkbox=document.getElementById('ackCheck');
+    if(product){
+      prodImg.src=product.img;prodImg.alt=product.name;prodName.textContent=product.name;
+      if(product.oldPrice){prodPrice.innerHTML='<s>'+product.oldPrice+'</s> → '+product.price;}else{prodPrice.textContent=product.price;}
+      checkbox.addEventListener('change',function(){
+        continueBtn.disabled=!this.checked;
       });
-
-      // Record acknowledgment
-      continueBtn.addEventListener('click', function() {
-        if (checkbox.checked) {
-          localStorage.setItem('fsa_ack_' + productKey, new Date().toISOString());
-        }
+      continueBtn.addEventListener('click',function(e){
+        if(!checkbox.checked){e.preventDefault();e.stopPropagation();return false;}
+        localStorage.setItem('fsa_ack_'+productKey,new Date().toISOString());
+        window.location.href=product.link;
       });
-    } else {
-      // Product not found
-      prodBox.style.display = 'none';
-      errorMsg.style.display = 'block';
-      continueBtn.style.display = 'none';
+    }else{
+      prodBox.style.display='none';errorMsg.style.display='block';continueBtn.style.display='none';
     }
   });
 </script>
-
 </body>
 </html>
