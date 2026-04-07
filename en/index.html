@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Financial Structure Academy</title>
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/img/favicon.png">
   <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
@@ -85,6 +88,71 @@
     </div>
   </div>
 </nav>
+
+  <section id="produkty-carousel" class="fsa-slider swiper">
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/en/img/books/" alt="Set 4 books">
+        <h3>Complete Foundation FSA</h3>
+        <p>You save -30% of the price and get a complete FSA system instead of individual items.</p>
+        <a href="https://buy.stripe.com/00w7sE7EZ0SF98ugTD4ow01" class="btn">Buy Set <br> <s>246 $</s> → 169 $</a>
+      </div>
+    </div>
+   
+
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/en/img/books/int0.jpg" alt="Introductory Book">
+        <h3>Introductory Book</h3>
+        <p>The mental basis of structural work. Preparation for market analysis.</p>
+        <a href="https://buy.stripe.com/cNi3co5wRgRD98u46R4ow06" class="btn">Buy Introduction Book</a>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/en/img/books/vol1.png" alt="VOLUME 1">
+        <h3>VOLUME 1 — System Structure</h3>
+        <p>Technical basis of structural work. Definitions, models and frameworks for analysis.</p>
+        <a href="https://buy.stripe.com/9B68wIf7rcBn2K646R4ow02" class="btn">Buy VOLUME 1 <br> <s>99 $</s> → 95 $</a>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/en/img/books/vol2.jpg" alt="VOLUME 2">
+        <h3>VOLUME 2 — Price Action</h3>
+        <p>Mechanics of price movement and behavior of participants without narrative.</p>
+        <a href="https://buy.stripe.com/5kQ3co1gBdFrbgC32N4ow04" class="btn">Buy VOLUME 2 <br><s>69 $</s> → 49 $</a>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="product-card">
+        <img src="/en/img/books/vol1.jpg" alt="VOLUME 3">
+        <h3>VOLUME 3 — Decision structure</h3>
+        <p>The process of moving from observation to action. Decision structure.</p>
+        <a href="https://buy.stripe.com/00wfZabVfeJvesO46R4ow05" class="btn">Buy VOLUME 3 <br><s>69 $</s> → 49 $</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="swiper-button-prev fsa-arrow">
+    <svg viewBox="0 0 24 24">
+      <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+  <div class="swiper-button-next fsa-arrow">
+    <svg viewBox="0 0 24 24">
+      <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+  
+  <div class="swiper-pagination"></div>
+</section>
 
 <!-- HERO -->
 <section id="home" class="hero">
@@ -390,5 +458,31 @@
   }
 </script>
 
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.fsa-slider', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+  
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }
+    });
+  });
+</script>
 </body>
 </html>
