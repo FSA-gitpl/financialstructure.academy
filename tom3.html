@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tom 3 — Struktura Decyzji — Financial Structure Academy</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    .book-page { min-height: 100vh; display: flex; flex-direction: column; }
+    .book-main { flex: 1; padding: 60px 24px; background: var(--hero-bg); }
+    .book-container { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: start; }
+    .book-cover { position: sticky; top: 100px; }
+    .book-cover img { width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+    .book-toc-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 10px 16px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 0.9rem; transition: opacity 0.2s; }
+    .book-toc-link:hover { opacity: 0.9; }
+    .book-toc-link svg { width: 16px; height: 16px; }
+    .book-content h1 { font-family: 'IBM Plex Serif', serif; font-size: 2rem; margin: 0 0 16px 0; color: var(--text); }
+    .book-subtitle { color: var(--subtext); font-size: 1.1rem; margin-bottom: 24px; line-height: 1.6; }
+    .book-section { margin-bottom: 32px; }
+    .book-section h2 { font-size: 1.3rem; margin: 0 0 16px 0; color: var(--text); }
+    .book-section p { color: var(--subtext); line-height: 1.7; margin-bottom: 16px; }
+    .book-highlight { background: var(--card-bg); border-left: 4px solid #45a29e; padding: 20px; border-radius: 4px; margin: 24px 0; }
+    .book-highlight p { margin: 0; color: var(--text); }
+    .book-cta { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .book-cta .btn { display: inline-block; padding: 14px 32px; background: var(--text); color: var(--bg); border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: opacity 0.2s; }
+    .book-cta .btn:hover { opacity: 0.95; }
+    .book-disclaimer { font-size: 0.85rem; color: var(--subtext); opacity: 0.8; margin-top: 24px; }
+    @media (max-width: 768px) {
+      .book-container { grid-template-columns: 1fr; }
+      .book-cover { position: static; text-align: center; max-width: 200px; margin: 0 auto 24px; }
+      .book-content h1 { font-size: 1.6rem; }
+      .book-subtitle { font-size: 1rem; }
+    }
+  </style>
+</head>
+
+<body class="book-page">
+
+<!-- NAVIGATION (no language switcher) -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand" style="display:flex;align-items:center;gap:12px;">
+      <img src="/assets/img/books/logo.png" alt="Logo FSA" style="height:40px;width:40px;border-radius:50%;" loading="lazy">
+      <div style="display:flex;flex-direction:column;">
+        <span style="font-weight:600;font-size:0.95rem;letter-spacing:0.04em;">FINANCIAL STRUCTURE ACADEMY</span>
+        <span style="font-size:0.75rem;color:var(--subtext);">Strukturalne podejście do rynku finansowego</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="/#home">Strona główna</a>
+      <a href="/#about">O FSA</a>
+      <a href="/#method">Metodologia</a>
+      <a href="/#produkty">Produkty</a>
+      <a href="/#kontakt">Kontakt</a>
+      <button id="themeToggle">🌙 Dark</button>
+    </div>
+  </div>
+</nav>
+
+<!-- BOOK CONTENT -->
+<main class="book-main">
+  <div class="book-container">
+    
+    <!-- Cover + TOC Link -->
+    <div class="book-cover">
+      <img src="/assets/img/books/tom3.png" alt="Tom 3 — Struktura Decyzji">
+      <a href="/files_pl/tom3.pdf" class="book-toc-link" target="_blank" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Pobierz spis treści
+      </a>
+    </div>
+
+    <!-- Content -->
+    <div class="book-content">
+      <h1>Tom 3 — Struktura Decyzji</h1>
+      <p class="book-subtitle">Od analizy do działania: Budowa własnego systemu</p>
+
+      <div class="book-section">
+        <p>Tom 3 stanowi pomost między rozumieniem rynku a spójnym podejściem systemowym. Podczas gdy poprzednie tomy dostarczyły solidnych fundamentów analitycznych (struktura, płynność, Price Action), ten tom koncentruje się na tym, co odróżnia profesjonalistę od amatora: powtarzalnym procesie, dyscyplinie i zarządzaniu ryzykiem.</p>
+        <p><strong>To nie jest gotowy system tradingowy.</strong> To ramy analityczne, które pomagają przekształcić wiedzę w stabilny, logiczny proces decyzyjny. Celem nie jest przewidywanie rynku, lecz budowa struktury, która minimalizuje błędy, kontroluje ryzyko i umożliwia długoterminową stabilność.</p>
+      </div>
+
+      <div class="book-highlight">
+        <p><strong>Co zyskasz:</strong> Narzędzia do samodzielnej konstrukcji systemu dopasowanego do Twojego charakteru, metodologię pracy z niepewnością, framework do analizy błędów oraz ścieżkę do konsolidacji procesu, który eliminuje chaos decyzyjny.</p>
+      </div>
+
+      <div class="book-section">
+        <h2>Co obejmuje ten tom?</h2>
+        <ul style="color:var(--subtext);line-height:1.7;padding-left:20px;">
+          <li><strong>Fundamenty podejścia systemowego:</strong> różnica między zbiorem zasad a spójnym systemem, rola kontekstu, stref obserwacji, filtrów i warunków unieważnienia</li>
+          <li><strong>Budowa własnego systemu:</strong> od definiowania warunków rynkowych, przez formułowanie hipotez, po ocenę reakcji ceny i domykanie scenariuszy</li>
+          <li><strong>Analiza powymiarowa i statystyka:</strong> jak obiektywnie oceniać jakość scenariuszy niezależnie od wyniku transakcji, które dane są kluczowe, a które wprowadzają szum</li>
+          <li><strong>Błędy jako narzędzie rozwoju:</strong> źródła błędów decyzyjnych, psychologicznych i proceduralnych; jak je analizować, eliminować i przekształcać w iteracyjne ulepszenia systemu</li>
+          <li><strong>Długoterminowa stabilność:</strong> jak utrzymać proces w zmiennych warunkach rynkowych, uniknąć wypalenia, zintegrować wszystkie elementy systemu i zbudować nawyki profesjonalnego tradera</li>
+          <li><strong>Psychologia w ramach systemu:</strong> dlaczego stabilność emocjonalna jest efektem spójnego procesu, a nie celem samym w sobie; jak system redukuje presję i eliminuje reakcje impulsywne</li>
+        </ul>
+      </div>
+
+      <div class="book-section">
+        <h2>Dlaczego ten tom jest inny?</h2>
+        <p>Większość materiałów edukacyjnych skupia się na „idealnych wejściach”, wskaźnikach lub gotowych strategiach. Tom 3 idzie w przeciwną stronę — uczy budowania procesu, który działa niezależnie od krótkoterminowych wyników. System nie gwarantuje zysków, ale eliminuje chaos w zachowaniach tradera. Zapewnia powtarzalność, kontrolę ryzyka i możliwość obiektywnej oceny własnych decyzji.</p>
+        <p>W tym tomie nie znajdziesz gotowych reguł wejścia i wyjścia. Znajdziesz natomiast narzędzia do samodzielnej konstrukcji systemu dopasowanego do Twojego charakteru, tolerancji ryzyka i stylu analitycznego. To przejście od reaktywnego handlowania do świadomego, procesowego podejścia.</p>
+      </div>
+
+      <div class="book-section">
+        <h2>Dla kogo jest ten tom?</h2>
+        <ul style="color:var(--subtext);line-height:1.7;padding-left:20px;">
+          <li>Osób, które chcą przejść od chaotycznego reagowania na wykres do świadomego, procesowego podejścia</li>
+          <li>Traderów gotowych pracować nad dyscypliną, statystyką i zarządzaniem ryzykiem</li>
+          <li>Uczestników rynku rozumiejących, że stabilność wynika z powtarzalności procesu, a nie z trafnych prognoz</li>
+          <li>Osób akceptujących niepewność jako naturalny element rynku i szukających narzędzi do pracy z prawdopodobieństwem</li>
+        </ul>
+      </div>
+
+      <div class="book-cta">
+        <a href="/confirm_pl.html?product=vol3" class="btn">Kup Tom 3 — Struktura Decyzji</a>
+        <p class="book-disclaimer">Materiał edukacyjny. Nie stanowi rekomendacji inwestycyjnych. Produkt cyfrowy — zwrot niemożliwy po uzyskaniu dostępu. Kupując, akceptujesz Regulamin, Politykę prywatności i Politykę zwrotów.</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#0A1A2F;color:#fff;padding:40px 24px;margin-top:0;">
+  <div style="max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:24px;">
+    <div style="font-size:1rem;font-weight:600;">FINANCIAL STRUCTURE ACADEMY</div>
+    <div style="font-size:0.9rem;opacity:0.75;line-height:1.6;">
+      Strukturalne podejście do rynku finansowego. Edukacja oparta na danych, płynności i uczestnikach instytucjonalnych.
+    </div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:0.9rem;">
+      <a href="/regulamin.html" style="color:#fff;opacity:0.8;text-decoration:none;">Regulamin</a>
+      <a href="/polityka-prywatnosci.html" style="color:#fff;opacity:0.8;text-decoration:none;">Polityka prywatności</a>
+      <a href="/informacje-prawne.html" style="color:#fff;opacity:0.8;text-decoration:none;">Informacje prawne</a>
+      <a href="/polityka-zwrotow.html" style="color:#fff;opacity:0.8;text-decoration:none;">Polityka zwrotów</a>
+    </div>
+    <div style="font-size:0.8rem;opacity:0.5;margin-top:12px;">
+      © Financial Structure Academy — Wszystkie prawa zastrzeżone
+    </div>
+  </div>
+</footer>
+
+<!-- DARK MODE SCRIPT -->
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  if (toggleBtn) {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      root.setAttribute('data-theme', savedTheme);
+      toggleBtn.textContent = savedTheme === 'dark' ? '☀️ Light' : '🌙 Dark';
+    }
+    toggleBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggleBtn.textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
+    });
+  }
+</script>
+
+</body>
+</html>
