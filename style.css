@@ -1,10 +1,39 @@
+/* ===========================
+   THEME VARIABLES & BASE
+=========================== */
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --subtext: #333333;
+  --border: rgba(0, 0, 0, 0.1);
+  --hero-bg: #fafafa;
+  --card-bg: #ffffff;
+  --nav-bg: #ffffff;
+  --shadow-soft: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+[data-theme="dark"] {
+  --bg: #0A0F14;
+  --text: #f2f2f2;
+  --subtext: #cccccc;
+  --border: rgba(255, 255, 255, 0.15);
+  --hero-bg: #11161d;
+  --card-bg: #161d26;
+  --nav-bg: #0A0F14;
+}
+
 html[data-theme="light"] body {
   background: linear-gradient(to bottom, #F7F6F4 0%, #fff7f7 100%);
 }
 
 body {
-  background: var(--bg-color);
-  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .section__inner {
@@ -14,12 +43,8 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
-
-/* ===========================
-   THEME VARIABLES
-=========================== */
-html[data-theme="light"] .section__inner .nav {
-  background: var(--card-bg, #fff7f7 );
+html[data-theme="light"] nav {
+  background: var(--card-bg, #fff7f7);
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -32,6 +57,9 @@ html[data-theme="dark"] .section__inner {
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
+/* ===========================
+   THEME BANNER
+=========================== */
 .theme-banner {
   position: fixed;
   bottom: 20px;
@@ -67,14 +95,17 @@ html[data-theme="dark"] .section__inner {
   color: #000;
 }
 
-
+/* ===========================
+   SWIPER ARROWS
+=========================== */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-    display: none !important;
+  display: none !important;
 }
 
 .fsa-arrow {
   height: 40px;
+  width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,58 +117,24 @@ html[data-theme="dark"] .section__inner {
   border: 1px solid var(--border);
 }
 
-/* Ikona */
 .fsa-arrow svg {
   width: 20px;
   height: 20px;
 }
 
-/* Hover – tło + cień jak w product-card */
 .fsa-arrow:hover {
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   transform: translateY(-2px);
 }
 
-
-/* Mobile */
 @media (max-width: 768px) {
   .swiper-button-prev { left: 10px; }
   .swiper-button-next { right: 10px; }
 }
 
-:root {
-  --bg: #ffffff;
-  --text: #111111;
-  --subtext: #333333;
-  --border: rgba(0, 0, 0, 0.1);
-  --hero-bg: #fafafa;
-  --card-bg: #ffffff;
-  --nav-bg: #ffffff;
-}
- 
-[data-theme="dark"] {
-  --bg: #0A0F14;
-  --text: #f2f2f2;
-  --subtext: #cccccc;
-  --border: rgba(255, 255, 255, 0.15);
-  --hero-bg: #11161d;
-  --card-bg: #161d26;
-  --nav-bg: #0A0F14;
-}
-
 /* ===========================
-   BASE
+   TYPOGRAPHY & LINKS
 =========================== */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
 h1, h2, h3 {
   font-family: 'IBM Plex Serif', serif;
   margin: 0 0 16px 0;
@@ -184,7 +181,6 @@ a:hover {
    NAVIGATION
 =========================== */
 nav {
-  
   top: 0;
   background: var(--nav-bg);
   border-bottom: 1px solid var(--border);
@@ -298,158 +294,8 @@ nav {
 }
 
 /* ===========================
-   MOBILE ADAPTATION
+   ZESTAWY / SETS
 =========================== */
-@media (max-width: 768px) {
-
-  body {
-    font-size: 0.95rem;
-  }
-
-  nav {
-    padding: 10px 16px;
-  }
-
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 14px;
-    font-size: 0.95rem;
-  }
-
-  .hero {
-    padding: 80px 16px 60px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-    line-height: 1.25;
-  }
-
-  .hero__subtitle {
-    font-size: 1rem;
-  }
-
-  .hero__meta {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero__meta-item {
-    font-size: 0.85rem;
-    padding: 6px 10px;
-  }
-
-  .section {
-    padding: 60px 16px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .card {
-    padding: 14px;
-  }
-
-  .card__title {
-    font-size: 1rem;
-  }
-
-  .card__text {
-    font-size: 0.95rem;
-  }
-
-  /* Method diagram vertical mode */
-  .method-diagram {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .method-step {
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .step-circle {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-  }
-
-  .method-line {
-    display: none;
-  }
-
-  footer {
-    padding: 32px 16px !important;
-  }
-
-  footer div {
-    font-size: 0.85rem;
-  }
-}
-
-/* TABLET (769px–1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
-
-  nav {
-    padding: 12px 20px;
-  }
-
-  .nav-inner {
-    gap: 16px;
-  }
-
-  .nav-links {
-    gap: 18px;
-  }
-
-  .hero {
-    padding: 100px 24px 80px;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-    line-height: 1.25;
-  }
-
-  .hero__meta {
-    gap: 10px;
-  }
-
-  .hero__meta-item {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-  }
-
-  .section {
-    padding: 70px 24px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-  }
-
-  .card {
-    padding: 16px;
-  }
-
-  footer {
-    padding: 40px 24px !important;
-  }
-   /* ===== SEKCJA ZESTAWY ===== */
-
 .zestawy-section {
   width: 100%;
   max-width: 900px;
@@ -465,8 +311,6 @@ nav {
   text-align: center;
   color: #111;
 }
-
-/* ===== KARTA HORYZONTALNA ===== */
 
 .card-horizontal {
   width: 100%;
@@ -508,8 +352,6 @@ nav {
 .card-horizontal__link:hover {
   background: #333;
 }
-}
-/* ===== RESPONSYWNOŚĆ ===== */
 
 @media (max-width: 480px) {
   .card-horizontal {
@@ -520,9 +362,6 @@ nav {
     max-width: 300px;
   }
 }
-/* ===========================
-   ZESTAWY – SPÓJNY STYL FSA
-=========================== */
 
 .zestaw {
   text-align: center;
@@ -532,7 +371,7 @@ nav {
 
 .zestaw__img {
   width: 100%;
-  max-width: 420px; /* średnia, elegancka wielkość */
+  max-width: 420px;
   height: auto;
   border-radius: 12px;
   margin-bottom: 16px;
@@ -545,16 +384,11 @@ nav {
   line-height: 1.5;
 }
 
-/* Responsywność */
 @media (max-width: 480px) {
   .zestaw__img {
     max-width: 300px;
   }
 }
-
-   /* ===========================
-   ZESTAWY – SPÓJNY STYL Z KSIĄŻKAMI
-=========================== */
 
 .zestaw-card {
   background: var(--card-bg);
@@ -581,7 +415,6 @@ nav {
   line-height: 1.5;
 }
 
-/* Responsywność */
 @media (max-width: 480px) {
   .zestaw-card {
     max-width: 320px;
@@ -592,31 +425,25 @@ nav {
   }
 }
 
-/* ============================================
-   KARCELA PRODUKTÓW FSA – WERSJA JEDEN SLIDE
-   (zawsze 1 produkt na ekranie, wycentrowany)
-   ============================================ */
-
-/* Kontener całej karuzeli */
 .fsa-slider {
   width: 100%;
-  max-width: 640px;      /* szerokość całej karuzeli */
-  margin: 40px auto;     /* wycentrowanie */
-  padding: 0;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 12px;
+  box-sizing: border-box;
 }
 
-/* Wyrównanie slajdów w pionie */
 .fsa-slider .swiper-wrapper {
-  align-items: stretch;   /* każdy slajd ma tę samą wysokość */
+  align-items: stretch;
+  padding-bottom: 24px;
 }
 
-/* Każdy slajd jest flexboxem, aby karta była idealnie wycentrowana */
 .fsa-slider .swiper-slide {
   display: flex;
   justify-content: center;
+  height: auto;
 }
 
-/* Karta produktu wewnątrz slajdu */
 .product-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -625,8 +452,12 @@ nav {
   text-align: center;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   transition: transform .3s ease, box-shadow .3s ease;
-  max-width: 420px;       /* szerokość karty */
+  width: 100%;
+  max-width: 420px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
 }
 
 .product-card:hover {
@@ -634,34 +465,34 @@ nav {
   box-shadow: 0 12px 32px rgba(0,0,0,0.12);
 }
 
-/* ============================
-   OBRAZKI – JEDNAKOWY ROZMIAR
-   ============================ */
 .product-card img {
-  width: 50%;
-    height: 60%;
-  max-width: 360px;       
-  object-fit: cover;      
+  width: 100%;
+  max-width: 360px;
+  height: 280px;
+  object-fit: contain;
   border-radius: 12px;
   margin: 0 auto 16px auto;
   display: block;
+  flex-shrink: 0;
 }
 
-/* Teksty */
 .product-card h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
+  font-size: 1.1rem;
+  margin: 0 0 8px 0;
   font-weight: 600;
+  min-height: 3rem;
+  line-height: 1.5;
 }
 
 .product-card p {
   font-size: 0.95rem;
   color: var(--subtext);
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
   line-height: 1.5;
+  flex-grow: 1;
+  min-height: 4.5rem;
 }
 
-/* Przycisk */
 .product-card .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -671,29 +502,133 @@ nav {
   text-decoration: none;
   font-size: 0.95rem;
   transition: background .2s ease, opacity .2s ease;
+  margin-top: auto;
 }
 
 .product-card .btn:hover {
   background: #333;
+  opacity: 0.95;
 }
 
-/* ============================
-   MOBILE
-   ============================ */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fsa-slider {
+    max-width: 900px;
+  }
+  .product-card {
+    min-height: 520px;
+  }
+  .product-card img {
+    height: 260px;
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1025px) {
+  .fsa-slider {
+    max-width: 1200px;
+  }
+  .product-card {
+    min-height: 500px;
+  }
+  .product-card img {
+    height: 270px;
+  }
+}
+
+@media (max-width: 767px) {
   .fsa-slider {
     max-width: 100%;
     margin: 24px auto;
     padding: 0 8px;
   }
-
   .product-card {
     padding: 16px;
+    min-height: 460px;
   }
-
   .product-card img {
-    width: 50%;
-    height: 60%;   /* mniejsza wysokość na telefonach */
+    height: 240px;
   }
 }
 
+/* ===========================
+   GLOBAL MOBILE ADAPTATION
+=========================== */
+@media (max-width: 768px) {
+  body { font-size: 0.95rem; }
+  nav { padding: 10px 16px; }
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 0.95rem;
+  }
+  .hero {
+    padding: 80px 16px 60px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+  .hero__subtitle { font-size: 1rem; }
+  .hero__meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero__meta-item {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+  .section { padding: 60px 16px; }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card { padding: 14px; }
+  .card__title { font-size: 1rem; }
+  .card__text { font-size: 0.95rem; }
+  .method-diagram {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .method-step {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .step-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .method-line { display: none; }
+  footer {
+    padding: 32px 16px !important;
+  }
+  footer div { font-size: 0.85rem; }
+}
+
+/* ===========================
+   TABLET (769px–1024px)
+=========================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  nav { padding: 12px 20px; }
+  .nav-inner { gap: 16px; }
+  .nav-links { gap: 18px; }
+  .hero { padding: 100px 24px 80px; }
+  h1 { font-size: 2.2rem; line-height: 1.25; }
+  .hero__meta { gap: 10px; }
+  .hero__meta-item { font-size: 0.9rem; padding: 8px 12px; }
+  .section { padding: 70px 24px; }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .card { padding: 16px; }
+  footer { padding: 40px 24px !important; }
+}
