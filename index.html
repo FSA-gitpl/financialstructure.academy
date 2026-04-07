@@ -80,10 +80,10 @@
       <a href="#kontakt">Kontakt</a>
 
       <!-- Language Switch X -->
-      <div class="lang-switch" style="margin-left:12px; opacity:0.8;">
-        <a href="/">PL</a> |
-        <a href="/en/">EN</a> |
-        <a href="/de/">DE</a>
+      <div class="lang-switch" id="langSwitch">
+        <a href="#" data-lang="pl">PL</a> |
+        <a href="#" data-lang="en">EN</a> |
+        <a href="#" data-lang="de">DE</a>
       </div>
       
       <button id="themeToggle">🌙 Dark</button>
@@ -491,7 +491,6 @@ Równolegle trwają prace związane z przygotowaniem kursów od strony prawnej i
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
   const swiper = new Swiper('.fsa-slider', {
@@ -553,6 +552,17 @@ function declineTheme() {
   document.getElementById("theme-banner").style.display = "none";
 }
 </script>
-  
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const el = document.getElementById('langSwitch');
+  if (!el) return;
+  el.addEventListener('click', function(e) {
+    if (e.target.dataset.lang && window.FSA?.setLanguage) {
+      e.preventDefault();
+      window.FSA.setLanguage(e.target.dataset.lang);
+    }
+  });
+});
+</script>
 </body>
 </html>
